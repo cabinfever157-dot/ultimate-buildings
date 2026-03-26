@@ -134,7 +134,7 @@ export default function QuoteWizard() {
       opacity: 1, 
       y: 0, 
       scale: 1,
-      transition: { type: "spring", stiffness: 300, damping: 24 }
+      transition: { type: "spring" as const, stiffness: 300, damping: 24 }
     },
     out: { opacity: 0, y: -20, scale: 0.98, transition: { duration: 0.2 } }
   };
