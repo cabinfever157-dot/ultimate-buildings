@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
+import { LuxuryBackground } from "@/components/layout/LuxuryBackground";
+import Script from "next/script";
 import "./globals.css";
 
 const fontBody = Inter({
@@ -29,7 +31,9 @@ export default function RootLayout({
       lang="en"
       className={`${fontBody.variable} ${fontDisplay.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col font-body bg-background text-foreground tracking-tight">
+      <body className="min-h-full flex flex-col font-body bg-brand-dark text-foreground tracking-tight relative">
+        <Script src="https://www.youtube.com/iframe_api" strategy="beforeInteractive" />
+        <LuxuryBackground />
         {children}
       </body>
     </html>

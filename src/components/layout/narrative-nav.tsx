@@ -3,6 +3,16 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 export function NarrativeNav() {
   return (
@@ -14,15 +24,76 @@ export function NarrativeNav() {
              Ultimate Buildings
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 font-body text-sm font-medium">
-            <Link href="/catalogs" className="text-foreground/80 hover:text-brand-primary transition-colors">
-              Catalogs
+           <nav className="hidden md:flex items-center gap-8 font-body text-sm font-medium">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-foreground/80 hover:text-brand-primary transition-colors bg-transparent hover:bg-transparent focus:bg-transparent">
+                    Products
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-4 w-[400px] md:w-[500px] lg:w-[600px] lg:grid-cols-2">
+                      <li>
+                           <Link href="/products/flooring-walls" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                             <div className="text-sm font-medium leading-none">Flooring & Walls</div>
+                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                               Marble, Granite, Quartz - Interior & Exterior solutions
+                             </p>
+                           </Link>
+                       </li>
+                       <li>
+                            <Link href="/products/stairs-railings" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Stairs & Railings</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Custom-designed staircases and railings
+                              </p>
+                            </Link>
+                       </li>
+                       <li>
+                            <Link href="/products/cabinets" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Cabinets</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Luxury cabinetry solutions
+                              </p>
+                            </Link>
+                       </li>
+                       <li>
+                            <Link href="/products/countertops" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Countertops</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Granite, quartz, and marble solutions
+                              </p>
+                            </Link>
+                       </li>
+                       <li>
+                            <Link href="/products/windows-doors" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Windows & Doors</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Energy-efficient systems
+                              </p>
+                            </Link>
+                       </li>
+                       <li>
+                            <Link href="/products/metal-fencing-gates" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Metal Fencing & Gates</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Custom wrought iron and steel solutions
+                              </p>
+                            </Link>
+                       </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <Link href="/quote-wizard" className="text-foreground/80 hover:text-brand-primary transition-colors">
+              Quote Wizard
             </Link>
-            <Link href="/materials" className="text-foreground/80 hover:text-brand-primary transition-colors">
-              Materials
+            <Link href="/promotional-gallery" className="text-foreground/80 hover:text-brand-primary transition-colors">
+              Promotional Gallery
             </Link>
             <Link href="/about" className="text-foreground/80 hover:text-brand-primary transition-colors">
-              About GBTS
+              About Ultimate-Buildings
             </Link>
           </nav>
 

@@ -144,7 +144,7 @@ const leadershipTeam = [
 
 export default function AboutPage() {
   return (
-    <div className="relative min-h-screen bg-brand-dark pt-32 pb-24">
+    <div className="relative min-h-screen bg-transparent pt-32 pb-24">
       <NarrativeNav />
 
       {/* Background glow */}

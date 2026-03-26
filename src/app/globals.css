@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --font-sans: var(--font-body);
   --font-body: var(--font-body);
   --font-display: var(--font-display);
@@ -60,44 +60,59 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-shiny-text: shiny-text 8s infinite;
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+    }
+  }
+  @keyframes shiny-text {
+  0%, 90%, 100% {
+    background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+  30%, 60% {
+    background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
 }
 
 :root {
   /* Default to dark mode for cinematic feel */
   --background: oklch(0.13 0.02 260); /* Deep midnight blue/slate */
   --foreground: oklch(0.985 0 0);
-  
+
   --card: oklch(0.16 0.02 260);
   --card-foreground: oklch(0.985 0 0);
-  
+
   --popover: oklch(0.16 0.02 260);
   --popover-foreground: oklch(0.985 0 0);
-  
+
   --primary: oklch(0.8 0.15 85); /* Cinematic Gold */
   --primary-foreground: oklch(0.1 0.02 260);
-  
+
   --secondary: oklch(0.2 0.02 260);
   --secondary-foreground: oklch(0.985 0 0);
-  
+
   --muted: oklch(0.2 0.02 260);
   --muted-foreground: oklch(0.7 0.02 260);
-  
+
   --accent: oklch(0.2 0.02 260);
   --accent-foreground: oklch(0.985 0 0);
-  
+
   --destructive: oklch(0.6 0.2 20);
   --border: oklch(0.25 0.02 260);
   --input: oklch(0.25 0.02 260);
   --ring: oklch(0.8 0.15 85);
-  
+
   --chart-1: oklch(0.8 0.15 85);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  
+
   --radius: 0.75rem;
-  
+
   --sidebar: oklch(0.16 0.02 260);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.8 0.15 85);
@@ -118,13 +133,13 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
   }
-  
+
   /* Yellow glow effect for hero text */
   .glow-yellow {
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6)) drop-shadow(0 0 16px rgba(212, 175, 55, 0.4)) drop-shadow(0 0 24px rgba(212, 175, 55, 0.2));
     animation: pulse-glow 3s ease-in-out infinite alternate;
   }
-  
+
   @keyframes pulse-glow {
     from {
       filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6)) drop-shadow(0 0 16px rgba(212, 175, 55, 0.4)) drop-shadow(0 0 24px rgba(212, 175, 55, 0.2));

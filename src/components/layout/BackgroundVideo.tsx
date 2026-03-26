@@ -69,7 +69,7 @@ export function BackgroundVideo({
         allowFullScreen
         frameBorder="0"
         title="background-video"
-      ></iframe>
+       />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 to-brand-dark/60 pointer-events-none" />
     </motion.div>
   );
