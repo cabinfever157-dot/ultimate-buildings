@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
-import { CheckCircle, Star, Globe, Factory, ShieldCheck, Truck, Award, Home, Building, Users, ArrowRight } from "lucide-react";
+import { CheckCircle, Star, Globe, Factory, ShieldCheck, Truck, Home, Building, Users, ArrowRight, Award } from "lucide-react";
 
 // Magic sparkle effect
 const Sparkle = ({ size = 20, color = "#d4af37", delay = 0, style = {} }: any) => {
@@ -77,24 +77,44 @@ const companyStats = [
 // Our values
 const ourValues = [
   {
-    title: "Quality Craftsmanship",
-    description: "We deliver exceptional quality in every product, using premium materials and precision manufacturing.",
+    title: "Quality",
+    description: "We only work with Tier 1 well financed established factories",
     icon: <Star className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Customer Focus",
-    description: "Your satisfaction is our priority. We provide personalized service and tailored solutions.",
-    icon: <Users className="w-8 h-8 text-brand-primary" />,
+    title: "Reliability",
+    description: "Delivering as promised so we all sleep well at night",
+    icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Innovation",
-    description: "Staying ahead with cutting-edge technology and modern design solutions.",
+    title: "Value",
+    description: "Our factories understand every penny counts, that is why we have factory direct pricing",
     icon: <Factory className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Integrity",
-    description: "Honest business practices, transparent pricing, and reliable delivery.",
-    icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
+    title: "Flexibility",
+    description: "Our goal is to deliver your customized needs",
+    icon: <Award className="w-8 h-8 text-brand-primary" />,
+  },
+  {
+    title: "CX",
+    description: "The Cornerstone of our Buyer relationship with live USA Customer Support",
+    icon: <Users className="w-8 h-8 text-brand-primary" />,
+  },
+  {
+    title: "Teamwork",
+    description: "We are 1 team together and only grow together via our execution",
+    icon: <Users className="w-8 h-8 text-brand-primary" />,
+  },
+  {
+    title: "Our Team",
+    description: "We have employee/partner oversight at every factory production step to ensure desired results",
+    icon: <Building className="w-8 h-8 text-brand-primary" />,
+  },
+  {
+    title: "Appreciation",
+    description: "Thank you for putting your projects trust in us, we value your business",
+    icon: <CheckCircle className="w-8 h-8 text-brand-primary" />,
   },
 ];
 
