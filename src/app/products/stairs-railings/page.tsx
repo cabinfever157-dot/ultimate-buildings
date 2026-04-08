@@ -207,10 +207,10 @@ export default function StairsRailingsPage() {
 
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-foreground mb-2">
-                      {material.styles ? "Styles Available:" : "Finishes Available:"}
+                      Styles & Options
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {(material.styles || material.finishes || material.types || material.woodTypes)?.map((item, itemIndex) => (
+                      {(material.styles || material.finishes || [])?.map((item, itemIndex) => (
                         <span
                           key={itemIndex}
                           className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full border border-white/10"

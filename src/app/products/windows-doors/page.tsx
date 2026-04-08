@@ -239,10 +239,10 @@ export default function WindowsDoorsPage() {
 
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-foreground mb-2">
-                      {type.features ? "Advanced Features:" : type.finishes ? "Finish Options:" : type.woodTypes ? "Wood Types:" : type.materials ? "Material Options:" : "Options:"}
+                      Key Features
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {(type.features || type.finishes || type.woodTypes || type.materials)?.map((item, itemIndex) => (
+                      {type.features?.map((item, itemIndex) => (
                         <span
                           key={itemIndex}
                           className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full border border-white/10"
