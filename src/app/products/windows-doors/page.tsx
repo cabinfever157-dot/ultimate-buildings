@@ -6,19 +6,41 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
-// Window and door types
+// Window and door types - Custom fabricated, all types available
 const windowDoorTypes = [
   {
-    id: "aluminum-windows",
-    title: "Aluminum Windows",
-    description: "Slim profile windows with excellent thermal performance",
+    id: "french-slim",
+    title: "French Slim Steel",
+    description: "Custom fabricated French slim steel windows and doors. Up to local code - residential & commercial.",
     image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
     properties: [
+      "Custom fabricated to your measurements",
+      "Slim profiles for maximum glass area",
+      "Up to local code compliance",
+      "Residential & commercial",
+    ],
+    applications: [
+      "Modern architecture",
+      "Commercial buildings",
+      "Residential homes",
+      "High-end renovations",
+    ],
+    features: [
+      "Thermal break technology",
+      "Custom color finishes",
+      "Double/triple glazing options",
+    ],
+  },
+  {
+    id: "aluminum",
+    title: "Aluminum Systems",
+    description: "Custom fabricated aluminum windows and doors with thermal break technology.",
+    image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
+    properties: [
+      "Custom fabricated to your measurements",
       "Thermal break technology",
       "Slim sightlines for maximum glass area",
       "Corrosion-resistant finishes",
-      "Excellent energy efficiency",
-      "Low maintenance requirements",
     ],
     applications: [
       "Residential homes",
@@ -27,72 +49,56 @@ const windowDoorTypes = [
       "Modern architecture",
     ],
     features: [
-      "Double/triple glazing options",
-      "Sound reduction glass",
+      "Excellent energy efficiency",
+      "Low maintenance",
       "Custom color finishes",
-      "Motorized operation",
-      "Integrated blinds",
     ],
   },
   {
-    id: "steel-windows",
-    title: "Steel Windows & Doors",
-    description: "Industrial-strength windows with slim profiles",
-    image: "/images/bento/Modern-aluminum-window-systems.jpg",
-    properties: [
-      "Exceptional strength and durability",
-      "Slim profiles for modern aesthetics",
-      "High security performance",
-      "Custom fabrication capabilities",
-      "Long lifespan",
-    ],
-    applications: [
-      "Luxury residences",
-      "Commercial storefronts",
-      "Industrial buildings",
-      "Historic renovations",
-    ],
-    finishes: ["Galvanized", "Powder Coated", "Corten Steel", "Stainless Steel"],
-  },
-  {
-    id: "wood-windows",
-    title: "Premium Wood Windows",
-    description: "Classic wood windows with modern performance",
-    image: "/images/bento/High-end-kitchen-cabinetry.jpg",
-    properties: [
-      "Natural insulation properties",
-      "Timeless aesthetic appeal",
-      "Custom wood species and finishes",
-      "Energy-efficient designs",
-      "Sound absorption qualities",
-    ],
-    applications: [
-      "Traditional homes",
-      "Historic preservation",
-      "Luxury residences",
-      "Custom architecture",
-    ],
-    woodTypes: ["Mahogany", "Douglas Fir", "Oak", "Pine", "Cedar"],
-  },
-  {
-    id: "entry-doors",
-    title: "Entry Door Systems",
-    description: "Premium entry doors for security and curb appeal",
+    id: "wrought-iron",
+    title: "Wrought Iron",
+    description: "Custom fabricated wrought iron doors and windows. Custom design to fit your needs.",
     image: "/images/bento/wrought-iron-wooden-door.jpg",
     properties: [
+      "Custom fabricated to your measurements",
+      "Custom design to fit your needs",
       "Enhanced security features",
-      "Weather-resistant construction",
-      "Energy-efficient insulation",
-      "Custom design options",
-      "Durable finishes",
+      "Durable powder-coated finishes",
     ],
     applications: [
       "Residential front doors",
       "Commercial entrances",
-      "Patio and garden doors",
       "Security doors",
+      "Decorative elements",
     ],
-    materials: ["Fiberglass", "Steel", "Wood", "Aluminum-Clad Wood"],
+    features: [
+      "Weather-resistant construction",
+      "Custom design options",
+      "Residential & commercial",
+    ],
+  },
+  {
+    id: "mixed-materials",
+    title: "Mixed Materials",
+    description: "Custom fabricated windows and doors using mixed materials for unique designs.",
+    image: "/images/bento/Modern-aluminum-window-systems.jpg",
+    properties: [
+      "Custom fabricated to your measurements",
+      "Wood-clad aluminum",
+      "Fiberglass with wood interiors",
+      "Custom configurations",
+    ],
+    applications: [
+      "Modern architecture",
+      "Traditional homes",
+      "Custom projects",
+      "Energy-efficient designs",
+    ],
+    features: [
+      "Best of both materials",
+      "Custom wood species",
+      "Low maintenance exteriors",
+    ],
   },
 ];
 
@@ -159,7 +165,7 @@ export default function WindowsDoorsPage() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Energy-efficient window and door systems with premium materials and craftsmanship
+            Energy-efficient window and door systems with quality materials and craftsmanship
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -371,7 +377,7 @@ export default function WindowsDoorsPage() {
           className="text-center py-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-6">
-            Transform your space with premium windows and doors
+            Transform your space with quality windows and doors - factory direct pricing
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Our window and door specialists can help you choose the perfect solutions for your project

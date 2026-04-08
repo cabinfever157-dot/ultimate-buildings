@@ -26,7 +26,7 @@ const cabinetTypes = [
   {
     id: "bathroom",
     title: "Bathroom Vanities",
-    description: "Luxury bathroom storage solutions with premium materials",
+    description: "Custom bathroom storage solutions with quality materials",
     image: "/images/bento/luxury-kitchen-with-custom-wood-cabinetry.jpg",
     features: [
       "Water-resistant materials and finishes",

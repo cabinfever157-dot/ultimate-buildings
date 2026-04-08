@@ -104,7 +104,7 @@ export default function HomePage() {
                 transition={{ duration: 1, delay: 0.2, type: "spring", bounce: 0.4 }}
                 className="max-w-5xl"
               >
-                <AnimatedGradientText className="mb-8 cursor-pointer">
+                  <AnimatedGradientText className="mb-8 cursor-pointer">
                   <Sparkles className="w-4 h-4 mr-2" />
                   <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
                   <span
@@ -112,17 +112,16 @@ export default function HomePage() {
                       `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
                     )}
                   >
-                    The 2026 Collection is now available
+                    Contact Lloyd Perlman: 513-800-1980
                   </span>
                   <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                 </AnimatedGradientText>
 
                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
-                   Build Beyond <br/>
-                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Boundaries</span>
-                 </h1>
+                    Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
+                  </h1>
                 <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 font-body font-light">
-                  From French Slim Steel Windows to Wrought Iron Doors and Quartz Decks. Discover the ultimate materials for your next masterpiece.
+                  Premium Cabinetry, Doors, Windows, Staircases & More. We handle logistics, customs, tariffs, and delivery. Best Prices. Efficient Service. On-Time.
                 </p>
                  <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -177,6 +176,62 @@ export default function HomePage() {
                 ))}
               </BentoGrid>
             </section>
+
+            {/* Factory Direct Process Section */}
+            <section className="py-24 relative z-20">
+              <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="mb-16 text-center"
+              >
+                <h2 className="text-4xl md:text-6xl font-display font-light text-white tracking-tight">
+                  Factory Direct <span className="text-brand-primary font-medium">to Your Job Site</span>
+                </h2>
+                <p className="text-lg text-white/60 mt-4 max-w-2xl mx-auto">
+                  We handle everything from factory to foundation. No middlemen. No LC required.
+                </p>
+                <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-brand-primary to-transparent mt-8 mx-auto rounded-full opacity-50" />
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {[
+                  {
+                    step: "1",
+                    title: "Inquire & Design",
+                    desc: "Share your project requirements. We provide shop drawings and 3D visualizations for your approval.",
+                    icon: "📐"
+                  },
+                  {
+                    step: "2",
+                    title: "Produce & QC",
+                    desc: "Factory production with progress reports and quality photos. Trial installation before shipping.",
+                    icon: "🏭"
+                  },
+                  {
+                    step: "3",
+                    title: "Deliver & Install",
+                    desc: "We handle logistics, customs, tariffs, and delivery to your job site. Door-to-door service.",
+                    icon: "🚚"
+                  }
+                ].map((item, i) => (
+                  <motion.div
+                    key={item.step}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.2 }}
+                    className="glass-panel rounded-2xl p-8 border border-white/10 text-center"
+                  >
+                    <div className="text-4xl mb-4">{item.icon}</div>
+                    <div className="text-3xl font-display text-brand-primary mb-3">Step {item.step}</div>
+                    <h3 className="text-xl font-display text-white mb-3">{item.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
           </main>
           
           {/* Ambient background glows */}
@@ -208,56 +263,56 @@ const Skeleton = ({ src }: { src?: string }) => (
 
 const features = [
   {
-    title: "French Slim Steel Windows & Doors",
-    header: <Skeleton src="/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg" />,
+    title: "Windows & Doors",
+    header: <Skeleton src="/images/projects/page05_img02.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/windows-doors",
-  },
-  {
-    title: "Quartz & Granite Decks",
-    header: <Skeleton src="/images/bento/Luxury-granite-marble-countertop.jpg" />,
-    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
-    href: "/products/countertops",
-  },
-  {
-    title: "Light Steel Prefab Construction",
-    header: <Skeleton src="/images/bento/Light-Steel-Prefab-Construction.jpg" />,
-    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
-    href: "/products",
-  },
-  {
-    title: "Wrought Iron & Wooden Doors",
-    header: <Skeleton src="/images/bento/wrought-iron-wooden-door.jpg" />,
-    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
-    href: "/products/windows-doors",
-  },
-  {
-    title: "Stairs & Railings",
-    header: <Skeleton src="/images/bento/elegant-granite-marble-kitchen-countertops.jpg" />,
-    icon: <Box className="h-6 w-6 text-brand-primary" />,
-    href: "/products/stairs-railings",
   },
   {
     title: "Premium Cabinets",
-    header: <Skeleton src="/images/bento/High-end-kitchen-cabinetry.jpg" />,
+    header: <Skeleton src="/images/projects/page06_img03.jpg" />,
     icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",
   },
   {
-    title: "Stone Countertops",
-    header: <Skeleton src="/images/bento/Luxury-granite-marble-countertop.jpg" />,
+    title: "Staircases & Railings",
+    header: <Skeleton src="/images/projects/page13_img01.jpg" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
-    href: "/products/countertops",
+    href: "/products/stairs-railings",
   },
   {
-    title: "Windows & Doors",
-    header: <Skeleton src="/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg" />,
+    title: "Wrought Iron & Metal Gates",
+    header: <Skeleton src="/images/projects/page18_img01.jpg" />,
     icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/products/windows-doors",
   },
   {
+    title: "Custom Vanities & Closets",
+    header: <Skeleton src="/images/projects/page16_img01.jpg" />,
+    icon: <Box className="h-6 w-6 text-brand-primary" />,
+    href: "/products/cabinets",
+  },
+  {
+    title: "Flooring Solutions",
+    header: <Skeleton src="/images/projects/page12_img01.jpg" />,
+    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
+    href: "/materials",
+  },
+  {
+    title: "Stone Countertops",
+    header: <Skeleton src="/images/projects/page08_img01.jpg" />,
+    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
+    href: "/products/countertops",
+  },
+  {
+    title: "Factory Direct Pricing",
+    header: <Skeleton src="/images/projects/page04_img01.jpg" />,
+    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
+    href: "/quote-wizard",
+  },
+  {
     title: "Metal Fencing & Gates",
-    header: <Skeleton src="/images/bento/Metal-Fencing-Gates.jpg" />,
+    header: <Skeleton src="/images/projects/page14_img01.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/metal-fencing-gates",
   },

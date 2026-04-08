@@ -66,101 +66,87 @@ const Shimmer = ({ children }: any) => {
   );
 };
 
-// Company information
+// Company information - Ultimate Buildings / GBTS
 const companyStats = [
-  { value: "2020", label: "Founded", icon: <Home className="w-6 h-6" /> },
-  { value: "50+", label: "Products", icon: <Building className="w-6 h-6" /> },
-  { value: "1000+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
+  { value: "Factory Direct", label: "Pricing Model", icon: <Factory className="w-6 h-6" /> },
   { value: "Global", label: "Reach", icon: <Globe className="w-6 h-6" /> },
+  { value: "USA, UK, AU, NZ", label: "Completed Projects", icon: <Building className="w-6 h-6" /> },
+  { value: "Cincinnati, OH", label: "Headquarters", icon: <Home className="w-6 h-6" /> },
 ];
 
-// Our values
+// Our values - GBTS Core Pillars
 const ourValues = [
   {
-    title: "Quality",
-    description: "We only work with Tier 1 well financed established factories",
-    icon: <Star className="w-8 h-8 text-brand-primary" />,
-  },
-  {
-    title: "Reliability",
-    description: "Delivering as promised so we all sleep well at night",
-    icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
-  },
-  {
-    title: "Value",
-    description: "Our factories understand every penny counts, that is why we have factory direct pricing",
+    title: "Factory Direct",
+    description: "Eliminating middlemen. Best pricing straight from our factories to your job site.",
     icon: <Factory className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Flexibility",
-    description: "Our goal is to deliver your customized needs",
-    icon: <Award className="w-8 h-8 text-brand-primary" />,
+    title: "All Logistics Included",
+    description: "We handle customs, tariffs, shipping, and delivery. No LC required. Door-to-door service.",
+    icon: <Truck className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "CX",
-    description: "The Cornerstone of our Buyer relationship with live USA Customer Support",
-    icon: <Users className="w-8 h-8 text-brand-primary" />,
+    title: "Own the Mine",
+    description: "Fully integrated granite and marble operations from quarry to fabrication. Direct quality control.",
+    icon: <Star className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Teamwork",
-    description: "We are 1 team together and only grow together via our execution",
-    icon: <Users className="w-8 h-8 text-brand-primary" />,
-  },
-  {
-    title: "Our Team",
-    description: "We have employee/partner oversight at every factory production step to ensure desired results",
-    icon: <Building className="w-8 h-8 text-brand-primary" />,
-  },
-  {
-    title: "Appreciation",
-    description: "Thank you for putting your projects trust in us, we value your business",
-    icon: <CheckCircle className="w-8 h-8 text-brand-primary" />,
-  },
-];
-
-// What sets us apart
-const differentiators = [
-  {
-    title: "Factory Direct Pricing",
-    description: "Eliminating middlemen to provide competitive pricing without sacrificing quality.",
-  },
-  {
-    title: "Complete Logistics",
-    description: "Handling all shipping, duties, tariffs, and delivery to your job site.",
+    title: "On-Time Delivery",
+    description: "Coordinated freight and logistics to ensure your project stays on schedule.",
+    icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
   },
   {
     title: "Custom Solutions",
-    description: "Your size, your colors, your details - tailored to your exact specifications.",
+    description: "Your size, your colors, your details — with shop drawings and 3D visualizations.",
+    icon: <Award className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Global Sourcing",
-    description: "Premium materials from top quarries and manufacturers worldwide.",
+    title: "USA Customer Support",
+    description: "Live USA-based customer support throughout the entire process.",
+    icon: <Users className="w-8 h-8 text-brand-primary" />,
+  },
+  {
+    title: "Quality Assurance",
+    description: "Trial installations with photo/video proof before shipping. QC at every step.",
+    icon: <CheckCircle className="w-8 h-8 text-brand-primary" />,
+  },
+  {
+    title: "Global Reach",
+    description: "Completed projects across USA, UK, Australia, New Zealand, and Caribbean.",
+    icon: <Globe className="w-8 h-8 text-brand-primary" />,
   },
 ];
 
-// Leadership team
-const leadershipTeam = [
+// What sets us apart - GBTS Differentiators
+const differentiators = [
   {
-    name: "John Smith",
-    title: "CEO & Founder",
-    bio: "20+ years in construction and building materials industry. Visionary leader with expertise in global sourcing.",
+    title: "Factory Direct Pricing",
+    description: "Eliminating middlemen to provide competitive pricing without sacrificing quality. Supply chain services straight to your project.",
   },
   {
-    name: "Sarah Johnson",
-    title: "Director of Operations",
-    bio: "15 years managing complex logistics and supply chain operations for international projects.",
+    title: "Complete Logistics Included",
+    description: "We handle all shipping, customs clearance, duties, tariffs, and delivery directly to your job site. No LC required.",
   },
   {
-    name: "Michael Chen",
-    title: "Head of Product Development",
-    bio: "Innovator with 12 years experience in architectural materials and custom product design.",
+    title: "Own the Mine",
+    description: "We own the quarry for granite and marble — fully integrated from mine to fabrication. Direct control over quality and pricing.",
   },
   {
-    name: "Emily Rodriguez",
-    title: "Customer Experience Director",
-    bio: "10 years ensuring client satisfaction and delivering exceptional service experiences.",
+    title: "Custom Solutions",
+    description: "Your size, your colors, your details — tailored to exact specifications with shop drawings and 3D visualizations included.",
+  },
+  {
+    title: "Trial Installation Proof",
+    description: "Factory executes complete trial installation with photo and video proof before final payment and shipping.",
+  },
+  {
+    title: "Flexible Quality Control",
+    description: "Inspections by your own representative or entrusted third-party inspector — your choice.",
   },
 ];
+
+
 
 export default function AboutPage() {
   return (
@@ -201,7 +187,7 @@ export default function AboutPage() {
               className="text-4xl md:text-6xl font-display font-medium text-white mb-6 relative"
             >
               About <span className="text-brand-primary relative">
-                Ultimate Buildings
+                GBTS
                 <motion.span
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: [0, 1, 0.5], scale: [0, 2, 0] }}
@@ -231,8 +217,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Discover the story behind Ultimate Buildings - where innovation meets craftsmanship
-            in creating exceptional building materials for modern architecture and design.
+            Discover GBTS — where quality meets factory-direct pricing for custom architectural finishing products. Led by CEO Lloyd Perlman from Cincinnati, Ohio.
           </motion.div>
         </section>
 
@@ -253,9 +238,7 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="text-muted-foreground leading-[1.7] mb-8"
             >
-              Founded in 2020, Ultimate Buildings emerged from a vision to revolutionize the building materials industry
-              by combining premium quality with innovative design. What started as a small operation has grown into a
-              global provider of architectural materials, serving residential and commercial projects worldwide.
+              Ultimate Buildings is your direct source for commercial and residential custom architectural finishing products with factory-direct pricing.
             </motion.div>
 
             <motion.div
@@ -264,9 +247,7 @@ export default function AboutPage() {
               transition={{ delay: 0.3 }}
               className="text-muted-foreground leading-[1.7] mb-8"
             >
-              Our mission is simple: <span className="text-brand-primary font-medium">Deliver exceptional quality, innovative solutions,
-              and unparalleled service</span> to architects, builders, and homeowners who demand the best. We believe that
-              every project deserves materials that inspire, perform, and endure.
+              Our core value proposition is acting as a <span className="text-brand-primary font-medium">"1 Stop Finishing Products" provider</span> that offers factory-direct supply chain services straight to the job site. We pride ourselves on offering the <span className="text-brand-primary font-medium">best prices, efficient service, and on-time delivery.</span>
             </motion.div>
 
             <motion.div
@@ -275,9 +256,7 @@ export default function AboutPage() {
               transition={{ delay: 0.4 }}
               className="text-muted-foreground leading-[1.7]"
             >
-              With a commitment to sustainability, craftsmanship, and customer satisfaction, we've built a reputation for
-              excellence in the industry. Our factory-direct model ensures competitive pricing while maintaining the
-              highest standards of quality and service.
+              With completed projects across the USA, UK, Australia, New Zealand, and the Caribbean, we've built a reputation for excellence in delivering customized architectural products. Our end-to-end service — from inquiry and quotation through production, logistics, and after-sales support — ensures your project succeeds.
             </motion.div>
           </div>
 
@@ -411,72 +390,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Leadership */}
-        <section className="mb-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-display font-medium text-white mb-12 text-center"
-          >
-            Leadership Team
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leadershipTeam.map((member, i) => (
-              <FloatAnimation key={member.name} delay={0.1 + i * 0.1}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.3 } }}
-                  transition={{ delay: 0.1 + i * 0.1, duration: 0.6, ease: [0.4, 0.0, 0.2, 1] }}
-                  className="glass-panel rounded-xl p-6 border border-white/10 hover:border-brand-primary/20 transition-all relative overflow-hidden"
-                >
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: 0.2 + i * 0.1, duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
-                    className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-4 mx-auto relative"
-                  >
-                    <span className="text-2xl font-display text-white z-10">👤</span>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: [0, 0.4, 0] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="absolute inset-0 bg-gradient-to-br from-brand-primary/15 to-transparent rounded-full blur-sm"
-                    />
-                    </motion.div>
-                  <motion.div
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.2 + i * 0.1 }}
-                    className="text-xl font-display font-medium text-white mb-2 text-center"
-                  >
-                    {member.name}
-                  </motion.div>
-                  <motion.div
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
-                    className="text-brand-primary text-sm mb-3 text-center"
-                  >
-                    {member.title}
-                  </motion.div>
-                  <motion.div
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
-                    className="text-muted-foreground text-sm leading-[1.6] text-center"
-                  >
-                    <Shimmer>
-                      {member.bio}
-                    </Shimmer>
-                  </motion.div>
-                </motion.div>
-              </FloatAnimation>
-            ))}
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="text-center py-16 relative">
           <FloatAnimation delay={0.2}>
@@ -486,7 +399,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
               className="text-3xl md:text-4xl font-display font-medium text-white mb-6 relative"
             >
-              Experience the Ultimate Buildings Difference
+              Experience the GBTS Difference
               <motion.span
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: [0, 1, 0.5], scale: [0, 1.5, 0] }}
@@ -501,8 +414,7 @@ export default function AboutPage() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            Discover why architects, builders, and homeowners trust us for their most ambitious projects.
-            Contact us today to learn how we can bring your vision to life.
+            Connect with Lloyd Perlman directly. Get factory-direct pricing on custom cabinetry, doors, windows, staircases, and more.
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05 }}

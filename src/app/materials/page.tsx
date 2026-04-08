@@ -34,9 +34,10 @@ const getIconComponent = (iconName: string) => {
 export const materialsData = [
   {
     id: 'spc-flooring',
-    title: 'Stone Plastic Composite',
+    title: 'SPC Flooring',
     category: 'Flooring',
-    description: 'Revolutionary hybrid flooring combining stone durability with plastic flexibility',
+    description: 'Stone Plastic Composite flooring — waterproof, durable, and factory direct. Perfect for high-traffic residential and commercial spaces.',
+    image: '/images/projects/page08_img03.jpg',
     icon: 'FlooringIcon',
     properties: [
       '100% Waterproof',
@@ -55,16 +56,18 @@ export const materialsData = [
   },
   {
     id: 'natural-stone',
-    title: 'Natural Stone Surfaces',
+    title: 'Granite & Marble',
     category: 'Premium Materials',
-    description: 'Luxury stone surfaces sourced from premium quarries worldwide',
+    description: 'We own the quarry. Fully integrated from mine to fabrication. Premium stone surfaces with direct quality control.',
+    image: '/images/projects/page05_img04.jpg',
     icon: 'StoneIcon',
     properties: [
+      'Own the Mine',
+      'Factory Direct',
       'Heat Resistant',
       'Stain Resistant',
       'Timeless Elegance',
-      'Durable for Decades',
-      'Unique Natural Patterns'
+      'Durable for Decades'
     ],
     applications: [
       'Kitchen Countertops',
@@ -204,17 +207,29 @@ export default function MaterialsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -5 }}
-              className="group relative flex flex-col p-8 rounded-2xl glass-panel border border-white/10 hover:border-brand-primary/30 transition-all overflow-hidden"
+              className="group relative flex flex-col rounded-2xl glass-panel border border-white/10 hover:border-brand-primary/30 transition-all overflow-hidden"
             >
+              {/* Material image */}
+              {material.image && (
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={material.image}
+                    alt={material.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              
+              <div className="p-6 flex flex-col flex-1">
               {/* Material icon with glow */}
-              <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-brand-primary/30 transition-all">
+              <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-4 border border-white/10 group-hover:border-brand-primary/30 transition-all">
                 {getIconComponent(material.icon)}
               </div>
 
-              <h3 className="text-2xl font-display font-medium text-white mb-4">
+              <h3 className="text-2xl font-display font-medium text-white mb-3">
                 {material.title}
               </h3>
-              <p className="text-muted-foreground mb-6 text-sm leading-[1.6] flex-1">
+              <p className="text-muted-foreground mb-4 text-sm leading-[1.6] flex-1">
                 {material.description}
               </p>
 
@@ -246,10 +261,11 @@ export default function MaterialsPage() {
               {/* Learn More Button */}
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                className="mt-6 w-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all py-3 px-6 rounded-xl border border-white/10 hover:border-brand-primary/50 flex items-center justify-center gap-2 text-sm font-medium"
+                className="mt-4 w-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all py-3 px-6 rounded-xl border border-white/10 hover:border-brand-primary/50 flex items-center justify-center gap-2 text-sm font-medium"
               >
                 Explore {material.title} <ArrowRight className="w-4 h-4" />
               </motion.button>
+              </div>
             </motion.div>
           ))}
         </div>

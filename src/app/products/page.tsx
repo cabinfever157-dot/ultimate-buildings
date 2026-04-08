@@ -6,84 +6,112 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
-// Product categories data
+// Product categories data - All products are custom fabricated to your measurements, colors, and details
 const productCategories = [
   {
-    id: "flooring-walls",
-    title: "Flooring & Walls",
-    description: "Premium flooring and wall solutions for residential and commercial spaces",
+    id: "stone-flooring",
+    title: "Stone Flooring & Walls",
+    description: "Custom fabricated stone flooring and walls to your measurements. Premium flooring for interior and exterior residential and commercial spaces.",
     image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
-    materials: ["Marble", "Granite", "Quartz"],
+    materials: ["Marble", "Granite", "Quartz", "Limestone"],
     features: [
+      "Custom fabricated to your measurements",
+      "Custom colors and finishes",
       "Interior & Exterior applications",
-      "Custom patterns and finishes",
       "Durable and low-maintenance",
-      "Wide range of colors and textures",
+    ],
+  },
+  {
+    id: "spc-flooring",
+    title: "SPC Flooring",
+    description: "Custom SPC flooring - click-lock, glue-down, lay-flat options. 5-week production. Your brand packaging available.",
+    image: "/images/projects/page08_img03.jpg",
+    materials: ["SPC Core", "UV Coating", "Click-Lock", "Glue-Down", "Lay-Flat"],
+    features: [
+      "Custom fabricated to your measurements",
+      "5 weeks production from order confirmation",
+      "Click Lock – Glue Down – Lay Flat",
+      "Custom ml wear thickness & mm plank thickness",
+      "Your brand packaging available",
+    ],
+  },
+  {
+    id: "prefab-construction",
+    title: "Prefab Construction",
+    description: "Custom prefab construction components - hotels, apartments, offices. Volume builder pricing.",
+    image: "/images/bento/Light-Steel-Prefab-Construction.jpg",
+    materials: ["Light Steel Frame", "Prefab Panels", "Structural Components"],
+    features: [
+      "Custom fabricated to your measurements",
+      "Hotels, Apartments, Offices",
+      "Volume builder pricing",
+      "Factory direct delivery",
     ],
   },
   {
     id: "stairs-railings",
     title: "Stairs & Railings",
-    description: "Custom-designed staircases and railing systems for luxury properties",
+    description: "Custom fabricated staircases and railings. Safety & code compliant to your location.",
     image: "/images/bento/Modern-aluminum-window-systems.jpg",
     materials: ["Wrought Iron", "Stainless Steel", "Glass", "Wood"],
     features: [
-      "Custom fabrication",
-      "Safety compliant designs",
+      "Custom fabricated to your measurements",
+      "Safety & Code compliant",
       "Modern and classic styles",
       "Durable finishes",
     ],
   },
   {
     id: "cabinets",
-    title: "Cabinets",
-    description: "Luxury cabinetry solutions for kitchens, bathrooms, and storage spaces",
+    title: "Cabinets & Storage",
+    description: "Custom fabricated cabinets for kitchens, bathrooms, and storage. Volume buyers welcome.",
     image: "/images/bento/High-end-kitchen-cabinetry.jpg",
-    materials: ["Premium Wood", "Laminates", "Metal", "Glass"],
+    materials: ["Wood", "Laminates", "Metal", "Glass"],
     features: [
-      "Custom design and sizing",
+      "Custom fabricated to your measurements",
+      "Custom colors and details",
+      "Residential & commercial uses",
       "Soft-close mechanisms",
-      "Premium hardware",
-      "Variety of finishes",
     ],
   },
   {
     id: "countertops",
     title: "Countertops",
-    description: "Durable and elegant countertop solutions for kitchens and bathrooms",
+    description: "Custom fabricated granite, marble, quartz. Own the quarry. Slabs and fabrication available.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
-    materials: ["Granite", "Quartz", "Marble", "Solid Surface"],
+    materials: ["Granite", "Quartz", "Marble"],
     features: [
+      "Custom fabricated to your measurements",
+      "Own the quarry - factory direct",
+      "Custom edge profiles (12+ styles)",
+      "Slabs or custom fabrication",
       "Heat and scratch resistant",
-      "Custom edge profiles",
-      "Seamless installation",
-      "Easy maintenance",
     ],
   },
   {
     id: "windows-doors",
     title: "Windows & Doors",
-    description: "Energy-efficient window and door systems with premium materials",
+    description: "Custom windows and doors - Wrought Iron, French Slim, Aluminum, Mixed Materials. Up to local code.",
     image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
-    materials: ["Aluminum", "Wood", "Vinyl", "Fiberglass"],
+    materials: ["Wrought Iron", "French Slim", "Aluminum", "Mixed Materials"],
     features: [
-      "Thermal break technology",
-      "Sound insulation",
-      "Custom sizes and shapes",
-      "Weather-resistant finishes",
+      "Custom fabricated to your measurements",
+      "Custom colors and details",
+      "Exterior & Interior",
+      "Up to local code - residential & commercial",
     ],
   },
   {
-    id: "metal-fencing-gates",
-    title: "Metal Fencing & Gates",
-    description: "Custom metal fencing and gate solutions for security and curb appeal",
+    id: "metal-products",
+    title: "Metal Products",
+    description: "Custom fencing, gates, partitions, garage doors. Custom designed & sized to fit your needs.",
     image: "/images/bento/Metal-Fencing-Gates.jpg",
-    materials: ["Wrought Iron", "Steel", "Aluminum", "Brass"],
+    materials: ["Wrought Iron", "Steel", "Aluminum", "Garage Doors"],
     features: [
-      "Custom design and fabrication",
+      "Custom fabricated to your measurements",
+      "Custom designed & sized",
+      "Residential & commercial",
       "Powder-coated finishes",
-      "Security-enhanced options",
-      "Automated gate systems",
     ],
   },
 ];
@@ -157,7 +185,7 @@ export default function ProductsPage() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Discover our comprehensive range of premium building materials and solutions
+            Discover our comprehensive range of factory-direct building materials and solutions
           </motion.p>
         </div>
 

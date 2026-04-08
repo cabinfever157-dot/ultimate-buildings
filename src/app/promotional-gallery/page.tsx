@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
-// Project data for the promotional gallery
+// Project data for the promotional gallery - GBTS Global Projects
 const projectTypes = [
   {
     id: "multi-unit",
@@ -15,99 +15,99 @@ const projectTypes = [
     description: "Large-scale residential and commercial developments",
     projects: [
       {
-        id: "luxury-condos",
-        title: "Luxury Waterfront Condominiums",
-        description: "500-unit high-rise with premium marble flooring and granite countertops",
-        location: "Miami, Florida",
-        size: "500,000 sq ft",
-        materials: ["Marble Flooring", "Granite Countertops", "Aluminum Windows"],
-        image: "/images/bento/luxury-kitchen-with-custom-wood-cabinetry.jpg",
+        id: "tampa-home",
+        title: "Tampa Bay Residence",
+        description: "Complete kitchen cabinetry package for luxury waterfront home",
+        location: "Tampa, Florida",
+        size: "Custom Residential",
+        materials: ["Kitchen Cabinets", "Quartz Countertops", "Custom Cabinetry"],
+        image: "/images/projects/page05_img03.jpg",
       },
       {
-        id: "apartment-complex",
-        title: "Modern Apartment Complex",
-        description: "300-unit development with energy-efficient systems",
-        location: "Austin, Texas",
-        size: "350,000 sq ft",
-        materials: ["SPC Flooring", "Quartz Countertops", "Aluminum Doors"],
-        image: "/images/bento/Modern-aluminum-window-systems.jpg",
+        id: "ohio-apartments",
+        title: "Ohio Apartment Complex",
+        description: "Multi-unit development with complete window, door, staircase and railing package",
+        location: "Ohio, USA",
+        size: "Multi-Family Residential",
+        materials: ["Windows", "Doors", "Staircases", "Railings"],
+        image: "/images/projects/page07_img02.jpg",
       },
       {
-        id: "student-housing",
-        title: "University Student Housing",
-        description: "Durable and stylish materials for high-traffic areas",
-        location: "Boston, Massachusetts",
-        size: "200,000 sq ft",
-        materials: ["Natural Stone Flooring", "Laminate Countertops", "Steel Railings"],
-        image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
+        id: "aruba-full-home",
+        title: "Aruba Caribbean Villa",
+        description: "Complete architectural finishing package for luxury island home",
+        location: "Aruba",
+        size: "Luxury Villa",
+        materials: ["Cabinets", "Doors", "Windows", "Staircase", "Railings", "Vanities"],
+        image: "/images/projects/page12_img01.jpg",
       },
     ],
   },
   {
     id: "public",
-    title: "Public Projects",
-    description: "Government and community infrastructure projects",
+    title: "International Projects",
+    description: "Global projects showcasing international craftsmanship",
     projects: [
       {
-        id: "civic-center",
-        title: "Metropolitan Civic Center",
-        description: "Grand public space with marble and granite architectural elements",
-        location: "Chicago, Illinois",
-        size: "1,200,000 sq ft",
-        materials: ["Italian Marble", "Granite Cladding", "Custom Wrought Iron"],
-        image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+        id: "uk-villa",
+        title: "UK Country Villa",
+        description: "Custom curved staircase for elegant country estate",
+        location: "United Kingdom",
+        size: "Luxury Residential",
+        materials: ["Custom Staircase", "Premium Materials", "Precision Craftsmanship"],
+        image: "/images/projects/page13_img02.jpg",
       },
       {
-        id: "library",
-        title: "Central Public Library",
-        description: "Modern learning space with premium wood and stone finishes",
-        location: "Seattle, Washington",
-        size: "850,000 sq ft",
-        materials: ["Premium Oak", "Quartz Surfaces", "Aluminum Systems"],
-        image: "/images/bento/High-end-kitchen-cabinetry.jpg",
+        id: "australia-hotel",
+        title: "Australian Resort Hotel",
+        description: "Walk-in closets and bathroom vanities for boutique resort",
+        location: "Australia",
+        size: "Resort Hospitality",
+        materials: ["Walk-in Closets", "Bathroom Vanities", "Custom Cabinetry"],
+        image: "/images/projects/page16_img02.jpg",
       },
       {
-        id: "transit-hub",
-        title: "Regional Transit Hub",
-        description: "High-traffic transportation facility with durable materials",
-        location: "San Francisco, California",
-        size: "600,000 sq ft",
-        materials: ["SPC Flooring", "Stainless Steel", "Tempered Glass"],
-        image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
+        id: "nz-hotel",
+        title: "New Zealand Boutique Hotel",
+        description: "Sweeping curved staircase as signature architectural feature",
+        location: "New Zealand",
+        size: "Boutique Hospitality",
+        materials: ["Curved Staircase", "Custom Design", "Structural Engineering"],
+        image: "/images/projects/page14_img02.jpg",
       },
     ],
   },
   {
     id: "private",
-    title: "Private Projects",
-    description: "Exclusive residential and private commissions",
+    title: "Specialty Projects",
+    description: "Unique commercial and residential commissions",
     projects: [
       {
-        id: "estate-mansion",
-        title: "Beverly Hills Estate Mansion",
-        description: "Luxury private residence with custom marble and wrought iron work",
-        location: "Beverly Hills, California",
-        size: "25,000 sq ft",
-        materials: ["Carrara Marble", "Custom Wrought Iron", "Premium Mahogany"],
-        image: "/images/bento/luxury-kitchen-with-custom-wood-cabinetry.jpg",
+        id: "arizona-estate",
+        title: "Arizona Desert Estate",
+        description: "Custom cabinetry and wrought iron entry doors for southwestern luxury home",
+        location: "Arizona, USA",
+        size: "Luxury Estate",
+        materials: ["Custom Cabinetry", "Wrought Iron Doors", "Designer Hardware"],
+        image: "/images/projects/page18_img02.jpg",
       },
       {
-        id: "penthouse",
-        title: "Manhattan Penthouse Renovation",
-        description: "High-end urban renovation with Italian marble and smart glass",
-        location: "New York, New York",
-        size: "8,500 sq ft",
-        materials: ["Calacatta Marble", "Smart Glass Systems", "Brass Accents"],
-        image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
+        id: "us-shopping-mall",
+        title: "Regional Shopping Mall",
+        description: "Architectural staircase and railing system for premier retail destination",
+        location: "USA",
+        size: "Commercial Retail",
+        materials: ["Staircase", "Railings", "Architectural Metalwork"],
+        image: "/images/projects/page15_img02.jpg",
       },
       {
-        id: "vineyard-estate",
-        title: "Napa Valley Vineyard Estate",
-        description: "Rustic luxury with natural stone and reclaimed wood",
-        location: "Napa, California",
-        size: "18,000 sq ft",
-        materials: ["Limestone", "Reclaimed Oak", "Copper Accents"],
-        image: "/images/bento/Modern-aluminum-window-systems.jpg",
+        id: "fitness-gym",
+        title: "Premium Fitness Center",
+        description: "Modern staircase and glass railings for luxury gym facility",
+        location: "USA",
+        size: "Commercial Fitness",
+        materials: ["Custom Staircase", "Glass Railings", "Metal Accents"],
+        image: "/images/projects/page11_img02.jpg",
       },
     ],
   },
@@ -141,7 +141,7 @@ export default function PromotionalGallery() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            <span className="text-brand-primary">Promotional</span> Gallery
+            GBTS <span className="text-brand-primary">Project</span> Gallery
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -149,7 +149,7 @@ export default function PromotionalGallery() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Explore our portfolio of successful projects across various sectors and see how our premium materials transform spaces
+            Explore our global portfolio of completed projects across the USA, UK, Australia, New Zealand, and beyond. Factory-direct architectural finishing products delivered worldwide.
           </motion.p>
         </div>
 

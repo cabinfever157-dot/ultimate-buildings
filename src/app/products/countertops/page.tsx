@@ -6,18 +6,18 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
-// Countertop materials data
+// Countertop materials data - Custom fabricated, Own the Mine
 const countertopMaterials = [
   {
     id: "granite",
     title: "Granite Countertops",
-    description: "Natural stone with exceptional durability and unique patterns",
+    description: "Custom fabricated granite. Own the quarry - factory direct pricing with 20 acres of stock stone blocks.",
     image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
     properties: [
-      "Extremely hard and scratch resistant",
+      "Own the quarry - factory direct",
+      "20 acres of stock stone blocks",
+      "Custom cut to your project",
       "Heat resistant up to 1200°F",
-      "Unique natural patterns and colors",
-      "Long-lasting with proper sealing",
     ],
     applications: [
       "Kitchen countertops",
@@ -27,18 +27,18 @@ const countertopMaterials = [
     ],
     colors: ["Absolute Black", "Ubatuba", "Santa Cecilia", "Bianco Antico", "Blue Pearl"],
     finishes: ["Polished", "Honed", "Leathered", "Flamed"],
-    edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Waterfall"],
+    edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Waterfall", "Custom"],
   },
   {
     id: "quartz",
     title: "Quartz Countertops",
-    description: "Engineered stone with consistent patterns and low maintenance",
+    description: "Custom fabricated quartz. Can design or copy your color patterns. Consistent quality with low maintenance.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     properties: [
+      "Can design custom color patterns",
+      "Can copy your existing patterns",
       "Non-porous and hygienic",
       "Highly scratch and stain resistant",
-      "Consistent color and pattern",
-      "Low maintenance (no sealing required)",
     ],
     applications: [
       "Kitchen countertops",
@@ -46,51 +46,30 @@ const countertopMaterials = [
       "Commercial surfaces",
       "Backsplashes",
     ],
-    colors: ["Calacatta", "Carrara", "Statuario", "Volga Blue", "Nero Marquina"],
+    colors: ["Calacatta", "Carrara", "Statuario", "Volga Blue", "Nero Marquina", "Custom"],
     finishes: ["Polished", "Matte", "Suede"],
-    edgeProfiles: ["Straight", "Bevel", "Bullnose", "Ogee", "Mitered"],
+    edgeProfiles: ["Straight", "Bevel", "Bullnose", "Ogee", "Mitered", "Custom"],
   },
   {
     id: "marble",
     title: "Marble Countertops",
-    description: "Luxurious natural stone with timeless elegance",
+    description: "Custom fabricated marble. Timeless elegance - sourced from our integrated quarry operations worldwide.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     properties: [
+      "Own the quarry - factory direct",
+      "Sourced from around the world",
       "Timeless beauty with unique veining",
-      "Cooler surface ideal for baking",
-      "Softer than granite (more susceptible to etching)",
-      "Requires regular sealing and maintenance",
+      "Custom cut to your specifications",
     ],
     applications: [
       "Bathroom vanities",
-      "Kitchen islands (lower use areas)",
+      "Kitchen islands",
       "Fireplace surrounds",
       "Furniture tops",
     ],
     colors: ["Carrara", "Calacatta", "Statuario", "Emperador", "Crema Marfil"],
     finishes: ["Polished", "Honed", "Brushed"],
-    edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Chiseled"],
-  },
-  {
-    id: "solid-surface",
-    title: "Solid Surface Countertops",
-    description: "Seamless and versatile engineered material",
-    image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
-    properties: [
-      "Seamless installation possible",
-      "Repairable surface",
-      "Non-porous and hygienic",
-      "Wide range of colors and patterns",
-    ],
-    applications: [
-      "Kitchen countertops",
-      "Bathroom vanities",
-      "Integrated sinks",
-      "Commercial applications",
-    ],
-    brands: ["Corian", "Hi-Macs", "Staron", "Avonite"],
-    finishes: ["Matte", "Semi-gloss", "Textured"],
-    edgeProfiles: ["Square", "Bevel", "Bullnose", "Cove"],
+    edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Chiseled", "Custom"],
   },
 ];
 

@@ -201,7 +201,7 @@ export default function QuoteWizard() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Direct factory pricing including all logistics, customs, and duties.
+            Direct factory pricing including all logistics, customs, and duties. Shop drawings and 3D visualizations included.
           </motion.p>
         </div>
 
@@ -290,11 +290,23 @@ export default function QuoteWizard() {
                       className="space-y-8"
                     >
                       <motion.div variants={itemVariants} className="mb-10">
-                        <h2 className="text-4xl font-display font-medium text-white mb-3">Purchasing Rules & Terms</h2>
-                        <p className="text-white/60 text-lg">Please review our business model to ensure a perfect fit for your project.</p>
+                        <h2 className="text-4xl font-display font-medium text-white mb-3">Purchasing Rules for Customers</h2>
+                        <p className="text-white/60 text-lg">Factory Direct to Your Job Site. We handle everything from factory to foundation.</p>
                       </motion.div>
 
                       <div className="grid gap-6">
+                        <motion.div variants={itemVariants} className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-8 rounded-3xl hover:border-brand-primary/40 hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] transition-all duration-500 group">
+                          <h3 className="flex items-center gap-4 text-xl font-medium text-white mb-4">
+                            <div className="p-2.5 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:scale-110 transition-transform">
+                              <MapPin className="w-6 h-6" />
+                            </div>
+                            Factory to Your Job Site
+                          </h3>
+                          <p className="text-white/60 text-base leading-relaxed pl-14">
+                            Pricing includes ALL logistics from factory to job site/warehouse, customs clearance, and duties. We are responsible to handle all your logistics from factory to your door. You do not need to open an LC or handle international shipping.
+                          </p>
+                        </motion.div>
+
                         <motion.div variants={itemVariants} className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-8 rounded-3xl hover:border-brand-primary/40 hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] transition-all duration-500 group">
                           <h3 className="flex items-center gap-4 text-xl font-medium text-white mb-4">
                             <div className="p-2.5 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:scale-110 transition-transform">
@@ -304,18 +316,6 @@ export default function QuoteWizard() {
                           </h3>
                           <p className="text-white/60 text-base leading-relaxed pl-14">
                             Purchases by Product Type must be in container lots (except entrance doors). Different products from different origins cannot be combined in the same container.
-                          </p>
-                        </motion.div>
-
-                        <motion.div variants={itemVariants} className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-8 rounded-3xl hover:border-brand-primary/40 hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] transition-all duration-500 group">
-                          <h3 className="flex items-center gap-4 text-xl font-medium text-white mb-4">
-                            <div className="p-2.5 rounded-xl bg-brand-primary/10 text-brand-primary group-hover:scale-110 transition-transform">
-                              <MapPin className="w-6 h-6" />
-                            </div>
-                            True Factory Direct
-                          </h3>
-                          <p className="text-white/60 text-base leading-relaxed pl-14">
-                            Pricing includes all logistics from factory to job site/warehouse, customs clearance, and duties. You do not need to open an LC or handle international shipping.
                           </p>
                         </motion.div>
 
