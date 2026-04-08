@@ -214,10 +214,10 @@ export default function CountertopsPage() {
 
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-foreground mb-2">
-                      {material.colors ? "Popular Colors:" : material.brands ? "Premium Brands:" : "Options:"}
+                      {material.colors ? "Popular Colors:" : "Options:"}
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {(material.colors || material.brands)?.map((item, itemIndex) => (
+                      {material.colors?.map((item, itemIndex) => (
                         <span
                           key={itemIndex}
                           className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full border border-white/10"
