@@ -7,8 +7,7 @@ import { NarrativeNav } from "@/components/layout/narrative-nav";
 import { BackgroundVideo } from "@/components/layout/BackgroundVideo";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
-import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
-import { ArrowRight, Box, CircleDashed, ShieldCheck, Sparkles, ChevronRight } from "lucide-react";
+import { ArrowRight, Box, CircleDashed, ShieldCheck, Sparkles } from "lucide-react";
 import { CoreValues } from "@/components/sections/CoreValues";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -71,7 +70,7 @@ export default function HomePage() {
       <AnimatePresence>
         {showIntro && (
            <IntroSequence
-               text="Ultimate Buildings. Factory Direct to Your Job Site."
+               text="Ultimate-Buildings. Factory Direct to Your Job Site."
              videoId="FFwm_-HXYEY"
              onComplete={handleIntroComplete}
              playbackRate={0.5}
@@ -105,18 +104,9 @@ export default function HomePage() {
                 transition={{ duration: 1, delay: 0.2, type: "spring", bounce: 0.4 }}
                 className="max-w-5xl"
               >
-                  <AnimatedGradientText className="mb-8 cursor-pointer">
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
-                  <span
-                    className={cn(
-                      `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
-                    )}
-                  >
+                  <p className="mb-8 text-[1.125rem] md:text-[1.25rem] font-body font-medium text-white drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]">
                     Contact Lloyd Perlman: 513-800-1980
-                  </span>
-                  <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                </AnimatedGradientText>
+                  </p>
 
                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
                     Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
