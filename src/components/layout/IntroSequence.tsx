@@ -111,7 +111,7 @@ export function IntroSequence({ text, videoId, onComplete, playbackRate = 1.0, s
               transition={{ duration: 1.5, ease: "easeOut" }}
               className="absolute mt-48 flex items-center justify-center" 
             >
-               <img src="/logo.png" alt="Ultimate Buildings Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_16px_rgba(212,175,55,0.6)]" />
+                <img src="/logo.png" alt="Ultimate-Buildings Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_16px_rgba(212,175,55,0.6)]" />
             </motion.div>
           </div>
         </motion.div>

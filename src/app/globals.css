@@ -12,7 +12,7 @@
   --font-body: var(--font-body);
   --font-display: var(--font-display);
 
-  /* Brand Colors for Ultimate Buildings */
+  /* Brand Colors for Ultimate-Buildings */
   --color-brand-primary: #d4af37; /* Cinematic Gold */
   --color-brand-dark: #0a0c10;
   --color-brand-slate: #1c212b;
@@ -75,7 +75,19 @@
     background-position: calc(100% + var(--shiny-width)) 0;
     }
   }
-}
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
+;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);}
+  to {
+    transform: translateX(calc(-100% - var(--gap)));}}
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);}
+  to {
+    transform: translateY(calc(-100% - var(--gap)));}}}
 
 :root {
   /* Default to dark mode for cinematic feel */

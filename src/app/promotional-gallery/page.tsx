@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
-// Project data for the promotional gallery - GBTS Global Projects
+// Project data for the promotional gallery - Ultimate-Buildings Global Projects
 const projectTypes = [
   {
     id: "multi-unit",
@@ -141,7 +141,7 @@ export default function PromotionalGallery() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            GBTS <span className="text-brand-primary">Project</span> Gallery
+            Ultimate-Buildings <span className="text-brand-primary">Project</span> Gallery
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

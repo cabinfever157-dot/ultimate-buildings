@@ -9,6 +9,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import { ArrowRight, Box, CircleDashed, ShieldCheck, Sparkles, ChevronRight } from "lucide-react";
+import { CoreValues } from "@/components/sections/CoreValues";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -70,7 +71,7 @@ export default function HomePage() {
       <AnimatePresence>
         {showIntro && (
            <IntroSequence
-             text="Ultimate Buildings. Engineering Tomorrow's Infrastructure."
+               text="Ultimate Buildings. Factory Direct to Your Job Site."
              videoId="FFwm_-HXYEY"
              onComplete={handleIntroComplete}
              playbackRate={0.5}
@@ -231,8 +232,11 @@ export default function HomePage() {
                   </motion.div>
                 ))}
               </div>
-            </section>
-          </main>
+             </section>
+
+             {/* Core Values Section */}
+             <CoreValues />
+           </main>
           
           {/* Ambient background glows */}
           <motion.div 
@@ -306,7 +310,7 @@ const features = [
   },
   {
     title: "Factory Direct Pricing",
-    header: <Skeleton src="/images/projects/page04_img01.jpg" />,
+    header: <Skeleton src="/images/projects/page03_img01.jpg" />,
     icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/quote-wizard",
   },
@@ -314,6 +318,6 @@ const features = [
     title: "Metal Fencing & Gates",
     header: <Skeleton src="/images/projects/page14_img01.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
-    href: "/products/metal-fencing-gates",
+    href: "/products/metal-products",
   },
 ];

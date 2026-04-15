@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { LuxuryBackground } from "@/components/layout/LuxuryBackground";
+import { Footer } from "@/components/layout/Footer";
 import Script from "next/script";
 import "./globals.css";
 
@@ -17,8 +18,8 @@ const fontDisplay = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Ultimate Buildings | Engineering Tomorrow's Infrastructure",
-  description: "Premium infrastructure, flooring, slim steel windows, quartz and granite decks.",
+  title: "Ultimate-Buildings | Factory Direct to Your Job Site",
+  description: "Premium cabinetry, doors, windows, staircases, flooring & more — factory direct pricing. We handle logistics, customs, tariffs, and delivery. Quality, Reliability, Value.",
 };
 
 export default function RootLayout({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Script src="https://www.youtube.com/iframe_api" strategy="beforeInteractive" />
         <LuxuryBackground />
         {children}
+        <Footer />
       </body>
     </html>
   );

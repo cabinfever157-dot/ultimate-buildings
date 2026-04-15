@@ -1,4 +1,4 @@
-// Ultimate Buildings Product Content Structure
+// Ultimate-Buildings Product Content Structure
 // Generated from Basecamp Download PDFs and Excel mapping
 
 export const siteStructure = {

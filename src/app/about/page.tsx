@@ -66,7 +66,7 @@ const Shimmer = ({ children }: any) => {
   );
 };
 
-// Company information - Ultimate Buildings / GBTS
+// Company information - Ultimate-Buildings
 const companyStats = [
   { value: "Factory Direct", label: "Pricing Model", icon: <Factory className="w-6 h-6" /> },
   { value: "Global", label: "Reach", icon: <Globe className="w-6 h-6" /> },
@@ -74,7 +74,7 @@ const companyStats = [
   { value: "Cincinnati, OH", label: "Headquarters", icon: <Home className="w-6 h-6" /> },
 ];
 
-// Our values - GBTS Core Pillars
+// Our values - Ultimate-Buildings Core Pillars
 const ourValues = [
   {
     title: "Factory Direct",
@@ -118,7 +118,7 @@ const ourValues = [
   },
 ];
 
-// What sets us apart - GBTS Differentiators
+// What sets us apart - Ultimate-Buildings Differentiators
 const differentiators = [
   {
     title: "Factory Direct Pricing",
@@ -187,7 +187,7 @@ export default function AboutPage() {
               className="text-4xl md:text-6xl font-display font-medium text-white mb-6 relative"
             >
               About <span className="text-brand-primary relative">
-                GBTS
+                Ultimate-Buildings
                 <motion.span
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: [0, 1, 0.5], scale: [0, 2, 0] }}
@@ -217,7 +217,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Discover GBTS — where quality meets factory-direct pricing for custom architectural finishing products. Led by CEO Lloyd Perlman from Cincinnati, Ohio.
+            Discover Ultimate-Buildings — where quality meets factory-direct pricing for custom architectural finishing products. Led by CEO Lloyd Perlman from Cincinnati, Ohio.
           </motion.div>
         </section>
 
@@ -238,7 +238,7 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="text-muted-foreground leading-[1.7] mb-8"
             >
-              Ultimate Buildings is your direct source for commercial and residential custom architectural finishing products with factory-direct pricing.
+              Ultimate-Buildings is your direct source for commercial and residential custom architectural finishing products with factory-direct pricing.
             </motion.div>
 
             <motion.div
@@ -399,7 +399,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
               className="text-3xl md:text-4xl font-display font-medium text-white mb-6 relative"
             >
-              Experience the GBTS Difference
+              Experience the Ultimate-Buildings Difference
               <motion.span
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: [0, 1, 0.5], scale: [0, 1.5, 0] }}
