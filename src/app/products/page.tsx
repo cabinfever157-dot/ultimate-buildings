@@ -11,14 +11,14 @@ const productCategories = [
   {
     id: "stone-flooring",
     title: "Stone Flooring & Walls",
-    description: "Custom fabricated stone flooring and walls to your measurements. Premium flooring for interior and exterior residential and commercial spaces.",
+    description: "Custom fabricated stone flooring and walls to your measurements. Value-priced factory direct for interior and exterior residential and commercial spaces.",
     image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
     materials: ["Marble", "Granite", "Quartz", "Limestone"],
     features: [
       "Custom fabricated to your measurements",
       "Custom colors and finishes",
       "Interior & Exterior applications",
-      "Durable and low-maintenance",
+      "Factory direct — own the quarry",
     ],
   },
   {
@@ -63,28 +63,28 @@ const productCategories = [
   },
   {
     id: "cabinets",
-    title: "Cabinets & Storage",
-    description: "Custom fabricated cabinets for kitchens, bathrooms, and storage. Volume buyers welcome.",
+    title: "Cabinets & Organizational Storage",
+    description: "Custom fabricated cabinets and organizational storage for kitchens, bathrooms, wardrobes, and walk-in closets. Volume buyers welcome.",
     image: "/images/bento/High-end-kitchen-cabinetry.jpg",
     materials: ["Wood", "Laminates", "Metal", "Glass"],
     features: [
       "Custom fabricated to your measurements",
       "Custom colors and details",
-      "Residential & commercial uses",
+      "Kitchen, bath, wardrobe, walk-in",
       "Soft-close mechanisms",
     ],
   },
   {
     id: "countertops",
-    title: "Countertops",
-    description: "Custom fabricated granite, marble, quartz. Own the quarry. Slabs and fabrication available.",
+    title: "Countertops & Slabs",
+    description: "Slabs and custom fabrication — granite, marble, quartz. Own the quarry. Sell slabs direct to fabricators or custom cut to your specs.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     materials: ["Granite", "Quartz", "Marble"],
     features: [
       "Custom fabricated to your measurements",
-      "Own the quarry - factory direct",
+      "Own the quarry — factory direct",
+      "Slabs sold direct to fabricators",
       "Custom edge profiles (12+ styles)",
-      "Slabs or custom fabrication",
       "Heat and scratch resistant",
     ],
   },
@@ -104,12 +104,12 @@ const productCategories = [
   {
     id: "metal-products",
     title: "Metal Products",
-    description: "Custom fencing, gates, partitions, garage doors. Custom designed & sized to fit your needs.",
+    description: "Custom fencing, gates, partitions, and garage doors. Custom designed & sized to fit your needs — not standard sizes.",
     image: "/images/bento/Metal-Fencing-Gates.jpg",
     materials: ["Wrought Iron", "Steel", "Aluminum", "Garage Doors"],
     features: [
-      "Custom fabricated to your measurements",
-      "Custom designed & sized",
+      "Custom fabricated & sized to your needs",
+      "Fencing, gates, partitions, garage doors",
       "Residential & commercial",
       "Powder-coated finishes",
     ],
@@ -122,7 +122,7 @@ const materialComparison = [
     name: "Marble",
     durability: "⭐⭐⭐⭐⭐",
     maintenance: "Medium",
-    bestFor: "Luxury surfaces, high-end projects",
+    bestFor: "Statement surfaces, custom projects",
     priceRange: "$$$",
   },
   {
@@ -185,7 +185,7 @@ export default function ProductsPage() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Discover our comprehensive range of factory-direct building materials and solutions
+            Discover our comprehensive range of factory-direct building materials — custom fabricated, volume priced, delivered to your job site
           </motion.p>
         </div>
 
@@ -330,72 +330,111 @@ export default function ProductsPage() {
           </div>
         </motion.div>
 
-        {/* Installation and Care Section */}
+        {/* Custom Design & Value Messaging */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <Card className="glass-panel border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Professional Installation
+              Custom Design & Sizing
             </h3>
             <p className="text-foreground/80 mb-4">
-              Our certified installation teams ensure perfect results with:
+              Every product is custom — your size, your colors, your details. We do not sell standard sizes.
             </p>
             <ul className="text-foreground/80 space-y-2 mb-6">
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Precision measurements and cuts</span>
+                <span>Custom fabricated to your measurements</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Expert material handling</span>
+                <span>Custom colors and details per project</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Comprehensive site preparation</span>
+                <span>Shop drawings and 3D visualizations included</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Quality assurance inspections</span>
+                <span>Trial installation with photo proof before shipping</span>
               </li>
             </ul>
             <Link href="/quote-wizard">
               <Button variant="outline" className="border-white/10 hover:bg-white/5">
-                Schedule Installation Consultation
+                Submit Your Project Specs
               </Button>
             </Link>
           </Card>
 
           <Card className="glass-panel border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Material Care Guide
+              Value, Not Premium
             </h3>
             <p className="text-foreground/80 mb-4">
-              Maintain the beauty of your materials with our care recommendations:
+              We are a volume-based business offering reliable, quality products at competitive prices — not premium pricing.
             </p>
             <ul className="text-foreground/80 space-y-2 mb-6">
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Daily cleaning routines for each material type</span>
+                <span>Factory direct pricing — no middleman markup</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Recommended cleaning products</span>
+                <span>Volume buyers and container lot pricing</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Preventative maintenance tips</span>
+                <span>All logistics, duty/tariffs, and delivery included</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Long-term care and restoration</span>
+                <span>Builders — apartments, hotels, offices, multi-home</span>
               </li>
             </ul>
-            <Link href="/materials">
+            <Link href="/catalogs">
               <Button variant="outline" className="border-white/10 hover:bg-white/5">
-                Download Care Guides
+                Browse Catalogs
               </Button>
             </Link>
           </Card>
         </div>
+
+        {/* Factory Direct Process Overview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-4 text-center">
+            Factory Direct to <span className="text-brand-primary">Your Job Site</span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-10 text-center leading-[1.7]">
+            Every product is custom fabricated — your size, your colors, your details. All logistics, duty/tariffs, and delivery included.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center mb-4">
+                <span className="text-2xl font-display font-medium text-brand-primary">1</span>
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Inquiry & Design</h3>
+              <p className="text-sm text-foreground/80">Share your requirements. We analyze, recommend, provide measurements and project drawings with your quotation.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center mb-4">
+                <span className="text-2xl font-display font-medium text-brand-primary">2</span>
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Order & Production</h3>
+              <p className="text-sm text-foreground/80">Deposit confirms order. Shop drawings and 3D visuals approved. Production begins — QC photos and progress reports sent.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center mb-4">
+                <span className="text-2xl font-display font-medium text-brand-primary">3</span>
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">QC & Delivery</h3>
+              <p className="text-sm text-foreground/80">Trial installation proof. Your rep can inspect. All logistics, customs, and delivery handled — direct to your job site.</p>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Call to Action */}
         <motion.div

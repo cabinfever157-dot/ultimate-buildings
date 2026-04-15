@@ -33,54 +33,70 @@ export function NarrativeNav() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 w-[400px] md:w-[500px] lg:w-[600px] lg:grid-cols-2">
-                      <li>
-                           <Link href="/products/stone-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                             <div className="text-sm font-medium leading-none">Flooring & Walls</div>
-                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                               Marble, Granite, Quartz - Interior & Exterior solutions
-                             </p>
-                           </Link>
-                       </li>
-                       <li>
-                            <Link href="/products/stairs-railings" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Stairs & Railings</div>
+                        <li>
+                            <Link href="/products/stone-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Stone Flooring & Walls</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Custom-designed staircases and railings
+                                Marble, Granite, Quartz - Interior & Exterior solutions
                               </p>
                             </Link>
-                       </li>
-                       <li>
-                            <Link href="/products/cabinets" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Cabinets</div>
+                        </li>
+                        <li>
+                            <Link href="/products/spc-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">SPC Flooring</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Luxury cabinetry solutions
+                                Click-Lock, Glue-Down, Lay-Flat — 5-week production
                               </p>
                             </Link>
-                       </li>
-                       <li>
-                            <Link href="/products/countertops" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Countertops</div>
+                        </li>
+                        <li>
+                             <Link href="/products/stairs-railings" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Stairs & Railings</div>
+                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                 Custom-designed staircases and railings
+                               </p>
+                             </Link>
+                        </li>
+                        <li>
+                             <Link href="/products/cabinets" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Cabinets & Storage</div>
+                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                 Kitchen, bath, wardrobe, and walk-in storage
+                               </p>
+                             </Link>
+                        </li>
+                        <li>
+                             <Link href="/products/countertops" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Countertops & Slabs</div>
+                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                 Slabs, fabrication, and custom countertops
+                               </p>
+                             </Link>
+                        </li>
+                        <li>
+                             <Link href="/products/windows-doors" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Windows & Doors</div>
+                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                 Custom fabricated — residential & commercial
+                               </p>
+                             </Link>
+                        </li>
+                        <li>
+                             <Link href="/products/metal-products" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Metal Products</div>
+                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                 Fencing, gates, partitions & garage doors
+                               </p>
+                             </Link>
+                        </li>
+                        <li>
+                            <Link href="/products/prefab-construction" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Prefab Construction</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Granite, quartz, and marble solutions
+                                Hotels, apartments, offices — volume builder pricing
                               </p>
                             </Link>
-                       </li>
-                       <li>
-                            <Link href="/products/windows-doors" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Windows & Doors</div>
-                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Energy-efficient systems
-                              </p>
-                            </Link>
-                       </li>
-                       <li>
-                            <Link href="/products/metal-products" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Metal Fencing & Gates</div>
-                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Custom wrought iron and steel solutions
-                              </p>
-                            </Link>
-                       </li>
+                        </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>

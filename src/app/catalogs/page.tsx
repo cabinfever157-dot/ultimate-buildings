@@ -83,7 +83,7 @@ export default function CatalogsPage() {
                  </p>
                  {catalog.types && catalog.types.length > 0 && (
                    <div className="flex flex-wrap gap-2 mt-4">
-                     {catalog.types.map((type, typeIndex) => (
+                      {catalog.types.map((type: string, typeIndex: number) => (
                        <span key={typeIndex} className="px-3 py-1 bg-white/5 rounded-full text-xs text-muted-foreground border border-white/10">
                          {type}
                        </span>
@@ -95,7 +95,7 @@ export default function CatalogsPage() {
                <div className="relative z-10 mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
                  <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Jan 2026 Edition</span>
                  <a
-                   href={`/catalogs/${encodeURIComponent(catalog.pdfFile || catalog.brochure || '')}`}
+                    href={`/catalogs/${encodeURIComponent((catalog as any).pdfFile || (catalog as any).brochure || '')}`}
                    download
                    className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all text-white"
                    title={`Download ${catalog.title} Catalog`}

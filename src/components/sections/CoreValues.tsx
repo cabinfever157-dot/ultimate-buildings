@@ -66,15 +66,14 @@ const industries = [
 ];
 
 const products = [
-  { label: "Stone Floor & Walls", href: "/materials" },
-  { label: "SPC Flooring", href: "/products/stone-flooring" },
-  { label: "Countertops", href: "/products/countertops" },
+  { label: "Stone Flooring & Walls", href: "/products/stone-flooring" },
+  { label: "SPC Flooring", href: "/products/spc-flooring" },
+  { label: "Countertops & Slabs", href: "/products/countertops" },
   { label: "Cabinets & Storage", href: "/products/cabinets" },
   { label: "Stairs & Railings", href: "/products/stairs-railings" },
-  { label: "Windows", href: "/products/windows-doors" },
-  { label: "Interior & Exterior Doors", href: "/products/windows-doors" },
-  { label: "Metal Gates & Fencing", href: "/products/metal-products" },
-  { label: "Prefab Buildings", href: "/catalogs" },
+  { label: "Windows & Doors", href: "/products/windows-doors" },
+  { label: "Metal Products", href: "/products/metal-products" },
+  { label: "Prefab Construction", href: "/products/prefab-construction" },
 ];
 
 export function CoreValues() {

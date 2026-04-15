@@ -16,7 +16,7 @@ export function Footer() {
               Ultimate Buildings
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-md font-body">
-              Factory Direct to Your Job Site. Premium cabinetry, doors, windows, staircases, flooring & more — with logistics, customs, and delivery handled end-to-end.
+              Factory Direct to Your Job Site. Cabinetry, doors, windows, staircases, flooring, countertops & more — with logistics, customs, and delivery handled end-to-end.
             </p>
             {/* Lloyd's Contact — Prominent */}
             <motion.div
@@ -43,12 +43,13 @@ export function Footer() {
             <h4 className="font-display font-medium text-white mb-4 tracking-tight">Products</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Windows & Doors", href: "/products/windows-doors" },
+                { label: "Stone Flooring & Walls", href: "/products/stone-flooring" },
+                { label: "SPC Flooring", href: "/products/spc-flooring" },
                 { label: "Cabinets & Storage", href: "/products/cabinets" },
-                { label: "Countertops", href: "/products/countertops" },
-                { label: "Stairs & Railings", href: "/products/stairs-railings" },
-                { label: "Flooring & Walls", href: "/products/stone-flooring" },
-                { label: "Metal Gates & Fencing", href: "/products/metal-products" },
+                { label: "Countertops & Slabs", href: "/products/countertops" },
+                { label: "Windows & Doors", href: "/products/windows-doors" },
+                { label: "Metal Products", href: "/products/metal-products" },
+                { label: "Prefab Construction", href: "/products/prefab-construction" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-white/50 hover:text-brand-primary transition-colors text-sm font-body">

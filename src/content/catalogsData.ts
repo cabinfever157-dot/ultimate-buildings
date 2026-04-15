@@ -3,126 +3,95 @@ import { siteStructure } from './siteStructure';
 
 export const catalogsData = [
   {
-    id: 'flooring',
+    id: 'spc-flooring',
     title: 'SPC Flooring',
-    category: 'Floor & Walls',
-    description: 'Stone Plastic Composite Flooring - Durable, waterproof, and easy to install',
-    types: siteStructure["Floor & Walls"]["SPC Flooring"].types,
-    pdfFile: siteStructure["Floor & Walls"]["SPC Flooring"].catalog,
+    category: 'SPC Flooring',
+    description: 'Custom SPC Flooring — Click-Lock, Glue-Down, Lay-Flat. 5-week production. Your brand packaging available.',
+    types: ['Click-Lock', 'Glue-Down', 'Lay-Flat'] as string[],
+    pdfFile: (siteStructure["SPC Flooring"] as Record<string, any>)["Click-Lock"]?.catalog || (siteStructure["SPC Flooring"] as Record<string, any>)["Glue-Down"]?.catalog || '',
     image: '/catalogs/flooring.jpg',
     icon: 'FlooringIcon',
     features: [
-      '100% Waterproof',
-      'Scratch Resistant',
-      'Easy Click-Lock Installation',
-      'Commercial Grade Durability'
+      '5-Week Production',
+      'Custom Wear Thickness & Plank Size',
+      'Your Brand Packaging Available',
+      'Click-Lock, Glue-Down, Lay-Flat'
     ]
   },
   {
     id: 'stone-surfaces',
     title: 'Stone Surfaces',
-    category: 'Floor & Walls',
-    description: 'Premium stone surfaces for interior and exterior applications',
-    types: siteStructure["Floor & Walls"]["Stone Surfaces"].types,
-    pdfFile: siteStructure["Floor & Walls"]["Stone Surfaces"].catalog,
+    category: 'Stone Flooring & Walls',
+    description: 'Marble, Granite, Quartz — factory direct from our quarries. 20 acres of stock stone blocks.',
+    types: ['Marble', 'Granite', 'Quartz'] as string[],
+    pdfFile: (siteStructure["Stone Flooring & Walls"] as Record<string, any>)["Granite"]?.catalog || '',
     image: '/catalogs/stone-surfaces.jpg',
     icon: 'StoneIcon',
     features: [
-      'Natural Stone Beauty',
-      'Durable and Long-lasting',
-      'Heat and Stain Resistant',
-      'Custom Fabrication Available'
+      'Own the Quarry — Factory Direct',
+      'Custom Colors and Finishes',
+      'Slabs or Custom Fabrication',
+      '20 Acres of Stock Stone Blocks'
     ]
   },
   {
     id: 'wooden-doors',
     title: 'Wooden Doors',
     category: 'Doors & Windows',
-    description: 'Premium wooden doors with custom designs and finishes',
+    description: 'Custom fabricated wooden doors — your size, your colors, your details',
     pdfFile: siteStructure["Doors & Windows"]["Wooden Doors"].catalog,
     image: '/catalogs/wooden-doors.jpg',
     icon: 'WoodIcon',
     features: [
       'Custom Sizes and Designs',
-      'Premium Wood Species',
+      'Custom Wood Species',
       'Factory Direct Pricing',
-      'Complete Installation Kits'
+      'Custom Finishes Available'
     ]
   },
   {
     id: 'aluminum-doors-windows',
     title: 'Aluminum Doors & Windows',
     category: 'Doors & Windows',
-    description: 'High-performance aluminum door and window systems',
+    description: 'Custom fabricated aluminum door and window systems — residential and commercial',
     pdfFile: siteStructure["Doors & Windows"]["Aluminum Doors & Windows"].catalog,
     image: '/catalogs/aluminum-doors-windows.jpg',
     icon: 'WindowIcon',
     features: [
       'Thermal Break Technology',
-      'Weather Resistant',
-      'Slim Profiles',
-      'Custom Colors and Finishes'
+      'Custom Colors and Finishes',
+      'Up to Local Code',
+      'Residential & Commercial'
     ]
   },
   {
     id: 'french-steel',
     title: 'French Slim Steel Windows & Doors',
     category: 'Doors & Windows',
-    description: 'Elegant slim steel window and door systems with French design',
+    description: 'Custom fabricated French slim steel windows and doors — residential and commercial',
     pdfFile: siteStructure["Doors & Windows"]["French Slim Steel Windows & Doors"].catalog,
     image: '/catalogs/french-steel.jpg',
     icon: 'WindowIcon',
     features: [
       'Ultra-Slim Profiles',
-      'French Design Aesthetics',
-      'High-Performance Glass',
-      'Custom Hardware Options'
+      'Up to Local Code',
+      'Custom Colors',
+      'Residential & Commercial'
     ]
   },
   {
     id: 'wrought-iron-doors',
     title: 'Wrought Iron Doors',
     category: 'Doors & Windows',
-    description: 'Handcrafted wrought iron doors with custom designs',
+    description: 'Custom fabricated wrought iron doors — your design, your size',
     pdfFile: siteStructure["Doors & Windows"]["Wrought Iron Doors"].catalog,
     image: '/catalogs/wrought-iron-doors.jpg',
     icon: 'DoorIcon',
     features: [
-      'Hand-Forged Designs',
-      'Custom Patterns',
+      'Custom Fabricated to Your Measurements',
+      'Custom Patterns and Designs',
       'Durable Construction',
-      'Security and Elegance'
-    ]
-  },
-  {
-    id: 'granite-decks',
-    title: 'Granite Decks',
-    category: 'Specialty Products',
-    description: 'Premium granite deck systems for outdoor living spaces',
-    pdfFile: siteStructure["Specialty Products"]["Granite Decks"].catalog,
-    image: '/catalogs/granite-decks.jpg',
-    icon: 'StoneIcon',
-    features: [
-      'Natural Stone Beauty',
-      'Weather Resistant',
-      'Slip-Resistant Surfaces',
-      'Custom Designs Available'
-    ]
-  },
-  {
-    id: 'power-equipment',
-    title: '60 Kw Generator',
-    category: 'Specialty Products',
-    description: 'Industrial-grade power equipment for reliable energy',
-    brochure: siteStructure["Specialty Products"]["Power Equipment"]["60 Kw Generator"].brochure,
-    specs: siteStructure["Specialty Products"]["Power Equipment"]["60 Kw Generator"].specs,
-    image: '/catalogs/power-equipment.jpg',
-    icon: 'PowerIcon',
-    features: [
-      'Industrial Grade Performance',
-      'Reliable Power Output',
-      'Easy Installation',
-      'Low Maintenance'
+      'Powder-Coated Finishes'
     ]
   }
 ];

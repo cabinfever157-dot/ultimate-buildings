@@ -79,7 +79,7 @@ const fencingTypes = [
     properties: [
       "Custom design and fabrication",
       "Automation-ready",
-      "Premium materials and finishes",
+      "Quality materials and finishes",
       "Integrated security features",
       "Weather-resistant construction",
     ],
@@ -91,6 +91,26 @@ const fencingTypes = [
     ],
     types: ["Swing Gates", "Sliding Gates", "Bi-Fold Gates", "Vertical Lift Gates"],
     automation: ["Remote control", "Keypad entry", "Biometric access", "Smartphone control"],
+  },
+  {
+    id: "garage-doors",
+    title: "Garage Doors",
+    description: "Custom garage doors designed and sized to fit your needs — not standard sizes",
+    image: "/images/bento/Metal-Fencing-Gates.jpg",
+    properties: [
+      "Custom design to fit your opening",
+      "Custom sized — not standard sizes",
+      "Residential and commercial",
+      "Automation-ready systems",
+    ],
+    applications: [
+      "Residential garages",
+      "Commercial loading docks",
+      "Parking structures",
+      "Warehouse facilities",
+    ],
+    types: ["Sectional", "Roll-Up", "Tilt-Up", "Custom"],
+    automation: ["Remote control", "Keypad entry", "Smart home integration", "Timer-based"],
   },
 ];
 
@@ -153,7 +173,7 @@ export default function MetalFencingGatesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            <span className="text-brand-primary">Metal Fencing</span> & Gates
+            <span className="text-brand-primary">Metal Products</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -161,7 +181,7 @@ export default function MetalFencingGatesPage() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Custom metal fencing and gate solutions for security, privacy, and aesthetic enhancement
+            Custom metal products — fencing, gates, partitions, and garage doors. Custom designed & sized to fit your needs
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">

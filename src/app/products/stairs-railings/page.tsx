@@ -67,7 +67,7 @@ const stairsRailingsData = [
   },
   {
     id: "wood",
-    title: "Premium Wood",
+    title: "Custom Wood",
     description: "Warmth and natural beauty for traditional designs",
     image: "/images/bento/High-end-kitchen-cabinetry.jpg",
     properties: [

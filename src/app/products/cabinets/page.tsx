@@ -16,7 +16,7 @@ const cabinetTypes = [
     features: [
       "Custom sizing and configurations",
       "Soft-close hinges and drawers",
-      "Premium wood species and finishes",
+      "Quality wood species and finishes",
       "Integrated organization systems",
       "Full extension drawer slides",
     ],
@@ -33,7 +33,7 @@ const cabinetTypes = [
       "Custom countertop integration",
       "Built-in organizational accessories",
       "Wall-mounted and freestanding options",
-      "Premium hardware selections",
+      "Quality hardware selections",
     ],
     styles: ["Modern", "Traditional", "Transitional", "Floating", "Double Sink"],
     countertopMaterials: ["Marble", "Granite", "Quartz", "Solid Surface"],
@@ -113,7 +113,7 @@ export default function CabinetsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            <span className="text-brand-primary">Premium</span> Cabinets
+            <span className="text-brand-primary">Cabinets</span> & Organizational Storage
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -121,7 +121,7 @@ export default function CabinetsPage() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Luxury cabinetry solutions tailored to your space and style preferences
+            Custom cabinet and organizational storage solutions — kitchens, bathrooms, wardrobes, walk-in closets
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -253,7 +253,7 @@ export default function CabinetsPage() {
         {/* Hardware and Accessories */}
         <Card className="glass-panel border border-white/10 p-8 mb-16">
           <h2 className="text-2xl font-display font-medium text-white mb-6">
-            Premium Hardware & Accessories
+            Quality Hardware & Accessories
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
