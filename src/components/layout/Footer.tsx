@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -23,7 +23,7 @@ export function Footer() {
               whileHover={{ scale: 1.01 }}
               className="rounded-2xl border border-brand-primary/20 bg-brand-primary/[0.04] p-5 backdrop-blur-xl inline-flex flex-col gap-3"
             >
-              <p className="text-brand-primary text-xs uppercase tracking-[0.2em] font-body font-medium">Contact Lloyd Perlman, CEO</p>
+              <p className="text-brand-primary text-xs uppercase tracking-[0.2em] font-body font-medium">Contact Us</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:5138001980" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
                   <Phone className="w-4 h-4 text-brand-primary" />
@@ -34,10 +34,7 @@ export function Footer() {
                   LloydPerlman@gbtsus.com
                 </a>
               </div>
-              <div className="flex items-center gap-2 text-white/50 font-body text-xs">
-                <MapPin className="w-3.5 h-3.5 text-brand-primary/60" />
-                Cincinnati, Ohio 45243 USA
-              </div>
+
             </motion.div>
           </div>
 

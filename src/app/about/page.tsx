@@ -71,7 +71,7 @@ const companyStats = [
   { value: "Factory Direct", label: "Pricing Model", icon: <Factory className="w-6 h-6" /> },
   { value: "Global", label: "Reach", icon: <Globe className="w-6 h-6" /> },
   { value: "USA, UK, AU, NZ", label: "Completed Projects", icon: <Building className="w-6 h-6" /> },
-  { value: "Cincinnati, OH", label: "Headquarters", icon: <Home className="w-6 h-6" /> },
+
 ];
 
 // Our values - Ultimate-Buildings Core Pillars
@@ -217,7 +217,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Discover Ultimate-Buildings — where quality meets factory-direct pricing for custom architectural finishing products. Led by CEO Lloyd Perlman from Cincinnati, Ohio.
+            Discover Ultimate-Buildings — where quality meets factory-direct pricing for custom architectural finishing products.
           </motion.div>
         </section>
 
@@ -414,7 +414,7 @@ export default function AboutPage() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            Connect with Lloyd Perlman directly. Get factory-direct pricing on custom cabinetry, doors, windows, staircases, and more.
+            Connect with us directly. Get factory-direct pricing on custom cabinetry, doors, windows, staircases, and more.
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05 }}

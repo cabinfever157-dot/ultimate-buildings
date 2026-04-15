@@ -105,7 +105,7 @@ export default function HomePage() {
                 className="max-w-5xl"
               >
                   <p className="mb-8 text-[1.125rem] md:text-[1.25rem] font-body font-medium text-white drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]">
-                    Contact Lloyd Perlman: 513-800-1980
+                    Contact Us: 513-800-1980
                   </p>
 
                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
