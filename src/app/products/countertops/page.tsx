@@ -11,12 +11,12 @@ const countertopMaterials = [
   {
     id: "granite",
     title: "Granite Countertops",
-    description: "Custom fabricated granite. Own the quarry - factory direct pricing with 20 acres of stock stone blocks.",
+    description: "Custom fabricated granite. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
     image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
     properties: [
-      "Own the quarry - factory direct",
-      "20 acres of stock stone blocks",
-      "Custom cut to your project",
+      "Own quarries — cut and finish blocks in-house",
+      "Purchase stone blocks worldwide",
+      "Custom fabricate slabs to your specs",
       "Heat resistant up to 1200°F",
     ],
     applications: [
@@ -32,13 +32,13 @@ const countertopMaterials = [
   {
     id: "quartz",
     title: "Quartz Countertops",
-    description: "Custom fabricated quartz. Can design or copy your color patterns. Consistent quality with low maintenance.",
+    description: "Custom fabricated quartz. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     properties: [
-      "Can design custom color patterns",
-      "Can copy your existing patterns",
+      "Manufacture the slabs",
+      "Use our colors or yours",
+      "Custom fabricate slabs to your specs",
       "Non-porous and hygienic",
-      "Highly scratch and stain resistant",
     ],
     applications: [
       "Kitchen countertops",
@@ -53,13 +53,13 @@ const countertopMaterials = [
   {
     id: "marble",
     title: "Marble Countertops",
-    description: "Custom fabricated marble. Timeless elegance - sourced from our integrated quarry operations worldwide.",
+    description: "Custom fabricated marble. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     properties: [
-      "Own the quarry - factory direct",
-      "Sourced from around the world",
+      "Own quarries — cut and finish blocks in-house",
+      "Purchase stone blocks worldwide",
+      "Custom fabricate slabs to your specs",
       "Timeless beauty with unique veining",
-      "Custom cut to your specifications",
     ],
     applications: [
       "Bathroom vanities",
@@ -426,7 +426,7 @@ export default function CountertopsPage() {
             <Card className="glass-panel border border-white/10 p-6">
               <h3 className="text-xl font-semibold text-foreground mb-4">Stone Slabs — Sold Direct</h3>
               <p className="text-foreground/80 mb-4">
-                We own the quarry and sell slabs direct to fabricators at lower costs than domestic sourcing. 20 acres of stock stone blocks — granite, marble, quartz available in volume.
+                Our partner owns quarries and sells slabs direct to fabricators at lower costs than domestic sourcing. 20 acres of stock stone blocks — granite, marble, quartz available in volume.
               </p>
               <ul className="text-foreground/80 space-y-2">
                 <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Buy slabs direct and cut your own</span></li>

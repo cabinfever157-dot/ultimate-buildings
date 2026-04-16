@@ -11,13 +11,13 @@ const flooringMaterials = [
   {
     id: "marble",
     title: "Marble",
-    description: "Timeless elegance with natural veining. Our factory source is fully integrated - owning the mine and sourcing stone around the world. 20 acres of stock stone block inventory.",
+    description: "Timeless elegance with natural veining. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs. 20 acres of stock stone block inventory.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     properties: [
-      "Own the quarry - factory direct",
-      "20 acres of stock stone blocks",
-      "Cutting and polishing in-house",
-      "Custom colors from around the world",
+      "Own quarries — cut and finish blocks in-house",
+      "Purchase stone blocks worldwide",
+      "Custom fabricate slabs to your specs",
+      "20 acres of stock stone block inventory",
     ],
     applications: [
       "Flooring",
@@ -31,13 +31,13 @@ const flooringMaterials = [
   {
     id: "granite",
     title: "Granite",
-    description: "Exceptional durability with natural beauty. Fully integrated - mine to fabrication. Custom cut and finished to accommodate your project.",
+    description: "Exceptional durability with natural beauty. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
     image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
     properties: [
-      "Own the quarry - factory direct",
-      "20 acres of stock stone blocks",
+      "Own quarries — cut and finish blocks in-house",
+      "Purchase stone blocks worldwide",
+      "Custom fabricate slabs to your specs",
       "Heat and scratch resistant",
-      "Custom cut to your project specs",
     ],
     applications: [
       "High-traffic flooring",
@@ -51,13 +51,13 @@ const flooringMaterials = [
   {
     id: "quartz",
     title: "Quartz",
-    description: "Engineered stone with consistent patterns. We can design or copy your color patterns. Custom fabrication to your specifications.",
+    description: "Engineered stone with consistent patterns. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
     image: "/images/bento/Luxury-granite-marble-countertop.jpg",
     properties: [
-      "Can design custom color patterns",
-      "Can copy your existing patterns",
+      "Manufacture the slabs",
+      "Use our colors or yours",
+      "Custom fabricate slabs to your specs",
       "Non-porous and hygienic",
-      "Highly scratch and stain resistant",
     ],
     applications: [
       "Kitchen countertops",
