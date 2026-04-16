@@ -111,9 +111,23 @@ export default function HomePage() {
                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
                     Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
                   </h1>
-                <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 font-body font-light">
+                <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-6 font-body font-light">
                   Premium Cabinetry, Doors, Windows, Staircases & More. We handle logistics, customs, tariffs, and delivery. Best Prices. Efficient Service. On-Time.
                 </p>
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-12 max-w-4xl mx-auto">
+                  {["Windows & Doors","Premium Cabinets","Staircases & Railings","Wrought Iron & Metal Gates","Custom Vanities & Closets","Flooring Solutions","Stone Countertops","Factory Direct Pricing","Metal Fencing & Gates"].map((pill, i) => (
+                    <motion.span
+                      key={pill}
+                      initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ delay: 0.4 + i * 0.06, duration: 0.4, type: "spring", bounce: 0.3 }}
+                      whileHover={{ scale: 1.08, backgroundColor: "rgba(212,175,55,0.15)" }}
+                      className="px-4 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/[0.06] text-brand-primary text-xs sm:text-sm font-body font-medium tracking-wide backdrop-blur-sm cursor-default transition-colors"
+                    >
+                      {pill}
+                    </motion.span>
+                  ))}
+                </div>
                  <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                      <Button size="lg" className="bg-gradient-to-r from-brand-primary to-amber-500 text-brand-dark hover:from-amber-400 hover:to-amber-300 text-lg px-10 py-8 rounded-full shadow-[0_0_40px_rgba(212,175,55,0.4)] flex gap-2 font-bold transition-all" onClick={() => window.location.href = '/catalogs'}>
