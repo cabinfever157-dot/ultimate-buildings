@@ -77,43 +77,43 @@ const companyStats = [
 // Our values - Ultimate-Buildings Core Pillars
 const ourValues = [
   {
-    title: "Factory Direct",
-    description: "Eliminating middlemen. Best pricing straight from our factories to your job site.",
+    title: "Quality",
+    description: "We only work with Tier 1 well financed established factories",
     icon: <Factory className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "All Logistics Included",
-    description: "We handle customs, tariffs, shipping, and delivery. No LC required. Door-to-door service.",
+    title: "Reliability",
+    description: "Delivering as promised so we all sleep well at night",
     icon: <Truck className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Own the Mine",
-    description: "Fully integrated granite and marble operations from quarry to fabrication. Direct quality control.",
+    title: "Value",
+    description: "Our factories understand every penny counts, that is why we have factory direct pricing",
     icon: <Star className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "On-Time Delivery",
-    description: "Coordinated freight and logistics to ensure your project stays on schedule.",
+    title: "Flexibility",
+    description: "Our goal is to deliver your customized needs",
     icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Custom Solutions",
-    description: "Your size, your colors, your details — with shop drawings and 3D visualizations.",
+    title: "CX",
+    description: "The Cornerstone of our Buyer relationship with live USA Customer Support",
     icon: <Award className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "USA Customer Support",
-    description: "Live USA-based customer support throughout the entire process.",
+    title: "Teamwork",
+    description: "We are 1 team together and only grow together via our execution",
     icon: <Users className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Quality Assurance",
-    description: "Trial installations with photo/video proof before shipping. QC at every step.",
+    title: "Our Team",
+    description: "We have partner employee oversight, in factory, at every production step to ensure desired results",
     icon: <CheckCircle className="w-8 h-8 text-brand-primary" />,
   },
   {
-    title: "Global Reach",
-    description: "Completed projects across USA, UK, Australia, New Zealand, and Caribbean.",
+    title: "Appreciation",
+    description: "Thank you for putting your projects trust in us, we value your business",
     icon: <Globe className="w-8 h-8 text-brand-primary" />,
   },
 ];
@@ -247,7 +247,7 @@ export default function AboutPage() {
               transition={{ delay: 0.3 }}
               className="text-muted-foreground leading-[1.7] mb-8"
             >
-              Our core value proposition is acting as a <span className="text-brand-primary font-medium">"1 Stop Finishing Products" provider</span> that offers factory-direct supply chain services straight to the job site. We pride ourselves on offering the <span className="text-brand-primary font-medium">best prices, efficient service, and on-time delivery.</span>
+              Our core value proposition is acting as a <span className="text-brand-primary font-medium">"1 Stop Finishing Products" provider</span> that offers factory-direct supply chain services straight to the job site. We pride ourselves on offering the <span className="text-brand-primary font-medium">value prices, efficient service, and on-time delivery.</span>
             </motion.div>
 
             <motion.div
@@ -257,6 +257,29 @@ export default function AboutPage() {
               className="text-muted-foreground leading-[1.7]"
             >
               With completed projects across the USA, UK, Australia, New Zealand, and the Caribbean, we've built a reputation for excellence in delivering customized architectural products. Our end-to-end service — from inquiry and quotation through production, logistics, and after-sales support — ensures your project succeeds.
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="mt-8 pt-8 border-t border-white/10"
+            >
+              <h3 className="text-2xl font-display font-medium text-brand-primary mb-6">
+                Our Global Partnership
+              </h3>
+              <p className="text-muted-foreground leading-[1.7] mb-6">
+                Our strategic partnership with <span className="text-white font-medium">UB Asia</span> brings over 30 years of import/export experience across North America, South America, Europe, and Asia. With offices throughout Asia and dedicated employees at the factory level, we execute every detail with precision for our customers.
+              </p>
+              <p className="text-muted-foreground leading-[1.7] mb-6">
+                In the USA, we serve a diverse clientele ranging from family-owned companies and real estate developers to Fortune 100 companies, contractors, builders, architects, and designers. Our reach extends to specialty markets including restaurant chains, religious organizations developing low-income housing, and hardscape products for residential projects.
+              </p>
+              <p className="text-muted-foreground leading-[1.7] mb-6">
+                In Asia, our partner works directly with factories to introduce innovative products to worldwide markets. Extra attention to innovation, ease of use, and proper detail has been instrumental in developing new products and expanding business across various global markets.
+              </p>
+              <p className="text-muted-foreground leading-[1.7]">
+                <span className="text-brand-primary font-medium">Customer Care, Simplicity, and Ease</span> — getting you what you need, when you need it — has been the key to our success and defines our story.
+              </p>
             </motion.div>
           </div>
 
@@ -390,6 +413,32 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* UB Asia Partner */}
+        <section className="mb-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center"
+          >
+            UB Asia Partner
+          </motion.h2>
+
+          <div className="glass-panel rounded-xl p-6 border border-white/10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="space-y-4 text-muted-foreground leading-[1.8]"
+            >
+              <p>Over 30 years of import / Export experience in North America, South America, Europe, and Asia.</p>
+              <p>Offices in Asia, employees at the factory level to execute the details for customers.</p>
+              <p>In the USA works with family-owned companies, Real Estate Developers, Fortune 100 companies, contractors, builders, architects, and designers. Plus, specialty markets like restaurant chains, religious organizations building low-income housing, and hardscape products for homes.</p>
+              <p>In Asia they are involved in working with factories to enter new worldwide markets using their knowledge of success in the Americas markets. Extra touches of innovation, ease of use, and proper detail have helped develop new products and grow new business in various markets.</p>
+              <p>Customer Care. Simplicity, and ease of getting what is needed when needed has been the key to success.</p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="text-center py-16 relative">
           <FloatAnimation delay={0.2}>
@@ -399,7 +448,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
               className="text-3xl md:text-4xl font-display font-medium text-white mb-6 relative"
             >
-              Experience the Ultimate-Buildings Difference
+              Experience the Ultimate Buildings Difference
               <motion.span
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: [0, 1, 0.5], scale: [0, 1.5, 0] }}
@@ -414,7 +463,18 @@ export default function AboutPage() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            Connect with us directly. Get factory-direct pricing on custom cabinetry, doors, windows, staircases, and more.
+            Discover why architects, designers, contractors, builders, commercial property owners,
+            retailers and wholesale distributors trust us for their most ambitious projects.
+            <br/><br/>
+            Apartments – Dorms/Nursing Homes – Hotels – Office Buildings – Remodels – Multi Home
+            <br/>
+            Restaurants/Entertainment Venues - Schools – Retail Centers/Retailers
+            <br/><br/>
+            Contact us today to learn how we can bring your vision to life for:
+            <br/>
+            Stone Floor & Walls – SPC Flooring – Countertops – Cabinets & Storage - Stairs & Railings
+            <br/>
+            Windows - Interior & Exterior Doors – Metal Gates & Fencing – Prefab Buildings
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05 }}

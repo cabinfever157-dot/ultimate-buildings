@@ -196,7 +196,7 @@ export default function PromotionalGallery() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card
-                className="bg-background/80 backdrop-blur-xl border-white/10 shadow-glass-md overflow-hidden hover:shadow-glass-lg transition-all duration-300 cursor-pointer"
+                className="bg-background/90 backdrop-blur-xl border-white/10 shadow-glass-md overflow-hidden hover:shadow-glass-lg transition-all duration-300 cursor-pointer"
                 onClick={() => openProjectModal(project)}
               >
                 <div className="h-48 overflow-hidden">

@@ -112,22 +112,8 @@ export default function HomePage() {
                     Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
                   </h1>
                 <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-6 font-body font-light">
-                  Premium Cabinetry, Doors, Windows, Staircases & More. We handle logistics, customs, tariffs, and delivery. Best Prices. Efficient Service. On-Time.
+                  Quality - Reliability - Value<br/>We handle logistics customs and delivery.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-2 mb-12 max-w-4xl mx-auto">
-                  {["Windows & Doors","Premium Cabinets","Staircases & Railings","Wrought Iron & Metal Gates","Custom Vanities & Closets","Flooring Solutions","Stone Countertops","Factory Direct Pricing","Metal Fencing & Gates"].map((pill, i) => (
-                    <motion.span
-                      key={pill}
-                      initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      transition={{ delay: 0.4 + i * 0.06, duration: 0.4, type: "spring", bounce: 0.3 }}
-                      whileHover={{ scale: 1.08, backgroundColor: "rgba(212,175,55,0.15)" }}
-                      className="px-4 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/[0.06] text-brand-primary text-xs sm:text-sm font-body font-medium tracking-wide backdrop-blur-sm cursor-default transition-colors"
-                    >
-                      {pill}
-                    </motion.span>
-                  ))}
-                </div>
                  <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                      <Button size="lg" className="bg-gradient-to-r from-brand-primary to-amber-500 text-brand-dark hover:from-amber-400 hover:to-amber-300 text-lg px-10 py-8 rounded-full shadow-[0_0_40px_rgba(212,175,55,0.4)] flex gap-2 font-bold transition-all" onClick={() => window.location.href = '/catalogs'}>
@@ -194,8 +180,8 @@ export default function HomePage() {
                 <h2 className="text-4xl md:text-6xl font-display font-light text-white tracking-tight">
                   Factory Direct <span className="text-brand-primary font-medium">to Your Job Site</span>
                 </h2>
-                <p className="text-lg text-white/60 mt-4 max-w-2xl mx-auto">
-                  We handle everything from factory to foundation. No middlemen. No LC required.
+                  <p className="text-lg text-white/60 mt-4 max-w-2xl mx-auto">
+                  We handle everything from concept to delivery.
                 </p>
                 <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-brand-primary to-transparent mt-8 mx-auto rounded-full opacity-50" />
               </motion.div>
@@ -205,18 +191,18 @@ export default function HomePage() {
                   {
                     step: "1",
                     title: "Inquire & Design",
-                    desc: "Share your project requirements. We provide shop drawings and 3D visualizations for your approval.",
+                    desc: "Share your project requirements, drawings or visualizations or we can help you.",
                     icon: "📐"
                   },
                   {
                     step: "2",
                     title: "Produce & QC",
-                    desc: "Factory production with progress reports and quality photos. Trial installation before shipping.",
+                    desc: "Pre production samples,\nFactory production updates.",
                     icon: "🏭"
                   },
                   {
                     step: "3",
-                    title: "Deliver & Install",
+                    title: "Deliver",
                     desc: "We handle logistics, customs, tariffs, and delivery to your job site. Door-to-door service.",
                     icon: "🚚"
                   }
@@ -227,7 +213,7 @@ export default function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.2 }}
-                    className="glass-panel rounded-2xl p-8 border border-white/10 text-center"
+                    className="glass-panel rounded-2xl p-8 border border-white/10 text-center bg-background/70"
                   >
                     <div className="text-4xl mb-4">{item.icon}</div>
                     <div className="text-3xl font-display text-brand-primary mb-3">Step {item.step}</div>
@@ -238,9 +224,97 @@ export default function HomePage() {
               </div>
              </section>
 
-             {/* Core Values Section */}
-             <CoreValues />
-           </main>
+{/* Core Values Section */}
+              <CoreValues />
+
+            {/* Experience the Ultimate Buildings Difference */}
+            <section className="py-24 relative z-20">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="text-center"
+              >
+                <h2 className="text-4xl md:text-5xl font-display font-light text-white tracking-tight mb-8">
+                  Experience the <span className="text-brand-primary font-medium">Ultimate Buildings</span> Difference
+                </h2>
+                <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-brand-primary to-transparent mt-4 mx-auto rounded-full opacity-50" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="glass-panel rounded-2xl p-8 md:p-12 mt-12 max-w-5xl mx-auto border border-white/10"
+              >
+                <p className="text-lg md:text-xl text-white leading-relaxed mb-8">
+                  Discover why architects, designers, contractors, builders, commercial property owners, retailers and wholesale distributors trust us for their most ambitious projects.
+                </p>
+
+                <div className="mb-8">
+                  <p className="text-brand-primary font-medium mb-4 text-lg">Project Types:</p>
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      "Apartments",
+                      "Dorms/Nursing Homes",
+                      "Hotels",
+                      "Office Buildings",
+                      "Remodels",
+                      "Multi Home",
+                      "Restaurants/Entertainment Venues",
+                      "Schools",
+                      "Retail Centers/Retailers"
+                    ].map((item) => (
+                      <span key={item} className="px-4 py-2 bg-white/5 rounded-full text-sm text-white border border-white/10">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-t border-white/10 pt-8">
+                  <p className="text-lg text-white leading-relaxed mb-6">
+                    Contact us today to learn how we can bring your vision to life for:
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      "Stone Floor & Walls",
+                      "SPC Flooring",
+                      "Countertops",
+                      "Cabinets & Storage",
+                      "Stairs & Railings",
+                      "Windows",
+                      "Interior & Exterior Doors",
+                      "Metal Gates & Fencing",
+                      "Prefab Buildings"
+                    ].map((item) => (
+                      <span key={item} className="px-4 py-2 bg-brand-primary/10 rounded-full text-sm text-brand-primary border border-brand-primary/20">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-center mt-12"
+              >
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-brand-primary to-amber-500 text-brand-dark hover:from-amber-400 hover:to-amber-300 text-lg px-10 py-8 rounded-full shadow-[0_0_40px_rgba(212,175,55,0.4)] flex gap-2 font-bold transition-all mx-auto"
+                  onClick={() => window.location.href = '/quote-wizard'}
+                >
+                  Contact Our Team <ArrowRight className="w-6 h-6" />
+                </Button>
+              </motion.div>
+            </section>
+            </main>
           
           {/* Ambient background glows */}
           <motion.div 

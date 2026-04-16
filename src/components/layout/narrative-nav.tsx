@@ -18,7 +18,7 @@ export function NarrativeNav() {
   return (
     <header className="fixed top-4 left-4 right-4 z-50 transition-all duration-300">
       <div className="mx-auto max-w-7xl">
-        <div className="backdrop-blur-xl bg-background/60 border border-white/10 shadow-glass-md rounded-2xl px-6 py-4 flex items-center justify-between">
+        <div className="backdrop-blur-xl bg-background/70 border border-white/10 shadow-glass-md rounded-2xl px-6 py-4 flex items-center justify-between">
            <Link href="/" className="font-display font-bold text-xl tracking-tighter text-brand-primary flex gap-2 items-center">
              <img src="/logo.png" alt="Ultimate-Buildings Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]" />
              Ultimate-Buildings
@@ -34,18 +34,26 @@ export function NarrativeNav() {
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 w-[400px] md:w-[500px] lg:w-[600px] lg:grid-cols-2">
                         <li>
-                            <Link href="/products/stone-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Stone Flooring & Walls</div>
-                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Marble, Granite, Quartz - Interior & Exterior solutions
-                              </p>
-                            </Link>
+                             <Link href="/products/countertops" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Countertops & Slabs</div>
+                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                 Slabs, fabrication, and custom countertops
+                               </p>
+                             </Link>
                         </li>
                         <li>
                             <Link href="/products/spc-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                               <div className="text-sm font-medium leading-none">SPC Flooring</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Click-Lock, Glue-Down, Lay-Flat — 5-week production
+                              </p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/products/stone-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Stone Flooring & Walls</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Marble, Granite, Quartz - Interior & Exterior solutions
                               </p>
                             </Link>
                         </li>
@@ -62,14 +70,6 @@ export function NarrativeNav() {
                                <div className="text-sm font-medium leading-none">Cabinets & Storage</div>
                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                  Kitchen, bath, wardrobe, and walk-in storage
-                               </p>
-                             </Link>
-                        </li>
-                        <li>
-                             <Link href="/products/countertops" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                               <div className="text-sm font-medium leading-none">Countertops & Slabs</div>
-                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                 Slabs, fabrication, and custom countertops
                                </p>
                              </Link>
                         </li>
