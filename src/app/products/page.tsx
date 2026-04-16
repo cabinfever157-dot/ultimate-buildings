@@ -9,16 +9,17 @@ import { NarrativeNav } from "@/components/layout/narrative-nav";
 // Product categories data - All products are custom fabricated to your measurements, colors, and details
 const productCategories = [
   {
-    id: "stone-flooring",
-    title: "Stone Flooring & Walls",
-    description: "Custom fabricated stone flooring and walls to your measurements. Value-priced factory direct for interior and exterior residential and commercial spaces.",
-    image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
-    materials: ["Marble", "Granite", "Quartz", "Limestone"],
+    id: "countertops",
+    title: "Countertops & Slabs",
+    description: "Slabs and custom fabrication — granite, marble, quartz. Own the quarry. Sell slabs direct to fabricators or custom cut to your specs.",
+    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+    materials: ["Granite", "Quartz", "Marble"],
     features: [
       "Custom fabricated to your measurements",
-      "Custom colors and finishes",
-      "Interior & Exterior applications",
-      "Factory direct — own the quarry",
+      "Own the quarry — factory direct",
+      "Slabs sold direct to fabricators",
+      "Custom edge profiles (12+ styles)",
+      "Heat and scratch resistant",
     ],
   },
   {
@@ -75,17 +76,16 @@ const productCategories = [
     ],
   },
   {
-    id: "countertops",
-    title: "Countertops & Slabs",
-    description: "Slabs and custom fabrication — granite, marble, quartz. Own the quarry. Sell slabs direct to fabricators or custom cut to your specs.",
-    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
-    materials: ["Granite", "Quartz", "Marble"],
+    id: "stone-flooring",
+    title: "Stone Flooring & Walls",
+    description: "Custom fabricated stone flooring and walls to your measurements. Value-priced factory direct for interior and exterior residential and commercial spaces.",
+    image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
+    materials: ["Marble", "Granite", "Quartz", "Limestone"],
     features: [
       "Custom fabricated to your measurements",
-      "Own the quarry — factory direct",
-      "Slabs sold direct to fabricators",
-      "Custom edge profiles (12+ styles)",
-      "Heat and scratch resistant",
+      "Custom colors and finishes",
+      "Interior & Exterior applications",
+      "Factory direct — own the quarry",
     ],
   },
   {
