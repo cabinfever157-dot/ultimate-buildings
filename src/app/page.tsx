@@ -213,7 +213,7 @@ export default function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.2 }}
-                    className="glass-panel rounded-2xl p-8 border border-white/10 text-center bg-background/70"
+                    className="glass-panel rounded-2xl p-8 text-center"
                   >
                     <div className="text-4xl mb-4">{item.icon}</div>
                     <div className="text-3xl font-display text-brand-primary mb-3">Step {item.step}</div>
@@ -255,46 +255,20 @@ export default function HomePage() {
 
                 <div className="mb-8">
                   <p className="text-brand-primary font-medium mb-4 text-lg">Project Types:</p>
-                  <div className="flex flex-wrap gap-3">
-                    {[
-                      "Apartments",
-                      "Dorms/Nursing Homes",
-                      "Hotels",
-                      "Office Buildings",
-                      "Remodels",
-                      "Multi Home",
-                      "Restaurants/Entertainment Venues",
-                      "Schools",
-                      "Retail Centers/Retailers"
-                    ].map((item) => (
-                      <span key={item} className="px-4 py-2 bg-white/5 rounded-full text-sm text-white border border-white/10">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-white/80 leading-relaxed">
+                    Apartments — Dorms/Nursing Homes — Hotels — Office Buildings — Remodels — Multi Home<br/>
+                    Restaurants/Entertainment Venues — Schools — Retail Centers/Retailers
+                  </p>
                 </div>
 
                 <div className="border-t border-white/10 pt-8">
-                  <p className="text-lg text-white leading-relaxed mb-6">
+                  <p className="text-lg text-white leading-relaxed mb-4">
                     Contact us today to learn how we can bring your vision to life for:
                   </p>
-                  <div className="flex flex-wrap gap-3">
-                    {[
-                      "Stone Floor & Walls",
-                      "SPC Flooring",
-                      "Countertops",
-                      "Cabinets & Storage",
-                      "Stairs & Railings",
-                      "Windows",
-                      "Interior & Exterior Doors",
-                      "Metal Gates & Fencing",
-                      "Prefab Buildings"
-                    ].map((item) => (
-                      <span key={item} className="px-4 py-2 bg-brand-primary/10 rounded-full text-sm text-brand-primary border border-brand-primary/20">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-brand-primary leading-relaxed">
+                    Stone Floor & Walls — SPC Flooring — Countertops — Cabinets & Storage — Stairs & Railings<br/>
+                    Windows — Interior & Exterior Doors — Metal Gates & Fencing — Prefab Buildings
+                  </p>
                 </div>
               </motion.div>
 
