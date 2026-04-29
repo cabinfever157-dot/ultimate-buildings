@@ -112,7 +112,7 @@ export default function HomePage() {
                     Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
                   </h1>
                 <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-6 font-body font-light">
-                  Quality - Reliability - Value<br/>We handle logistics customs and delivery.
+                  Quality - Reliability - Value<br/>We handle Production, Logistics, Customs, and Delivery.
                 </p>
                  <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -320,25 +320,25 @@ const Skeleton = ({ src }: { src?: string }) => (
 const features = [
   {
     title: "Windows & Doors",
-    header: <Skeleton src="/images/projects/page05_img02.jpg" />,
+    header: <Skeleton src="/images/bento/wrought-iron-wooden-door.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/windows-doors",
   },
   {
     title: "Premium Cabinets",
-    header: <Skeleton src="/images/projects/page06_img03.jpg" />,
+    header: <Skeleton src="/images/bento/cabinets.jpg" />,
     icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",
   },
   {
     title: "Staircases & Railings",
-    header: <Skeleton src="/images/projects/page13_img01.jpg" />,
+    header: <Skeleton src="/images/bento/staircases_railings..jpg" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
     href: "/products/stairs-railings",
   },
   {
     title: "Wrought Iron & Metal Gates",
-    header: <Skeleton src="/images/projects/page18_img01.jpg" />,
+    header: <Skeleton src="/images/bento/Metal-Fencing-Gates.jpg" />,
     icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/products/windows-doors",
   },
