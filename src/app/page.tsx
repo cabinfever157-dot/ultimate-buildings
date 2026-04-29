@@ -104,10 +104,13 @@ export default function HomePage() {
                 transition={{ duration: 1, delay: 0.2, type: "spring", bounce: 0.4 }}
                 className="max-w-5xl"
               >
-                  <p className="mb-8 text-[1.125rem] md:text-[1.25rem] font-body font-medium text-white drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]">
+                  <p className="mb-4 text-[1.125rem] md:text-[1.25rem] font-body font-medium text-white drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]">
                     Contact Us: 513-800-1980
                   </p>
 
+                  <p className="mb-8 text-2xl md:text-3xl font-display font-light text-white/80 drop-shadow-[0_0_12px_rgba(0,0,0,0.9)] leading-tight">
+                    Interior and Exterior<br/>Custom Architectural Finishing Products
+                  </p>
                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
                     Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
                   </h1>
