@@ -112,7 +112,7 @@ export function CoreValues() {
             }}
             className={value.wide ? "md:col-span-2 lg:col-span-3" : ""}
           >
-            <div className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-3xl p-8 h-full hover:border-brand-primary/20 transition-colors duration-500 overflow-hidden">
+            <div className="group relative glass-panel rounded-2xl p-8 h-full overflow-hidden">
               <BorderBeam
                 size={250}
                 duration={10}
@@ -168,7 +168,7 @@ export function CoreValues() {
         transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
         className="max-w-5xl mx-auto mb-16"
       >
-        <div className="relative rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-3xl p-12 md:p-16 text-center overflow-hidden">
+        <div className="relative glass-panel rounded-3xl p-12 md:p-16 text-center overflow-hidden">
           <BorderBeam size={400} duration={12} colorFrom="#d4af37" colorTo="#d4af3740" />
           {/* Radial glow */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.06)_0%,_transparent_70%)] pointer-events-none" />

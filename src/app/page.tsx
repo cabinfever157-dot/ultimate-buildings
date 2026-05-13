@@ -69,18 +69,19 @@ export default function HomePage() {
       {/* Intro Sequence Overlay */}
       <AnimatePresence>
         {showIntro && (
-           <IntroSequence
-               text="Ultimate-Buildings. Factory Direct to Your Job Site."
-             videoId="FFwm_-HXYEY"
-             onComplete={handleIntroComplete}
-             playbackRate={0.5}
-             startTime={7}
-           />
+          <IntroSequence
+              text="Ultimate-Buildings. Factory Direct to Your Job Site."
+            videoId="1191940044"
+            platform="vimeo"
+            onComplete={handleIntroComplete}
+            playbackRate={0.5}
+            startTime={7}
+          />
         )}
       </AnimatePresence>
 
         {/* Background Video - fades in as intro completes (half speed) */}
-        {showBackgroundVideo && <BackgroundVideo videoId="8jsXi_51B40" opacity={0.4} zIndex={0} playbackRate={0.5} startTime={13} />}
+        {showBackgroundVideo && <BackgroundVideo videoId="1191940044" platform="vimeo" opacity={0.4} zIndex={0} playbackRate={0.5} startTime={13} />}
         
         {/* Main Content displays 2 seconds after background video appears */}
         {introComplete && (

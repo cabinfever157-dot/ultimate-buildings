@@ -10,46 +10,69 @@ interface IntroSequenceProps {
   onComplete: () => void;
   playbackRate?: number;
   startTime?: number;
+  platform?: 'youtube' | 'vimeo';
 }
 
-export function IntroSequence({ text, videoId, onComplete, playbackRate = 1.0, startTime = 7 }: IntroSequenceProps) {
+export function IntroSequence({ text, videoId, onComplete, playbackRate = 1.0, startTime = 7, platform = 'youtube' }: IntroSequenceProps) {
   const [showText, setShowText] = useState(true); 
   const [showLogo, setShowLogo] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Determine the video URL based on platform
+  const getVideoUrl = () => {
+    if (platform === 'vimeo') {
+      // Vimeo URL format with parameters for background video
+      return `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&autopause=0&background=1&transparent=0&responsive=1`;
+    } else {
+      // YouTube URL format (existing implementation)
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&start=${startTime}&playinline=1&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0`;
+    }
+  };
+
+  // Determine the allow attribute based on platform
+  const getAllowAttribute = () => {
+    if (platform === 'vimeo') {
+      return "autoplay; fullscreen; picture-in-picture";
+    } else {
+      return "autoplay; encrypted-media; picture-in-picture";
+    }
+  };
 
   useEffect(() => {
     const logoTimer = setTimeout(() => setShowLogo(true), 3500);
     const fadeOutTimer = setTimeout(() => setIsFadingOut(true), 5500);
     const completeTimer = setTimeout(() => onComplete(), 8500);
 
-    // Set up YouTube player API for playback rate control
-    const setupYouTubePlayer = () => {
-      if ((window as any).YT && (window as any).YT.Player && iframeRef.current) {
-        try {
-          const player = new (window as any).YT.Player(iframeRef.current, {
-            events: {
-              'onReady': (event: any) => {
-                event.target.setPlaybackRate(playbackRate);
-                console.log(`Intro video playback rate set to ${playbackRate}x`);
+    if (platform === 'youtube') {
+      // Set up YouTube player API for playback rate control
+      const setupYouTubePlayer = () => {
+        if ((window as any).YT && (window as any).YT.Player && iframeRef.current) {
+          try {
+            const player = new (window as any).YT.Player(iframeRef.current, {
+              events: {
+                'onReady': (event: any) => {
+                  event.target.setPlaybackRate(playbackRate);
+                  console.log(`Intro video playback rate set to ${playbackRate}x`);
+                }
               }
-            }
-          });
-        } catch (error) {
-          console.log('Error setting intro playback rate:', error);
+            });
+          } catch (error) {
+            console.log('Error setting intro playback rate:', error);
+          }
         }
-      }
-    };
+      };
 
-    // Check for YouTube API availability
-    setupYouTubePlayer();
+      // Check for YouTube API availability
+      setupYouTubePlayer();
+    }
 
     return () => {
       clearTimeout(logoTimer);
       clearTimeout(fadeOutTimer);
       clearTimeout(completeTimer);
     };
-  }, [onComplete, playbackRate]);
+  }, [onComplete, playbackRate, platform]);
 
   return (
     <AnimatePresence>
@@ -72,8 +95,8 @@ export function IntroSequence({ text, videoId, onComplete, playbackRate = 1.0, s
                   ref={iframeRef}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                   style={{ width: '100vw', height: '100vh', objectFit: 'cover', zIndex: 10 }}
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&start=${startTime}&playinline=1&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0`}
-                  allow="autoplay; encrypted-media; picture-in-picture"
+                  src={getVideoUrl()}
+                  allow={getAllowAttribute()}
                   allowFullScreen
                   frameBorder="0"
                   title="brg-video"

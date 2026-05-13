@@ -9,6 +9,7 @@ interface BackgroundVideoProps {
   zIndex?: number;
   playbackRate?: number;
   startTime?: number;
+  platform?: 'youtube' | 'vimeo';
 }
 
 export function BackgroundVideo({
@@ -16,35 +17,58 @@ export function BackgroundVideo({
   opacity = 0.5,
   zIndex = -1,
   playbackRate = 1.0,
-  startTime = 0
+  startTime = 0,
+  platform = 'youtube'
 }: BackgroundVideoProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   
+  // Determine the video URL based on platform
+  const getVideoUrl = () => {
+    if (platform === 'vimeo') {
+      // Vimeo URL format with parameters for background video
+      return `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&autopause=0&background=1&transparent=0&responsive=1`;
+    } else {
+      // YouTube URL format (existing implementation)
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&start=${startTime || 0}&end=270&playinline=1&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0`;
+    }
+  };
+
+  // Determine the allow attribute based on platform
+  const getAllowAttribute = () => {
+    if (platform === 'vimeo') {
+      return "autoplay; fullscreen; picture-in-picture";
+    } else {
+      return "autoplay; encrypted-media; picture-in-picture";
+    }
+  };
+
   useEffect(() => {
-    // Check if YouTube API is available
-    const checkYouTubeAPI = () => {
-      if ((window as any).YT && (window as any).YT.Player && iframeRef.current) {
-        try {
-          const player = new (window as any).YT.Player(iframeRef.current, {
-            events: {
-              'onReady': (event: any) => {
-                event.target.setPlaybackRate(playbackRate);
-                console.log(`Video playback rate set to ${playbackRate}x`);
+    if (platform === 'youtube') {
+      // Check if YouTube API is available
+      const checkYouTubeAPI = () => {
+        if ((window as any).YT && (window as any).YT.Player && iframeRef.current) {
+          try {
+            const player = new (window as any).YT.Player(iframeRef.current, {
+              events: {
+                'onReady': (event: any) => {
+                  event.target.setPlaybackRate(playbackRate);
+                  console.log(`Video playback rate set to ${playbackRate}x`);
+                }
               }
-            }
-          });
-        } catch (error) {
-          console.log('Error setting playback rate:', error);
+            });
+          } catch (error) {
+            console.log('Error setting playback rate:', error);
+          }
+        } else {
+          // If API not ready, try again after delay
+          setTimeout(checkYouTubeAPI, 1000);
         }
-      } else {
-        // If API not ready, try again after delay
-        setTimeout(checkYouTubeAPI, 1000);
-      }
-    };
-    
-    // Start checking for YouTube API
-    checkYouTubeAPI();
-  }, [videoId, playbackRate]);
+      };
+      
+      // Start checking for YouTube API
+      checkYouTubeAPI();
+    }
+  }, [videoId, playbackRate, platform]);
 
   return (
     <motion.div
@@ -64,8 +88,8 @@ export function BackgroundVideo({
           opacity: opacity,
           zIndex: 10
         }}
-                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&start=${startTime || 0}&end=270&playinline=1&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0`}
-        allow="autoplay; encrypted-media; picture-in-picture"
+        src={getVideoUrl()}
+        allow={getAllowAttribute()}
         allowFullScreen
         frameBorder="0"
         title="background-video"
