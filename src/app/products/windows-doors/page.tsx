@@ -12,7 +12,7 @@ const windowDoorTypes = [
     id: "french-slim",
     title: "French Slim Steel",
     description: "Custom fabricated French slim steel windows and doors. Up to local code - residential & commercial.",
-    image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
+    image: "/images/bento/slimsteel.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Slim profiles for maximum glass area",
@@ -35,7 +35,7 @@ const windowDoorTypes = [
     id: "aluminum",
     title: "Aluminum Systems",
     description: "Custom fabricated aluminum windows and doors with thermal break technology.",
-    image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
+    image: "/images/bento/aluminum.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Thermal break technology",
@@ -58,7 +58,7 @@ const windowDoorTypes = [
     id: "wrought-iron",
     title: "Wrought Iron",
     description: "Custom fabricated wrought iron doors and windows. Custom design to fit your needs.",
-    image: "/images/bento/wrought-iron-wooden-door.jpg",
+    image: "/images/bento/wrought-iron.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Custom design to fit your needs",
@@ -81,7 +81,7 @@ const windowDoorTypes = [
     id: "mixed-materials",
     title: "Mixed Materials",
     description: "Custom fabricated windows and doors using mixed materials for unique designs.",
-    image: "/images/bento/Modern-aluminum-window-systems.jpg",
+    image: "/images/bento/mixed-materials.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Wood-clad aluminum",
@@ -196,7 +196,9 @@ export default function WindowsDoorsPage() {
                   <img
                     src={type.image}
                     alt={type.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className={`w-full h-full transition-transform duration-300 hover:scale-105 ${
+                      type.id === "wrought-iron" || type.id === "mixed-materials" ? "object-contain bg-brand-dark/80" : "object-cover"
+                    }`}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">

@@ -348,7 +348,7 @@ const features = [
   },
   {
     title: "Custom Vanities & Closets",
-    header: <Skeleton src="/images/projects/page16_img01.jpg" />,
+    header: <Skeleton src="/images/bento/closets.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",
   },
@@ -360,13 +360,13 @@ const features = [
   },
   {
     title: "Stone Countertops",
-    header: <Skeleton src="/images/projects/page08_img01.jpg" />,
+    header: <Skeleton src="/images/bento/countertops.jpg" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
     href: "/products/countertops",
   },
   {
     title: "Factory Direct Pricing",
-    header: <Skeleton src="/images/projects/page03_img01.jpg" />,
+    header: <Skeleton src="/images/bento/factorydirect.jpg" />,
     icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/quote-wizard",
   },
