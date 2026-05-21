@@ -14,7 +14,6 @@ import { cn } from "@/lib/utils";
 
 export default function HomePage() {
   const [showIntro, setShowIntro] = useState(true);
-  const [showBackgroundVideo, setShowBackgroundVideo] = useState(false);
   const [introComplete, setIntroComplete] = useState(false);
   
   const { scrollYProgress } = useScroll();
@@ -22,11 +21,9 @@ export default function HomePage() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   useEffect(() => {
-    // Check if intro has already been played in this session
     if (typeof window !== 'undefined') {
       if (sessionStorage.getItem('cinematicIntroPlayed') === 'true') {
         setShowIntro(false);
-        setShowBackgroundVideo(true);
         setIntroComplete(true);
       }
     }
@@ -34,22 +31,11 @@ export default function HomePage() {
 
   const handleIntroComplete = () => {
     setShowIntro(false);
-    setShowBackgroundVideo(true);
     if (typeof window !== 'undefined') {
       sessionStorage.setItem('cinematicIntroPlayed', 'true');
     }
+    setTimeout(() => setIntroComplete(true), 500);
   };
-
-  // Delay main content appearance by 2 seconds after background video appears
-  useEffect(() => {
-    if (showBackgroundVideo) {
-      const contentTimer = setTimeout(() => {
-        setIntroComplete(true);
-      }, 2000);
-      
-      return () => clearTimeout(contentTimer);
-    }
-  }, [showBackgroundVideo]);
 
    return (
      <div className="relative min-h-screen bg-brand-dark overflow-hidden">
@@ -66,22 +52,18 @@ export default function HomePage() {
         )}
       />
 
-      {/* Intro Sequence Overlay */}
+      {/* Persistent Background Video - always present, never reloads */}
+      <BackgroundVideo videoId="1194248578" platform="vimeo" opacity={0.4} zIndex={0} />
+
+      {/* Intro Sequence Overlay - sits on top of the persistent video */}
       <AnimatePresence>
         {showIntro && (
           <IntroSequence
-              text="Ultimate-Buildings. Factory Direct to Your Job Site."
-            videoId="1191940044"
-            platform="vimeo"
+            text="Ultimate-Buildings. Factory Direct to Your Job Site."
             onComplete={handleIntroComplete}
-            playbackRate={0.5}
-            startTime={7}
           />
         )}
       </AnimatePresence>
-
-        {/* Background Video - fades in as intro completes (half speed) */}
-        {showBackgroundVideo && <BackgroundVideo videoId="1191940044" platform="vimeo" opacity={0.4} zIndex={0} playbackRate={0.5} startTime={13} />}
         
         {/* Main Content displays 2 seconds after background video appears */}
         {introComplete && (
@@ -313,10 +295,9 @@ export default function HomePage() {
 
 const Skeleton = ({ src }: { src?: string }) => (
   <div className="flex flex-1 w-full min-h-[16rem] rounded-xl bg-[#0a0f18] border border-white/5 overflow-hidden relative group-hover/bento:shadow-[inset_0_0_50px_rgba(212,175,55,0.2)] transition-shadow duration-500">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover/bento:opacity-40 transition-opacity duration-500" />
       {src && (
           /* eslint-disable-next-line @next/next/no-img-element */
-          <img src={src} className="absolute inset-0 object-cover w-full h-full opacity-70 group-hover/bento:opacity-100 group-hover/bento:scale-110 transition-all duration-1000 ease-out" alt="Preview"/>
+          <img src={src} className="absolute inset-0 object-cover w-full h-full group-hover/bento:scale-110 transition-transform duration-1000 ease-out" alt="Preview"/>
       )}
   </div>
 );
