@@ -1,137 +1,155 @@
 "use client";
 
 import Link from "next/link";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
-// Project data for the promotional gallery - Ultimate-Buildings Global Projects
-const projectTypes = [
+const gallerySections = [
   {
-    id: "multi-unit",
-    title: "Multi-Unit Projects",
-    description: "Large-scale residential and commercial developments",
-    projects: [
-      {
-        id: "tampa-home",
-        title: "Tampa Bay Residence",
-        description: "Complete kitchen cabinetry package for luxury waterfront home",
-        location: "Tampa, Florida",
-        size: "Custom Residential",
-        materials: ["Kitchen Cabinets", "Quartz Countertops", "Custom Cabinetry"],
-        image: "/images/gallery/tampa-residence.jpg",
-      },
-      {
-        id: "ohio-apartments",
-        title: "Ohio Apartment Complex",
-        description: "Multi-unit development with complete window, door, staircase and railing package",
-        location: "Ohio, USA",
-        size: "Multi-Family Residential",
-        materials: ["Windows", "Doors", "Staircases", "Railings"],
-        image: "/images/gallery/ohio-apartments.jpg",
-      },
-      {
-        id: "aruba-full-home",
-        title: "Aruba Caribbean Villa",
-        description: "Complete architectural finishing package for luxury island home",
-        location: "Aruba",
-        size: "Luxury Villa",
-        materials: ["Cabinets", "Doors", "Windows", "Staircase", "Railings", "Vanities"],
-        image: "/images/gallery/aruba-villa.jpg",
-      },
+    id: "stairs",
+    title: "Staircases & Railings",
+    description: "Custom curved, spiral, and straight staircases — wrought iron, stainless steel, glass, and wood",
+    images: [
+      "/images/stock/stairs-1.jpg",
+      "/images/stock/stairs-2.jpg",
+      "/images/stock/stairs-stainless-steel.jpg",
+      "/images/gallery/uk-villa-staircase.png",
+      "/images/gallery/fitness-center.jpg",
+      "/images/gallery/shopping-mall.jpg",
+      "/images/gallery/nz-boutique-hotel.jpg",
     ],
   },
   {
-    id: "public",
-    title: "International Projects",
-    description: "Global projects showcasing international craftsmanship",
-    projects: [
-      {
-        id: "uk-villa",
-        title: "UK Country Villa",
-        description: "Custom curved staircase for elegant country estate",
-        location: "United Kingdom",
-        size: "Luxury Residential",
-        materials: ["Custom Staircase", "Premium Materials", "Precision Craftsmanship"],
-        image: "/images/gallery/uk-villa-staircase.png",
-      },
-      {
-        id: "australia-hotel",
-        title: "Australian Resort Hotel",
-        description: "Walk-in closets and bathroom vanities for boutique resort",
-        location: "Australia",
-        size: "Resort Hospitality",
-        materials: ["Walk-in Closets", "Bathroom Vanities", "Custom Cabinetry"],
-        image: "/images/gallery/australia-resort.jpg",
-      },
-      {
-        id: "nz-hotel",
-        title: "New Zealand Boutique Hotel",
-        description: "Sweeping curved staircase as signature architectural feature",
-        location: "New Zealand",
-        size: "Boutique Hospitality",
-        materials: ["Curved Staircase", "Custom Design", "Structural Engineering"],
-        image: "/images/gallery/nz-boutique-hotel.jpg",
-      },
+    id: "stone-flooring",
+    title: "Stone Flooring & Walls",
+    description: "Marble, granite, quartz, and limestone — interior and exterior applications",
+    images: [
+      "/images/stock/stone-flooring-1.jpg",
+      "/images/stock/stone-flooring-2.jpg",
+      "/images/stock/stone-flooring-3.jpg",
     ],
   },
   {
-    id: "private",
-    title: "Specialty Projects",
-    description: "Unique commercial and residential commissions",
-    projects: [
-      {
-        id: "arizona-estate",
-        title: "Arizona Desert Estate",
-        description: "Custom cabinetry and wrought iron entry doors for southwestern luxury home",
-        location: "Arizona, USA",
-        size: "Luxury Estate",
-        materials: ["Custom Cabinetry", "Wrought Iron Doors", "Designer Hardware"],
-        image: "/images/gallery/arizona-estate.jpg",
-      },
-      {
-        id: "us-shopping-mall",
-        title: "Regional Shopping Mall",
-        description: "Architectural staircase and railing system for premier retail destination",
-        location: "USA",
-        size: "Commercial Retail",
-        materials: ["Staircase", "Railings", "Architectural Metalwork"],
-        image: "/images/gallery/shopping-mall.jpg",
-      },
-      {
-        id: "fitness-gym",
-        title: "Premium Fitness Center",
-        description: "Modern staircase and glass railings for luxury gym facility",
-        location: "USA",
-        size: "Commercial Fitness",
-        materials: ["Custom Staircase", "Glass Railings", "Metal Accents"],
-        image: "/images/gallery/fitness-center.jpg",
-      },
+    id: "spc-flooring",
+    title: "SPC Flooring",
+    description: "Click-lock, glue-down, and lay-flat SPC flooring — custom thickness and wear layer",
+    images: [
+      "/images/stock/spc-flooring-1.jpg",
+      "/images/stock/spc-flooring-2.jpg",
+      "/images/stock/spc-flooring-3.jpg",
+    ],
+  },
+  {
+    id: "countertops",
+    title: "Countertops & Slabs",
+    description: "Granite, quartz, and marble countertops — custom fabricated to your specifications",
+    images: [
+      "/images/stock/countertops-1.jpg",
+      "/images/stock/countertops-2.jpg",
+      "/images/stock/countertops-3.jpg",
+      "/images/stock/countertops-4.jpg",
+      "/images/stock/countertops-5.jpg",
+      "/images/stock/countertops-6.jpg",
+      "/images/stock/countertops-7.jpg",
+      "/images/stock/countertops-8.jpg",
+    ],
+  },
+  {
+    id: "cabinets",
+    title: "Cabinets & Storage",
+    description: "Kitchens, vanities, closets, wardrobes, and organizational storage — fully custom",
+    images: [
+      "/images/stock/cabinets-1.jpg",
+      "/images/stock/cabinets-2.jpg",
+      "/images/stock/cabinets-3.jpg",
+      "/images/stock/cabinets-4.jpg",
+      "/images/stock/cabinets-5.jpg",
+      "/images/stock/cabinets-6.jpg",
+    ],
+  },
+  {
+    id: "vanities",
+    title: "Vanities",
+    description: "Custom bathroom vanities — sized to your space, finished to your style",
+    images: [
+      "/images/stock/vanity-1.jpg",
+      "/images/stock/vanity-2.jpg",
+    ],
+  },
+  {
+    id: "bathrooms",
+    title: "Hotel & Luxury Bathrooms",
+    description: "Complete bathroom packages for hotels, resorts, and luxury residential",
+    images: [
+      "/images/stock/hotel-bathroom-1.jpg",
+      "/images/stock/hotel-bathroom-2.jpg",
+      "/images/stock/hotel-bathroom-3.jpg",
+      "/images/stock/hotel-bathroom-4.jpg",
+      "/images/stock/hotel-bathroom-5.jpg",
+      "/images/stock/hotel-bathroom-6.jpg",
+    ],
+  },
+  {
+    id: "windows-doors",
+    title: "Windows & Doors",
+    description: "French slim steel, aluminum, wrought iron, and mixed material systems",
+    images: [
+      "/images/stock/windows-1.jpg",
+      "/images/stock/windows-2.jpg",
+      "/images/stock/windows-3.jpg",
+      "/images/stock/windows-mixed-materials.png",
+      "/images/gallery/ohio-apartments.jpg",
+    ],
+  },
+  {
+    id: "gates",
+    title: "Wrought Iron & Gates",
+    description: "Custom designed gates, fencing, and architectural metalwork",
+    images: [
+      "/images/stock/gates-1.jpg",
+      "/images/stock/gates-2.jpg",
+      "/images/stock/gates-upload.jpg",
+      "/images/gallery/arizona-estate.jpg",
+    ],
+  },
+  {
+    id: "garage-doors",
+    title: "Commercial Garage Doors",
+    description: "Custom fabricated garage doors — sized to fit, not standard sizes",
+    images: [
+      "/images/stock/garage-doors-1.jpg",
+      "/images/stock/garage-doors-2.jpg",
+      "/images/stock/garage-doors-3.jpg",
+    ],
+  },
+  {
+    id: "prefab",
+    title: "Prefab Construction",
+    description: "Hotels, apartments, and office buildings — volume builder pricing, factory direct",
+    images: [
+      "/images/stock/prefab-hotels.jpg",
+      "/images/stock/prefab-apartments.jpg",
+      "/images/stock/prefab-offices.jpg",
+    ],
+  },
+  {
+    id: "projects",
+    title: "Global Projects",
+    description: "Completed projects across the USA, Caribbean, Australia, and New Zealand",
+    images: [
+      "/images/gallery/tampa-residence.jpg",
+      "/images/gallery/aruba-villa.jpg",
+      "/images/gallery/australia-resort.jpg",
     ],
   },
 ];
 
 export default function PromotionalGallery() {
-  const [activeCategory, setActiveCategory] = useState("multi-unit");
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-
-  const currentCategory = projectTypes.find((category) => category.id === activeCategory) || projectTypes[0];
-
-  const openProjectModal = (project: any) => {
-    setSelectedProject(project);
-  };
-
-  const closeProjectModal = () => {
-    setSelectedProject(null);
-  };
-
   return (
     <div className="relative min-h-screen bg-transparent pt-32 pb-24">
       <NarrativeNav />
 
-      {/* Background glow */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-primary/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <main className="max-w-7xl mx-auto px-6 md:px-12">
@@ -149,176 +167,54 @@ export default function PromotionalGallery() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Explore our global portfolio of completed projects across the USA, UK, Australia, New Zealand, and beyond. Factory-direct architectural finishing products delivered worldwide.
+            Explore our showcase of custom architectural finishing products — stairs, flooring, countertops, cabinets, windows, doors, and more. All factory direct to your job site.
           </motion.p>
         </div>
 
-        {/* Category Navigation */}
-        <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {projectTypes.map((category) => (
-              <Button
-                key={category.id}
-                variant={activeCategory === category.id ? "default" : "outline"}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? "bg-brand-primary text-brand-dark shadow-glass-glow"
-                    : "border-white/10 hover:bg-white/5 hover:text-brand-primary"
-                }`}
-              >
-                {category.title}
-              </Button>
-            ))}
-          </div>
-
+        {gallerySections.map((section, sectionIndex) => (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-8"
+            key={section.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: sectionIndex * 0.05 }}
+            className="mb-20"
           >
-            <h2 className="text-2xl md:text-3xl font-display font-medium text-white mb-2">
-              {currentCategory.title}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {currentCategory.description}
-            </p>
-          </motion.div>
-        </div>
+            <div className="mb-8">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent" />
+                <h2 className="text-2xl md:text-3xl font-display font-medium text-white whitespace-nowrap">
+                  {section.title}
+                </h2>
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent" />
+              </div>
+              <p className="text-muted-foreground text-center text-sm max-w-2xl mx-auto">
+                {section.description}
+              </p>
+            </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {currentCategory.projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card
-                className="bg-background/90 backdrop-blur-xl border-white/10 shadow-glass-md overflow-hidden hover:shadow-glass-lg transition-all duration-300 cursor-pointer"
-                onClick={() => openProjectModal(project)}
-              >
-                <div className="h-48 overflow-hidden">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {section.images.map((image, imageIndex) => (
+                <motion.div
+                  key={image}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: imageIndex * 0.05 }}
+                  className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm hover:border-brand-primary/30 transition-all duration-500"
+                >
                   <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    src={image}
+                    alt={`${section.title} example`}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-foreground/80 mb-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.materials.map((material, matIndex) => (
-                      <span
-                        key={matIndex}
-                        className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs rounded-full"
-                      >
-                        {material}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex justify-between text-sm text-foreground/60">
-                    <span>{project.location}</span>
-                    <span>{project.size}</span>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
 
-        {/* Project Detail Modal */}
-        {selectedProject && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-xl flex items-center justify-center z-50 p-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="glass-panel border border-white/10 rounded-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] flex flex-col"
-            >
-              <div className="h-64 overflow-hidden">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 overflow-y-auto flex-1">
-                <div className="flex justify-between items-start mb-4">
-                  <h2 className="text-2xl font-bold text-foreground flex-1">
-                    {selectedProject.title}
-                  </h2>
-                  <button
-                    onClick={closeProjectModal}
-                    className="text-foreground/60 hover:text-foreground text-2xl ml-4"
-                  >
-                    ×
-                  </button>
-                </div>
-
-                <p className="text-foreground/80 mb-6">
-                  {selectedProject.description}
-                </p>
-
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <h4 className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-2">
-                      Location
-                    </h4>
-                    <p className="text-foreground">{selectedProject.location}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-2">
-                      Size
-                    </h4>
-                    <p className="text-foreground">{selectedProject.size}</p>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-3">
-                    Materials Used
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.materials.map((material: string, index: number) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs rounded-full"
-                      >
-                        {material}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-3 mt-6">
-                  <Link
-                    href="/quote-wizard"
-                    className="flex-1"
-                  >
-                    <Button className="w-full bg-brand-primary text-brand-dark hover:bg-brand-primary/90 shadow-glass-glow">
-                      Get Quote for Similar Project
-                    </Button>
-                  </Link>
-                  <Button
-                    onClick={closeProjectModal}
-                    variant="outline"
-                    className="flex-1 border-white/10 hover:bg-white/5"
-                  >
-                    Close
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-
-        {/* Call to Action Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
