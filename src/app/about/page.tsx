@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
-import { CheckCircle, Star, Globe, Factory, ShieldCheck, Truck, Users, ArrowRight, Award } from "lucide-react";
+import { CheckCircle, Star, Globe, Factory, ShieldCheck, Truck, Users, Award } from "lucide-react";
 
 // Magic sparkle effect
 const Sparkle = ({ size = 20, color = "#d4af37", delay = 0, style = {} }: any) => {
@@ -222,15 +222,64 @@ export default function AboutPage() {
           </motion.h2>
 
            <div className="glass-panel rounded-2xl p-8 md:p-12 border border-white/10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-muted-foreground leading-[1.7]"
-            >
-              With completed projects across North America, Europe, UK, Australia, New Zealand, and the Caribbean. All products are up to local building codes and tested by international respected standards.
-            </motion.div>
-          </div>
+             <div className="space-y-6">
+               <div className="flex items-start gap-4">
+                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
+                 <div>
+                   <h3 className="text-xl font-display font-medium text-white mb-2">Factory Direct Pricing</h3>
+                   <p className="text-muted-foreground leading-[1.6]">Eliminating middlemen to provide competitive pricing without sacrificing quality. Supply chain services straight to your project.</p>
+                 </div>
+               </div>
+               <div className="flex items-start gap-4">
+                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
+                 <div>
+                   <h3 className="text-xl font-display font-medium text-white mb-2">Complete Logistics Included</h3>
+                   <p className="text-muted-foreground leading-[1.6]">We handle all shipping, customs clearance, duties, tariffs, and delivery directly to your job site. No LC required.</p>
+                 </div>
+               </div>
+               <div className="flex items-start gap-4">
+                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
+                 <div>
+                   <h3 className="text-xl font-display font-medium text-white mb-2">Custom Solutions</h3>
+                   <p className="text-muted-foreground leading-[1.6]">Your size, your colors, your details — tailored to exact specifications meeting local building codes with shop drawings and 3D visualizations included.</p>
+                 </div>
+               </div>
+               <div className="flex items-start gap-4">
+                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
+                 <div>
+                   <h3 className="text-xl font-display font-medium text-white mb-2">Pre-Production Proof</h3>
+                   <p className="text-muted-foreground leading-[1.6]">Customers authorize preproduction samples just to make sure all is ok.</p>
+                 </div>
+               </div>
+               <div className="flex items-start gap-4">
+                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
+                 <div>
+                   <h3 className="text-xl font-display font-medium text-white mb-2">Flexible Quality Control</h3>
+                   <p className="text-muted-foreground leading-[1.6]">Inspections by our partners employees, a respected third-party inspection company, or your employees — your choice.</p>
+                 </div>
+               </div>
+             </div>
+
+             <div className="mt-12 pt-8 border-t border-white/10 text-center">
+               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-[1.7]">
+                 Discover why architects, designers, contractors, builders, commercial property owners,
+                 retailers and wholesale distributors trust us for their most ambitious projects.
+               </p>
+               <p className="text-muted-foreground mt-4 leading-[1.6]">
+                 Apartments – Dorms/Nursing Homes – Hotels – Office Buildings – Remodels – Multi Home
+                 <br />
+                 Restaurants/Entertainment Venues – Schools – Retail Centers/Retailers
+               </p>
+               <p className="text-muted-foreground mt-4 leading-[1.6]">
+                 Contact us today to learn how we can bring your vision to life for:
+               </p>
+               <p className="text-muted-foreground mt-2 leading-[1.6]">
+                 Stone Floor & Walls – SPC Flooring – Countertops – Cabinets & Storage – Stairs & Railings
+                 <br />
+                 Windows – Interior & Exterior Doors – Metal Gates & Fencing – Prefab Buildings
+               </p>
+             </div>
+           </div>
         </section>
 
         {/* Our Values */}
@@ -240,7 +289,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-4xl font-display font-medium text-white mb-12 text-center"
           >
-            Our Core Values
+            Why Choose Us
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -286,113 +335,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* What Sets Us Apart */}
-        <section className="mb-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-display font-medium text-white mb-12 text-center"
-          >
-            What Sets Us Apart
-          </motion.h2>
-
-          <div className="space-y-8">
-            {differentiators.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 + i * 0.1 }}
-                className="glass-panel rounded-xl p-6 border border-white/10 flex items-start gap-4"
-              >
-                <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-display font-medium text-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-[1.6]">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="text-center py-16 relative">
-          <FloatAnimation delay={0.2}>
-            <motion.h2
-              initial={{ opacity: 0, y: 20, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: [0.9, 1.05, 1] }}
-              transition={{ duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
-              className="text-3xl md:text-4xl font-display font-medium text-white mb-6 relative"
-            >
-              Experience the Ultimate Buildings Difference
-              <motion.span
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: [0, 1, 0.5], scale: [0, 1.5, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-2 bg-gradient-to-r from-transparent via-brand-primary to-transparent rounded-full blur-sm"
-              />
-            </motion.h2>
-          </FloatAnimation>
-            <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
-          >
-            Discover why architects, designers, contractors, builders, commercial property owners,
-            retailers and wholesale distributors trust us for their most ambitious projects.
-            <br/><br/>
-            Apartments – Dorms/Nursing Homes – Hotels – Office Buildings – Remodels – Multi Home
-            <br/>
-            Restaurants/Entertainment Venues - Schools – Retail Centers/Retailers
-            <br/><br/>
-            Contact us today to learn how we can bring your vision to life for:
-            <br/>
-            Stone Floor & Walls – SPC Flooring – Countertops – Cabinets & Storage - Stairs & Railings
-            <br/>
-            Windows - Interior & Exterior Doors – Metal Gates & Fencing – Prefab Buildings
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block"
-          >
-            <motion.button
-              initial={{ boxShadow: "0 0 0 0 rgba(212, 175, 55, 0)" }}
-              animate={{ 
-                boxShadow: [
-                  "0 0 0 0 rgba(212, 175, 55, 0)",
-                  "0 0 15px 5px rgba(212, 175, 55, 0.3)",
-                  "0 0 0 0 rgba(212, 175, 55, 0)"
-                ],
-                scale: [1, 1.02, 1]
-              }}
-              transition={{ 
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="bg-brand-primary text-brand-dark hover:bg-brand-primary/90 text-lg px-8 py-4 rounded-xl shadow-glass-glow flex items-center gap-2 mx-auto relative"
-            >
-              <span className="relative z-10">
-                Contact Our Team
-                <motion.span
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: [0, 0.5, 0], x: [0, 5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -right-6 top-1/2 transform -translate-y-1/2 text-2xl"
-                >
-                  →
-                </motion.span>
-              </span>
-              <ArrowRight className="w-5 h-5 z-10" />
-            </motion.button>
-          </motion.div>
-        </section>
       </main>
     </div>
   );

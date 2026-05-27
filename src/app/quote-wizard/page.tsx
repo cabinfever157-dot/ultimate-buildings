@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -27,7 +28,8 @@ const initialFormData: ContactFormData = {
 
 export default function QuoteWizard() {
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const router = useRouter();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -36,8 +38,8 @@ export default function QuoteWizard() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Contact form submitted:", formData);
-    setSubmitted(true);
+    setSubmitting(true);
+    router.push("/thank-you");
   };
 
   const isFormValid = formData.companyName.trim() && formData.contactName.trim() && formData.email.trim() && formData.phone.trim();
@@ -137,22 +139,6 @@ export default function QuoteWizard() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-brand-primary/5 pointer-events-none" />
 
             <div className="p-8 md:p-14 relative z-10">
-              {submitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-center py-20"
-                >
-                  <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-8">
-                    <Send className="w-10 h-10 text-green-400" />
-                  </div>
-                  <h2 className="text-3xl font-display font-medium text-white mb-4">Thank You</h2>
-                  <p className="text-white/60 text-lg max-w-md mx-auto leading-relaxed">
-                    Our USA Customer Service team will review your request and get back to you shortly.
-                  </p>
-                </motion.div>
-              ) : (
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -304,7 +290,6 @@ export default function QuoteWizard() {
                     </motion.div>
                   </form>
                 </motion.div>
-              )}
             </div>
           </Card>
         </div>
