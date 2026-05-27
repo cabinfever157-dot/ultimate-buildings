@@ -12,7 +12,7 @@ const fencingTypes = [
     id: "wrought-iron",
     title: "Wrought Iron Fencing",
     description: "Classic elegance with custom design possibilities",
-    image: "/images/bento/wrought-iron-wooden-door.jpg",
+    image: "/images/stock/gates-1.jpg",
     properties: [
       "Hand-forged custom designs",
       "Durable powder-coated finishes",
@@ -33,7 +33,7 @@ const fencingTypes = [
     id: "aluminum",
     title: "Aluminum Fencing",
     description: "Low-maintenance fencing with modern aesthetics",
-    image: "/images/bento/Metal-Fencing-Gates.jpg",
+    image: "/images/stock/gates-2.jpg",
     properties: [
       "Lightweight yet strong",
       "Corrosion-resistant",
@@ -54,7 +54,7 @@ const fencingTypes = [
     id: "steel",
     title: "Steel Security Fencing",
     description: "High-security fencing for maximum protection",
-    image: "/images/bento/wrought-iron-wooden-door.jpg",
+    image: "/images/stock/gates-1.jpg",
     properties: [
       "Exceptional strength and durability",
       "High impact resistance",
@@ -75,7 +75,7 @@ const fencingTypes = [
     id: "custom-gates",
     title: "Custom Gates",
     description: "Bespoke gate solutions for security and aesthetic enhancement",
-    image: "/images/bento/Metal-Fencing-Gates.jpg",
+    image: "/images/stock/gates-2.jpg",
     properties: [
       "Custom design and fabrication",
       "Automation-ready",
@@ -96,7 +96,7 @@ const fencingTypes = [
     id: "garage-doors",
     title: "Garage Doors",
     description: "Custom garage doors designed and sized to fit your needs — not standard sizes",
-    image: "/images/bento/Metal-Fencing-Gates.jpg",
+    image: "/images/stock/garage-doors-1.jpg",
     properties: [
       "Custom design to fit your opening",
       "Custom sized — not standard sizes",

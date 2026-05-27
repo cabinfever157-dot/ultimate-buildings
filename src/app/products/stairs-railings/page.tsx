@@ -12,7 +12,7 @@ const stairsRailingsData = [
     id: "wrought-iron",
     title: "Wrought Iron",
     description: "Classic elegance with custom design possibilities",
-    image: "/images/bento/wrought-iron-wooden-door.jpg",
+    image: "/images/stock/stairs-1.jpg",
     properties: [
       "Custom fabrication",
       "Durable powder-coated finishes",
@@ -31,7 +31,7 @@ const stairsRailingsData = [
     id: "stainless-steel",
     title: "Stainless Steel",
     description: "Modern aesthetic with exceptional durability",
-    image: "/images/bento/Modern-aluminum-window-systems.jpg",
+    image: "/images/stock/stairs-stainless-steel.jpg",
     properties: [
       "Corrosion resistant",
       "Sleek contemporary look",
@@ -50,7 +50,7 @@ const stairsRailingsData = [
     id: "glass",
     title: "Glass Railings",
     description: "Sleek and modern with unobstructed views",
-    image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
+    image: "/images/stock/windows-3.jpg",
     properties: [
       "Tempered safety glass",
       "Unobstructed views",
@@ -69,7 +69,7 @@ const stairsRailingsData = [
     id: "wood",
     title: "Custom Wood",
     description: "Warmth and natural beauty for traditional designs",
-    image: "/images/bento/High-end-kitchen-cabinetry.jpg",
+    image: "/images/stock/cabinets-5.jpg",
     properties: [
       "Natural wood grain beauty",
       "Custom stain and finish options",

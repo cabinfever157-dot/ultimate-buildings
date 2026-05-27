@@ -11,7 +11,7 @@ const prefabTypes = [
     id: "hotels",
     title: "Hotel Construction",
     description: "Complete prefab hotel packages — structural frame, panels, interior finishes. Volume builder pricing with factory direct delivery.",
-    image: "/images/bento/Light-Steel-Prefab-Construction.jpg",
+    image: "/images/stock/prefab-hotels.jpg",
     properties: [
       "Light steel frame construction",
       "Prefabricated wall and floor panels",
@@ -24,7 +24,7 @@ const prefabTypes = [
     id: "apartments",
     title: "Apartment Buildings",
     description: "Multi-unit prefab apartment construction. Custom layouts, code compliant, factory direct to job site.",
-    image: "/images/bento/Light-Steel-Prefab-Construction.jpg",
+    image: "/images/stock/prefab-apartments.jpg",
     properties: [
       "Multi-story structural systems",
       "Prefabricated bathroom pods",
@@ -37,7 +37,7 @@ const prefabTypes = [
     id: "offices",
     title: "Office Buildings",
     description: "Prefab office construction with flexible layouts. From shell to fully finished — factory direct.",
-    image: "/images/bento/Light-Steel-Prefab-Construction.jpg",
+    image: "/images/stock/prefab-offices.jpg",
     properties: [
       "Open plan and private office layouts",
       "Structural steel frame",

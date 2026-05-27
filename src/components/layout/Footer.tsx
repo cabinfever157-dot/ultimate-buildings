@@ -29,9 +29,9 @@ export function Footer() {
                   <Phone className="w-4 h-4 text-brand-primary" />
                   513-800-1980
                 </a>
-                <a href="mailto:LloydPerlman@gbtsus.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
+                <a href="mailto:info@Ultimate-Buildings.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
                   <Mail className="w-4 h-4 text-brand-primary" />
-                  LloydPerlman@gbtsus.com
+                  info@Ultimate-Buildings.com
                 </a>
               </div>
 

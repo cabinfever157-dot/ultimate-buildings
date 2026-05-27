@@ -353,7 +353,7 @@ const features = [
   },
   {
     title: "Metal Fencing & Gates",
-    header: <Skeleton src="/images/projects/page14_img01.jpg" />,
+    header: <Skeleton src="/images/stock/gates-upload.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/metal-products",
   },

@@ -12,7 +12,7 @@ const productCategories = [
     id: "countertops",
     title: "Countertops & Slabs",
     description: "Slabs and custom fabrication — granite, marble, quartz. Own the quarry. Sell slabs direct to fabricators or custom cut to your specs.",
-    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+    image: "/images/stock/countertops-1.jpg",
     materials: ["Granite", "Quartz", "Marble"],
     features: [
       "Custom fabricated to your measurements",
@@ -26,7 +26,7 @@ const productCategories = [
     id: "spc-flooring",
     title: "SPC Flooring",
     description: "Custom SPC flooring - click-lock, glue-down, lay-flat options. 5-week production. Your brand packaging available.",
-    image: "/images/projects/page08_img03.jpg",
+    image: "/images/stock/spc-flooring-1.jpg",
     materials: ["SPC Core", "UV Coating", "Click-Lock", "Glue-Down", "Lay-Flat"],
     features: [
       "Custom fabricated to your measurements",
@@ -40,7 +40,7 @@ const productCategories = [
     id: "prefab-construction",
     title: "Prefab Construction",
     description: "Custom prefab construction components - hotels, apartments, offices. Volume builder pricing.",
-    image: "/images/bento/Light-Steel-Prefab-Construction.jpg",
+    image: "/images/stock/prefab-hotels.jpg",
     materials: ["Light Steel Frame", "Prefab Panels", "Structural Components"],
     features: [
       "Custom fabricated to your measurements",
@@ -53,7 +53,7 @@ const productCategories = [
     id: "stairs-railings",
     title: "Stairs & Railings",
     description: "Custom fabricated staircases and railings. Safety & code compliant to your location.",
-    image: "/images/bento/Modern-aluminum-window-systems.jpg",
+    image: "/images/stock/stairs-1.jpg",
     materials: ["Wrought Iron", "Stainless Steel", "Glass", "Wood"],
     features: [
       "Custom fabricated to your measurements",
@@ -66,7 +66,7 @@ const productCategories = [
     id: "cabinets",
     title: "Cabinets & Organizational Storage",
     description: "Custom fabricated cabinets and organizational storage for kitchens, bathrooms, wardrobes, and walk-in closets. Volume buyers welcome.",
-    image: "/images/bento/High-end-kitchen-cabinetry.jpg",
+    image: "/images/stock/cabinets-1.jpg",
     materials: ["Wood", "Laminates", "Metal", "Glass"],
     features: [
       "Custom fabricated to your measurements",
@@ -79,7 +79,7 @@ const productCategories = [
     id: "stone-flooring",
     title: "Stone Flooring & Walls",
     description: "Custom fabricated stone flooring and walls to your measurements. Value-priced factory direct for interior and exterior residential and commercial spaces.",
-    image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
+    image: "/images/stock/stone-flooring-1.jpg",
     materials: ["Marble", "Granite", "Quartz", "Limestone"],
     features: [
       "Custom fabricated to your measurements",
@@ -92,7 +92,7 @@ const productCategories = [
     id: "windows-doors",
     title: "Windows & Doors",
     description: "Custom windows and doors - Wrought Iron, French Slim, Aluminum, Mixed Materials. Up to local code.",
-    image: "/images/bento/modern-aluminum-window-systems-with-slim-profiles.jpg",
+    image: "/images/stock/windows-1.jpg",
     materials: ["Wrought Iron", "French Slim", "Aluminum", "Mixed Materials"],
     features: [
       "Custom fabricated to your measurements",
@@ -105,7 +105,7 @@ const productCategories = [
     id: "metal-products",
     title: "Metal Products",
     description: "Custom fencing, gates, partitions, and garage doors. Custom designed & sized to fit your needs — not standard sizes.",
-    image: "/images/bento/Metal-Fencing-Gates.jpg",
+    image: "/images/stock/gates-2.jpg",
     materials: ["Wrought Iron", "Steel", "Aluminum", "Garage Doors"],
     features: [
       "Custom fabricated & sized to your needs",

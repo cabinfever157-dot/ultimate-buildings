@@ -24,8 +24,8 @@ const customCabinetApplications = [
 ];
 
 const imageGallery = [
-    { src: "/images/bento/cabinets.jpg", alt: "Modern custom kitchen cabinets" },
-    { src: "https://water-creation.com/cdn/shop/files/PY72CW03RS-P72TL1203_001_zonz0r.jpg", alt: "Custom cabinet example from an external source" },
+    { src: "/images/stock/cabinets-1.jpg", alt: "Custom kitchen cabinetry" },
+    { src: "/images/stock/cabinets-2.jpg", alt: "Custom organizational storage" },
 ]
 
 export default function CabinetsPage() {

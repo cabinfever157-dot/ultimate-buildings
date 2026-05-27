@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
-import { CheckCircle, Star, Globe, Factory, ShieldCheck, Truck, Home, Building, Users, ArrowRight, Award } from "lucide-react";
+import { CheckCircle, Star, Globe, Factory, ShieldCheck, Truck, Users, ArrowRight, Award } from "lucide-react";
 
 // Magic sparkle effect
 const Sparkle = ({ size = 20, color = "#d4af37", delay = 0, style = {} }: any) => {
@@ -66,13 +66,7 @@ const Shimmer = ({ children }: any) => {
   );
 };
 
-// Company information - Ultimate-Buildings
-const companyStats = [
-  { value: "Factory Direct", label: "Pricing Model", icon: <Factory className="w-6 h-6" /> },
-  { value: "Global", label: "Reach", icon: <Globe className="w-6 h-6" /> },
-  { value: "USA, UK, AU, NZ", label: "Completed Projects", icon: <Building className="w-6 h-6" /> },
 
-];
 
 // Our values - Ultimate-Buildings Core Pillars
 const ourValues = [
@@ -129,20 +123,16 @@ const differentiators = [
     description: "We handle all shipping, customs clearance, duties, tariffs, and delivery directly to your job site. No LC required.",
   },
   {
-    title: "Own the Mine",
-    description: "We own the quarry for granite and marble — fully integrated from mine to fabrication. Direct control over quality and pricing.",
-  },
-  {
     title: "Custom Solutions",
-    description: "Your size, your colors, your details — tailored to exact specifications with shop drawings and 3D visualizations included.",
+    description: "Your size, your colors, your details — tailored to exact specifications meeting local building codes with shop drawings and 3D visualizations included.",
   },
   {
-    title: "Trial Installation Proof",
-    description: "Factory executes complete trial installation with photo and video proof before final payment and shipping.",
+    title: "Pre-Production Proof",
+    description: "Customers authorize preproduction samples just to make sure all is ok.",
   },
   {
     title: "Flexible Quality Control",
-    description: "Inspections by your own representative or entrusted third-party inspector — your choice.",
+    description: "Inspections by our partners employees, a respected third-party inspection company, or your employees — your choice.",
   },
 ];
 
@@ -236,94 +226,10 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-muted-foreground leading-[1.7] mb-8"
-            >
-              Ultimate-Buildings is your direct source for commercial and residential custom architectural finishing products with factory-direct pricing.
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-muted-foreground leading-[1.7] mb-8"
-            >
-              Our core value proposition is acting as a <span className="text-brand-primary font-medium">"1 Stop Finishing Products" provider</span> that offers factory-direct supply chain services straight to the job site. We pride ourselves on offering the <span className="text-brand-primary font-medium">value prices, efficient service, and on-time delivery.</span>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
               className="text-muted-foreground leading-[1.7]"
             >
-              With completed projects across the USA, UK, Australia, New Zealand, and the Caribbean, we've built a reputation for excellence in delivering customized architectural products. Our end-to-end service — from inquiry and quotation through production, logistics, and after-sales support — ensures your project succeeds.
+              With completed projects across North America, Europe, UK, Australia, New Zealand, and the Caribbean. All products are up to local building codes and tested by international respected standards.
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="mt-8 pt-8 border-t border-white/10"
-            >
-              <h3 className="text-2xl font-display font-medium text-brand-primary mb-6">
-                Our Global Partnership
-              </h3>
-              <p className="text-muted-foreground leading-[1.7] mb-6">
-                Our strategic partnership with <span className="text-white font-medium">UB Asia</span> brings over 30 years of import/export experience across North America, South America, Europe, and Asia. With offices throughout Asia and dedicated employees at the factory level, we execute every detail with precision for our customers.
-              </p>
-              <p className="text-muted-foreground leading-[1.7] mb-6">
-                In the USA, we serve a diverse clientele ranging from family-owned companies and real estate developers to Fortune 100 companies, contractors, builders, architects, and designers. Our reach extends to specialty markets including restaurant chains, religious organizations developing low-income housing, and hardscape products for residential projects.
-              </p>
-              <p className="text-muted-foreground leading-[1.7] mb-6">
-                In Asia, our partner works directly with factories to introduce innovative products to worldwide markets. Extra attention to innovation, ease of use, and proper detail has been instrumental in developing new products and expanding business across various global markets.
-              </p>
-              <p className="text-muted-foreground leading-[1.7]">
-                <span className="text-brand-primary font-medium">Customer Care, Simplicity, and Ease</span> — getting you what you need, when you need it — has been the key to our success and defines our story.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Company Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            {companyStats.map((stat, i) => (
-              <FloatAnimation key={stat.label} delay={0.2 + i * 0.1}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  whileHover={{ y: -5, scale: 1.05, transition: { duration: 0.3 } }}
-                  transition={{ delay: 0.2 + i * 0.1, duration: 0.6, ease: [0.4, 0.0, 0.2, 1] }}
-                  className="glass-panel rounded-xl p-6 border border-white/10 text-center relative overflow-hidden"
-                >
-                    <Shimmer>
-                      <div className="text-3xl md:text-4xl font-display font-medium text-white mb-2 relative flex justify-center">
-                        {stat.icon}
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: [0, 0.5, 0] }}
-                          transition={{ duration: 3, repeat: Infinity }}
-                          className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-full blur-sm"
-                        />
-                      </div>
-                    </Shimmer>
-                    <motion.div
-                      initial={{ y: 10, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.2 + i * 0.1 }}
-                      className="text-4xl md:text-5xl font-display font-medium text-white mb-2 text-center"
-                    >
-                      {stat.value}
-                    </motion.div>
-                    <motion.div
-                      initial={{ y: 10, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.3 + i * 0.1 }}
-                      className="text-brand-primary text-sm mb-3 text-center uppercase tracking-widest"
-                    >
-                      {stat.label}
-                    </motion.div>
-                  </motion.div>
-                </FloatAnimation>
-            ))}
           </div>
         </section>
 
@@ -338,14 +244,14 @@ export default function AboutPage() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ourValues.map((value, i) => (
+              {ourValues.map((value, i) => (
               <FloatAnimation key={value.title} delay={0.1 + i * 0.1}>
                 <motion.div
                   initial={{ opacity: 0, y: 20, rotateY: 10 }}
                   animate={{ opacity: 1, y: 0, rotateY: 0 }}
                   whileHover={{ y: -8, rotateY: -5, transition: { duration: 0.3 } }}
                   transition={{ delay: 0.1 + i * 0.1, duration: 0.6, ease: [0.4, 0.0, 0.2, 1] }}
-                  className="glass-panel rounded-xl p-6 border border-white/10 hover:border-brand-primary/30 transition-all cursor-pointer relative overflow-hidden"
+                  className="glass-panel rounded-xl p-6 border border-white/10 hover:border-brand-primary/30 transition-all cursor-pointer relative overflow-hidden flex flex-col"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -410,32 +316,6 @@ export default function AboutPage() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </section>
-
-        {/* UB Asia Partner */}
-        <section className="mb-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center"
-          >
-            UB Asia Partner
-          </motion.h2>
-
-          <div className="glass-panel rounded-xl p-6 border border-white/10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="space-y-4 text-muted-foreground leading-[1.8]"
-            >
-              <p>Over 30 years of import / Export experience in North America, South America, Europe, and Asia.</p>
-              <p>Offices in Asia, employees at the factory level to execute the details for customers.</p>
-              <p>In the USA works with family-owned companies, Real Estate Developers, Fortune 100 companies, contractors, builders, architects, and designers. Plus, specialty markets like restaurant chains, religious organizations building low-income housing, and hardscape products for homes.</p>
-              <p>In Asia they are involved in working with factories to enter new worldwide markets using their knowledge of success in the Americas markets. Extra touches of innovation, ease of use, and proper detail have helped develop new products and grow new business in various markets.</p>
-              <p>Customer Care. Simplicity, and ease of getting what is needed when needed has been the key to success.</p>
-            </motion.div>
           </div>
         </section>
 

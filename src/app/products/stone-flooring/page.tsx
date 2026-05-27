@@ -12,7 +12,7 @@ const flooringMaterials = [
     id: "marble",
     title: "Marble",
     description: "Timeless elegance with natural veining. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs. 20 acres of stock stone block inventory.",
-    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+    image: "/images/stock/stone-flooring-1.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",
@@ -32,7 +32,7 @@ const flooringMaterials = [
     id: "granite",
     title: "Granite",
     description: "Exceptional durability with natural beauty. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
+    image: "/images/stock/stone-flooring-2.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",
@@ -52,7 +52,7 @@ const flooringMaterials = [
     id: "quartz",
     title: "Quartz",
     description: "Engineered stone with consistent patterns. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
-    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+    image: "/images/stock/stone-flooring-3.jpg",
     properties: [
       "Manufacture the slabs",
       "Use our colors or yours",

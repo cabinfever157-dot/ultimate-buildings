@@ -12,7 +12,7 @@ const countertopMaterials = [
     id: "granite",
     title: "Granite Countertops",
     description: "Custom fabricated granite. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/bento/elegant-granite-marble-kitchen-countertops.jpg",
+    image: "/images/stock/countertops-1.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",
@@ -33,7 +33,7 @@ const countertopMaterials = [
     id: "quartz",
     title: "Quartz Countertops",
     description: "Custom fabricated quartz. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
-    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+    image: "/images/stock/countertops-2.jpg",
     properties: [
       "Manufacture the slabs",
       "Use our colors or yours",
@@ -54,7 +54,7 @@ const countertopMaterials = [
     id: "marble",
     title: "Marble Countertops",
     description: "Custom fabricated marble. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/bento/Luxury-granite-marble-countertop.jpg",
+    image: "/images/stock/countertops-3.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",

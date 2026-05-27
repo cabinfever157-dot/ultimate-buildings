@@ -12,7 +12,7 @@ const spcTypes = [
     title: "Click-Lock SPC Flooring",
     description:
       "Quick-install click-lock system — no glue required. Custom ml wear thickness and mm plank thickness to your specs.",
-    image: "/images/projects/page08_img03.jpg",
+    image: "/images/stock/spc-flooring-1.jpg",
     properties: [
       "No glue needed — floats over subfloor",
       "Custom wear layer thickness",
@@ -27,7 +27,7 @@ const spcTypes = [
     title: "Glue-Down SPC Flooring",
     description:
       "Permanent adhesive installation for maximum stability. Best for high-traffic commercial environments.",
-    image: "/images/projects/page08_img03.jpg",
+    image: "/images/stock/spc-flooring-2.jpg",
     properties: [
       "Permanent bond to subfloor",
       "Maximum stability",
@@ -42,7 +42,7 @@ const spcTypes = [
     title: "Lay-Flat SPC Flooring",
     description:
       "Loose-lay installation — no click, no glue. Fastest install for temporary or quick-turn projects.",
-    image: "/images/projects/page08_img03.jpg",
+    image: "/images/stock/spc-flooring-3.jpg",
     properties: [
       "No click mechanism or adhesive",
       "Fastest installation time",

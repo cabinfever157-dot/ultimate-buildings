@@ -12,7 +12,7 @@ const windowDoorTypes = [
     id: "french-slim",
     title: "French Slim Steel",
     description: "Custom fabricated French slim steel windows and doors. Up to local code - residential & commercial.",
-    image: "/images/bento/slimsteel.jpg",
+    image: "/images/stock/windows-1.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Slim profiles for maximum glass area",
@@ -35,7 +35,7 @@ const windowDoorTypes = [
     id: "aluminum",
     title: "Aluminum Systems",
     description: "Custom fabricated aluminum windows and doors with thermal break technology.",
-    image: "/images/bento/aluminum.jpg",
+    image: "/images/stock/windows-2.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Thermal break technology",
@@ -58,7 +58,7 @@ const windowDoorTypes = [
     id: "wrought-iron",
     title: "Wrought Iron",
     description: "Custom fabricated wrought iron doors and windows. Custom design to fit your needs.",
-    image: "/images/bento/wrought-iron.jpg",
+    image: "/images/stock/windows-3.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Custom design to fit your needs",
@@ -81,7 +81,7 @@ const windowDoorTypes = [
     id: "mixed-materials",
     title: "Mixed Materials",
     description: "Custom fabricated windows and doors using mixed materials for unique designs.",
-    image: "/images/bento/mixed-materials.jpg",
+    image: "/images/stock/windows-mixed-materials.png",
     properties: [
       "Custom fabricated to your measurements",
       "Wood-clad aluminum",
