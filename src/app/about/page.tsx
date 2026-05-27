@@ -222,58 +222,35 @@ export default function AboutPage() {
           </motion.h2>
 
            <div className="glass-panel rounded-2xl p-8 md:p-12 border border-white/10">
-             <div className="space-y-6">
-               <div className="flex items-start gap-4">
-                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
-                 <div>
-                   <h3 className="text-xl font-display font-medium text-white mb-2">Factory Direct Pricing</h3>
-                   <p className="text-muted-foreground leading-[1.6]">Eliminating middlemen to provide competitive pricing without sacrificing quality. Supply chain services straight to your project.</p>
-                 </div>
-               </div>
-               <div className="flex items-start gap-4">
-                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
-                 <div>
-                   <h3 className="text-xl font-display font-medium text-white mb-2">Complete Logistics Included</h3>
-                   <p className="text-muted-foreground leading-[1.6]">We handle all shipping, customs clearance, duties, tariffs, and delivery directly to your job site. No LC required.</p>
-                 </div>
-               </div>
-               <div className="flex items-start gap-4">
-                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
-                 <div>
-                   <h3 className="text-xl font-display font-medium text-white mb-2">Custom Solutions</h3>
-                   <p className="text-muted-foreground leading-[1.6]">Your size, your colors, your details — tailored to exact specifications meeting local building codes with shop drawings and 3D visualizations included.</p>
-                 </div>
-               </div>
-               <div className="flex items-start gap-4">
-                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
-                 <div>
-                   <h3 className="text-xl font-display font-medium text-white mb-2">Pre-Production Proof</h3>
-                   <p className="text-muted-foreground leading-[1.6]">Customers authorize preproduction samples just to make sure all is ok.</p>
-                 </div>
-               </div>
-               <div className="flex items-start gap-4">
-                 <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-1" />
-                 <div>
-                   <h3 className="text-xl font-display font-medium text-white mb-2">Flexible Quality Control</h3>
-                   <p className="text-muted-foreground leading-[1.6]">Inspections by our partners employees, a respected third-party inspection company, or your employees — your choice.</p>
-                 </div>
-               </div>
+             <div className="text-muted-foreground leading-[1.8] text-lg space-y-6 max-w-3xl mx-auto">
+               <p>
+                 Ultimate-Buildings was founded on a simple principle: deliver custom architectural
+                 finishing products at factory-direct pricing — without the layers of middlemen that
+                 drive up costs and complicate timelines. By working directly with Tier 1, well-financed
+                 factories and managing the entire supply chain ourselves, we pass significant savings
+                 to our clients while maintaining uncompromising quality control at every stage of production.
+               </p>
+               <p>
+                 From the moment your order is confirmed, we handle everything. Our team manages all
+                 shipping, customs clearance, duties, tariffs, and final delivery straight to your job site —
+                 with no letter of credit required. Every product is custom-fabricated to your exact
+                 specifications: your sizes, your colors, your details, all meeting local building codes.
+                 We provide shop drawings and 3D visualizations so you see exactly what you&apos;re getting
+                 before a single cut is made. Pre-production samples are authorized by your team, and
+                 quality inspections can be conducted by our partner employees, a respected third-party
+                 inspection company, or your own staff — whichever gives you the most confidence.
+               </p>
+               <p>
+                 With completed projects across North America, Europe, the UK, Australia, New Zealand, and
+                 the Caribbean, we&apos;ve earned the trust of architects, designers, contractors, builders,
+                 commercial property owners, retailers, and wholesale distributors. From apartments and
+                 dormitories to hotels, office buildings, restaurants, schools, and retail centers — we
+                 supply the finishing products that define a space.
+               </p>
              </div>
 
              <div className="mt-12 pt-8 border-t border-white/10 text-center">
-               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-[1.7]">
-                 Discover why architects, designers, contractors, builders, commercial property owners,
-                 retailers and wholesale distributors trust us for their most ambitious projects.
-               </p>
-               <p className="text-muted-foreground mt-4 leading-[1.6]">
-                 Apartments – Dorms/Nursing Homes – Hotels – Office Buildings – Remodels – Multi Home
-                 <br />
-                 Restaurants/Entertainment Venues – Schools – Retail Centers/Retailers
-               </p>
-               <p className="text-muted-foreground mt-4 leading-[1.6]">
-                 Contact us today to learn how we can bring your vision to life for:
-               </p>
-               <p className="text-muted-foreground mt-2 leading-[1.6]">
+               <p className="text-muted-foreground leading-[1.6]">
                  Stone Floor & Walls – SPC Flooring – Countertops – Cabinets & Storage – Stairs & Railings
                  <br />
                  Windows – Interior & Exterior Doors – Metal Gates & Fencing – Prefab Buildings
