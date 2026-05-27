@@ -163,9 +163,17 @@ export default function WindowsDoorsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Energy-efficient window and door systems with quality materials and craftsmanship
+            Energy-efficient window and door systems with quality materials and craftsmanship.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4"
+          >
+            Factory Direct Pricing
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -209,51 +217,6 @@ export default function WindowsDoorsPage() {
                     {type.description}
                   </p>
 
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Key Properties:
-                    </h4>
-                    <ul className="text-sm text-foreground/80 space-y-1">
-                      {type.properties.map((property, propIndex) => (
-                        <li key={propIndex} className="flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>{property}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Applications:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {type.applications.map((app, appIndex) => (
-                        <span
-                          key={appIndex}
-                          className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs rounded-full"
-                        >
-                          {app}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Key Features
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {type.features?.map((item, itemIndex) => (
-                        <span
-                          key={itemIndex}
-                          className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full border border-white/10"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </Card>
             </motion.div>

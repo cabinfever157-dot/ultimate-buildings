@@ -4,8 +4,7 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { NarrativeNav } from "@/components/layout/narrative-nav";
-import { CheckCircle } from "lucide-react";
+import { NarrativeNav } from "@/components/layout/narrative-nav";import { CheckCircle } from "lucide-react";
 
 // New simplified list of custom cabinet applications
 const customCabinetApplications = [
@@ -49,9 +48,17 @@ export default function CabinetsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            We don't offer a set line of products because everything is custom-made. We build to your exact specifications for any application, ensuring a perfect fit for your space and style.
+            Everything is custom-made. We build to your exact specifications.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4"
+          >
+            Factory Direct Pricing
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -90,36 +97,6 @@ export default function CabinetsPage() {
                 </motion.div>
             ))}
         </motion.div>
-
-        {/* Custom Applications Showcase */}
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-        >
-            <Card className="glass-panel border border-white/10 p-8 md:p-12">
-                <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center">
-                    Custom Cabinetry for Any Space
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6 max-w-4xl mx-auto">
-                    {customCabinetApplications.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.05 }}
-                            className="flex items-center"
-                        >
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                            <span className="text-lg text-foreground/90">{item}</span>
-                        </motion.div>
-                    ))}
-                </div>
-            </Card>
-        </motion.div>
-
 
         {/* Call to Action */}
         <motion.div

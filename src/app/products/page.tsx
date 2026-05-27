@@ -183,9 +183,17 @@ export default function ProductsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Discover our comprehensive range of factory-direct building materials — custom fabricated, volume priced, delivered to your job site
+            Custom fabricated, volume priced, delivered to your job site.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4"
+          >
+            Factory Direct Pricing
           </motion.p>
         </div>
 
@@ -213,36 +221,6 @@ export default function ProductsPage() {
                   <p className="text-foreground/80 mb-4 flex-1">
                     {category.description}
                   </p>
-
-                  <div className="mb-4">
-                    <p className="text-sm font-medium text-foreground mb-2">
-                      Key Materials:
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {category.materials.map((material, matIndex) => (
-                        <span
-                          key={matIndex}
-                          className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs rounded-full"
-                        >
-                          {material}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <p className="text-sm font-medium text-foreground mb-2">
-                      Key Features:
-                    </p>
-                    <ul className="text-sm text-foreground/80 space-y-1">
-                      {category.features.map((feature, featIndex) => (
-                        <li key={featIndex} className="flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
                   <Link
                     href={`/products/${category.id}`}

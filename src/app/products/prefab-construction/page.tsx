@@ -86,9 +86,18 @@ export default function PrefabConstructionPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Custom prefab construction components for hotels, apartments, and offices. Volume builder pricing. Factory direct to your job site.
+            Custom prefab construction components for hotels, apartments, and offices.
+            <br />Volume builder pricing.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4"
+          >
+            Factory Direct to Your Job Site
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -125,28 +134,6 @@ export default function PrefabConstructionPage() {
                   <h3 className="text-xl font-semibold text-foreground mb-3">{type.title}</h3>
                   <p className="text-foreground/80 mb-4">{type.description}</p>
 
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">Key Properties:</h4>
-                    <ul className="text-sm text-foreground/80 space-y-1">
-                      {type.properties.map((p, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className="text-green-500 mr-2">&bull;</span>
-                          <span>{p}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">Features:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {type.features.map((f, i) => (
-                        <span key={i} className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs rounded-full">
-                          {f}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </Card>
             </motion.div>

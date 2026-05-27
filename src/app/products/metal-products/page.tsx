@@ -179,9 +179,18 @@ export default function MetalFencingGatesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Custom metal products — fencing, gates, partitions, and garage doors. Custom designed & sized to fit your needs
+            Custom metal products — fencing, gates, partitions, and garage doors.
+            <br />Custom designed & sized to fit your needs.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4"
+          >
+            Factory Direct Pricing
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">

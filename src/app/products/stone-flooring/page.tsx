@@ -32,7 +32,7 @@ const flooringMaterials = [
     id: "granite",
     title: "Granite",
     description: "Exceptional durability with natural beauty. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/stock/stone-flooring-2.jpg",
+    image: "/images/stock/stone-flooring-3.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",
@@ -52,7 +52,7 @@ const flooringMaterials = [
     id: "quartz",
     title: "Quartz",
     description: "Engineered stone with consistent patterns. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
-    image: "/images/stock/stone-flooring-3.jpg",
+    image: "/images/stock/stone-flooring-2.jpg",
     properties: [
       "Manufacture the slabs",
       "Use our colors or yours",
@@ -93,9 +93,17 @@ export default function StoneFlooringPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Quality stone materials for beautiful and durable floors and wall surfaces. Factory direct pricing.
+            Quality stone materials for beautiful and durable floors and wall surfaces.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4"
+          >
+            Factory Direct Pricing
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -137,67 +145,6 @@ export default function StoneFlooringPage() {
                     {material.description}
                   </p>
 
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Key Properties:
-                    </h4>
-                    <ul className="text-sm text-foreground/80 space-y-1">
-                      {material.properties.map((property, propIndex) => (
-                        <li key={propIndex} className="flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>{property}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Applications:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {material.applications.map((app, appIndex) => (
-                        <span
-                          key={appIndex}
-                          className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs rounded-full"
-                        >
-                          {app}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Available Colors:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {material.colors.map((color, colorIndex) => (
-                        <span
-                          key={colorIndex}
-                          className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full border border-white/10"
-                        >
-                          {color}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-foreground mb-2">
-                      Finishes:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {material.finishes.map((finish, finishIndex) => (
-                        <span
-                          key={finishIndex}
-                          className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full border border-white/10"
-                        >
-                          {finish}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </Card>
             </motion.div>
