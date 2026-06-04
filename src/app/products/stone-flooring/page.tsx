@@ -12,7 +12,7 @@ const flooringMaterials = [
     id: "marble",
     title: "Marble",
     description: "Timeless elegance with natural veining. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs. 20 acres of stock stone block inventory.",
-    image: "/images/stock/stone-flooring-1.jpg",
+    image: "/images/stock/stone-flooring-marble.png",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",
@@ -32,7 +32,7 @@ const flooringMaterials = [
     id: "granite",
     title: "Granite",
     description: "Exceptional durability with natural beauty. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/stock/stone-flooring-3.jpg",
+    image: "https://t4.ftcdn.net/jpg/05/19/71/33/360_F_519713382_18hplddKbojywZ1mHQHG5zNcbQJORPgy.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",

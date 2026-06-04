@@ -12,7 +12,7 @@ const countertopMaterials = [
     id: "granite",
     title: "Granite Countertops",
     description: "Custom fabricated granite. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/stock/countertops-1.jpg",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/056/121/709/small/beige-granite-kitchen-counter-photo.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",
@@ -54,7 +54,7 @@ const countertopMaterials = [
     id: "marble",
     title: "Marble Countertops",
     description: "Custom fabricated marble. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "/images/stock/countertops-3.jpg",
+    image: "https://t3.ftcdn.net/jpg/05/03/39/00/360_F_503390029_neeuMkAdFlk7NybORLlYveVV3naZ6YCc.jpg",
     properties: [
       "Own quarries — cut and finish blocks in-house",
       "Purchase stone blocks worldwide",

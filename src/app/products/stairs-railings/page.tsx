@@ -50,7 +50,7 @@ const stairsRailingsData = [
     id: "glass",
     title: "Glass Railings",
     description: "Sleek and modern with unobstructed views",
-    image: "/images/stock/windows-3.jpg",
+    image: "https://goldenglass.com/wp-content/uploads/2020/11/iStock-129179692.jpg",
     properties: [
       "Tempered safety glass",
       "Unobstructed views",
@@ -69,7 +69,7 @@ const stairsRailingsData = [
     id: "wood",
     title: "Custom Wood",
     description: "Warmth and natural beauty for traditional designs",
-    image: "/images/stock/cabinets-5.jpg",
+    image: "https://i.pinimg.com/474x/be/96/89/be9689eb0da03966ad31f0ceb8b69cc8.jpg",
     properties: [
       "Natural wood grain beauty",
       "Custom stain and finish options",

@@ -12,7 +12,7 @@ const windowDoorTypes = [
     id: "french-slim",
     title: "French Slim Steel",
     description: "Custom fabricated French slim steel windows and doors. Up to local code - residential & commercial.",
-    image: "/images/stock/windows-1.jpg",
+    image: "https://fsmedia.rt7.media/2018/02/08020130/steel-doors.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Slim profiles for maximum glass area",

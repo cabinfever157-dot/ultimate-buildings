@@ -33,7 +33,7 @@ const fencingTypes = [
     id: "aluminum",
     title: "Aluminum Fencing",
     description: "Low-maintenance fencing with modern aesthetics",
-    image: "/images/stock/gates-2.jpg",
+    image: "https://www.hurricanefenceinc.com/wp-content/uploads/2024/08/Aluminum-Fencing-Strength-ActiveYards-Marble-Hearth-6x8-1.jpg",
     properties: [
       "Lightweight yet strong",
       "Corrosion-resistant",

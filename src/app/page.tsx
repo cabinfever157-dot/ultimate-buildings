@@ -341,7 +341,7 @@ const features = [
   },
   {
     title: "Stone Countertops",
-    header: <Skeleton src="/images/bento/countertops.jpg" />,
+    header: <Skeleton src="https://stonemasters.ca/wp-content/uploads/2014/10/home-granite-countertops.jpg" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
     href: "/products/countertops",
   },
