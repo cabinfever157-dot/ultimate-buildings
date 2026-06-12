@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
-import { ArrowRight, Download } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 import { catalogsData } from "../../content/catalogsData";
 import {
   WindowIcon,
@@ -54,7 +55,7 @@ export default function CatalogsPage() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl font-body leading-[1.7]"
           >
-            Download our comprehensive catalogs to explore the ultimate materials available for modern, high-end infrastructure and residential projects.
+            Browse our interactive catalogs to explore the ultimate materials available for modern, high-end infrastructure and residential projects.
           </motion.p>
         </div>
 
@@ -92,17 +93,16 @@ export default function CatalogsPage() {
                  )}
                </div>
  
-               <div className="relative z-10 mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
-                 <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Jan 2026 Edition</span>
-                 <a
-                    href={`/catalogs/${encodeURIComponent((catalog as any).pdfFile || (catalog as any).brochure || '')}`}
-                   download
-                   className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all text-white"
-                   title={`Download ${catalog.title} Catalog`}
-                 >
-                   <Download className="w-4 h-4" />
-                 </a>
-               </div>
+                <div className="relative z-10 mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Jan 2026 Edition</span>
+                  <Link
+                    href={`/catalogs/${catalog.id}`}
+                    className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all text-white"
+                    title={`View ${catalog.title} Catalog`}
+                  >
+                    <BookOpen className="w-4 h-4" />
+                  </Link>
+                </div>
              </motion.div>
            ))}
          </div>

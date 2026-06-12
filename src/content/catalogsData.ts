@@ -1,5 +1,4 @@
-// Product Catalog Data - Mapped from PDF catalogs
-import { siteStructure } from './siteStructure';
+// Product Catalog Data - Mapped from Flipbook exports
 
 export const catalogsData = [
   {
@@ -8,9 +7,9 @@ export const catalogsData = [
     category: 'SPC Flooring',
     description: 'Custom SPC Flooring — Click-Lock, Glue-Down, Lay-Flat. 5-week production. Your brand packaging available.',
     types: ['Click-Lock', 'Glue-Down', 'Lay-Flat'] as string[],
-    pdfFile: (siteStructure["SPC Flooring"] as Record<string, any>)["Click-Lock"]?.catalog || (siteStructure["SPC Flooring"] as Record<string, any>)["Glue-Down"]?.catalog || '',
     image: '/catalogs/flooring.jpg',
     icon: 'FlooringIcon',
+    flipbookId: 'spc-flooring',
     features: [
       '5-Week Production',
       'Custom Wear Thickness & Plank Size',
@@ -22,11 +21,11 @@ export const catalogsData = [
     id: 'stone-surfaces',
     title: 'Stone Surfaces',
     category: 'Stone Flooring & Walls',
-    description: 'Marble, Granite, Quartz — factory direct from our quarries. 20 acres of stock stone blocks.',
-    types: ['Marble', 'Granite', 'Quartz'] as string[],
-    pdfFile: (siteStructure["Stone Flooring & Walls"] as Record<string, any>)["Granite"]?.catalog || '',
+    description: 'Marble and Granite — factory direct from our quarries. 20 acres of stock stone blocks.',
+    types: ['Marble', 'Granite'] as string[],
     image: '/catalogs/stone-surfaces.jpg',
     icon: 'StoneIcon',
+    flipbookId: 'stone-surfaces',
     features: [
       'Own the Quarry — Factory Direct',
       'Custom Colors and Finishes',
@@ -39,9 +38,9 @@ export const catalogsData = [
     title: 'Wooden Doors',
     category: 'Doors & Windows',
     description: 'Custom fabricated wooden doors — your size, your colors, your details',
-    pdfFile: siteStructure["Doors & Windows"]["Wooden Doors"].catalog,
     image: '/catalogs/wooden-doors.jpg',
     icon: 'WoodIcon',
+    flipbookId: 'wooden-doors',
     features: [
       'Custom Sizes and Designs',
       'Custom Wood Species',
@@ -54,9 +53,9 @@ export const catalogsData = [
     title: 'Aluminum Doors & Windows',
     category: 'Doors & Windows',
     description: 'Custom fabricated aluminum door and window systems — residential and commercial',
-    pdfFile: siteStructure["Doors & Windows"]["Aluminum Doors & Windows"].catalog,
     image: '/catalogs/aluminum-doors-windows.jpg',
     icon: 'WindowIcon',
+    flipbookId: 'aluminum-doors-windows',
     features: [
       'Thermal Break Technology',
       'Custom Colors and Finishes',
@@ -69,9 +68,9 @@ export const catalogsData = [
     title: 'French Slim Steel Windows & Doors',
     category: 'Doors & Windows',
     description: 'Custom fabricated French slim steel windows and doors — residential and commercial',
-    pdfFile: siteStructure["Doors & Windows"]["French Slim Steel Windows & Doors"].catalog,
     image: '/catalogs/french-steel.jpg',
     icon: 'WindowIcon',
+    flipbookId: 'french-steel',
     features: [
       'Ultra-Slim Profiles',
       'Up to Local Code',
@@ -84,14 +83,30 @@ export const catalogsData = [
     title: 'Wrought Iron Doors',
     category: 'Doors & Windows',
     description: 'Custom fabricated wrought iron doors — your design, your size',
-    pdfFile: siteStructure["Doors & Windows"]["Wrought Iron Doors"].catalog,
     image: '/catalogs/wrought-iron-doors.jpg',
     icon: 'DoorIcon',
+    flipbookId: 'wrought-iron-doors',
     features: [
       'Custom Fabricated to Your Measurements',
       'Custom Patterns and Designs',
       'Durable Construction',
       'Powder-Coated Finishes'
+    ]
+  },
+  {
+    id: 'prefab-construction',
+    title: 'Prefab Construction',
+    category: 'Prefab Construction',
+    description: 'Complete prefab construction packages — hotels, apartments, and office buildings. Light steel frame technology.',
+    types: ['Hotels', 'Apartments', 'Office Buildings'] as string[],
+    image: '/catalogs/prefab-construction.jpg',
+    icon: 'PrefabIcon',
+    flipbookId: 'prefab-construction',
+    features: [
+      'Complete Package Delivery',
+      'Light Steel Frame Technology',
+      'Rapid On-Site Assembly',
+      'Customizable Floor Plans'
     ]
   }
 ];

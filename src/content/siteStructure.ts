@@ -1,74 +1,49 @@
 // Ultimate-Buildings Product Content Structure
-// Generated from Basecamp Download PDFs and Excel mapping
 
 export const siteStructure = {
   "Stone Flooring & Walls": {
     "Marble": {
-      "applications": ["Flooring", "Wall cladding", "Feature walls", "Fireplace surrounds"],
-      "catalog": "UB - AFP - Quartz Catalog Jan 2026 - 2 pdf.pdf"
+      "applications": ["Flooring", "Wall cladding", "Feature walls", "Fireplace surrounds"]
     },
     "Granite": {
-      "applications": ["High-traffic flooring", "Kitchen countertops", "Outdoor applications"],
-      "catalog": "UB - AFP - Quartz Catalog Jan 2026 - 2 pdf.pdf"
+      "applications": ["High-traffic flooring", "Kitchen countertops", "Outdoor applications"]
     },
     "Quartz": {
-      "applications": ["Kitchen countertops", "Bathroom vanities", "Wall cladding"],
-      "catalog": "UB - AFP - Quartz Catalog Jan 2026 - 2 pdf.pdf"
+      "applications": ["Kitchen countertops", "Bathroom vanities", "Wall cladding"]
     }
   },
   "SPC Flooring": {
     "Click-Lock": {
       "description": "No glue needed — floats over subfloor",
-      "productionWeeks": 5,
-      "catalog": "UB - AFP - Flooring Catalog Jan 2026.pdf"
+      "productionWeeks": 5
     },
     "Glue-Down": {
       "description": "Permanent adhesive for high-traffic",
-      "productionWeeks": 5,
-      "catalog": "UB - AFP - Flooring Catalog Jan 2026.pdf"
+      "productionWeeks": 5
     },
     "Lay-Flat": {
       "description": "Loose-lay — fastest install",
-      "productionWeeks": 5,
-      "catalog": "UB - AFP - Flooring Catalog Jan 2026.pdf"
+      "productionWeeks": 5
     }
   },
   "Cabinets & Organizational Storage": {
-    "Kitchen Cabinets": {
-      "catalog": "UB -AFP -  Wooden Door Catalog Jan 2026 -3.pdf"
-    },
-    "Wardrobe Cabinets": {
-      "catalog": "UB -AFP -  Wooden Door Catalog Jan 2026 -3.pdf"
-    },
-    "Vanity Cabinets": {
-      "catalog": "UB -AFP -  Wooden Door Catalog Jan 2026 -3.pdf"
-    },
-    "Walk-In Closets": {
-      "catalog": "UB -AFP -  Wooden Door Catalog Jan 2026 -3.pdf"
-    }
+    "Kitchen Cabinets": {},
+    "Wardrobe Cabinets": {},
+    "Vanity Cabinets": {},
+    "Walk-In Closets": {}
   },
   "Doors & Windows": {
-    "Wooden Doors": {
-      "catalog": "UB -AFP -  Wooden Door Catalog Jan 2026 -3.pdf"
-    },
-    "Aluminum Doors & Windows": {
-      "catalog": "UB - Aluminum Door - Window Catalog Jan 2026.pdf"
-    },
-    "French Slim Steel Windows & Doors": {
-      "catalog": "UB - AFP - French Slim Steel Window & Door Catalog Jan 2026 .pdf"
-    },
-    "Wrought Iron Doors": {
-      "catalog": "UB - AFT - Wrought Iron Doors Catolog Jan 2026 - 3  .pdf"
-    }
+    "Wooden Doors": {},
+    "Aluminum Doors & Windows": {},
+    "French Slim Steel Windows & Doors": {},
+    "Wrought Iron Doors": {}
   },
   "Metal Products": {
     "Fencing": {
-      "types": ["Wrought Iron", "Aluminum", "Steel"],
-      "catalog": "UB - AFT - Wrought Iron Doors Catolog Jan 2026 - 3  .pdf"
+      "types": ["Wrought Iron", "Aluminum", "Steel"]
     },
     "Gates": {
-      "types": ["Swing", "Sliding", "Bi-Fold"],
-      "catalog": "UB - AFT - Wrought Iron Doors Catolog Jan 2026 - 3  .pdf"
+      "types": ["Swing", "Sliding", "Bi-Fold"]
     },
     "Garage Doors": {
       "types": ["Sectional", "Roll-Up", "Custom"]
@@ -89,15 +64,9 @@ export const siteStructure = {
     }
   },
   "Countertops & Slabs": {
-    "Granite Slabs": {
-      "catalog": "UB - AFP - Quartz Catalog Jan 2026 - 2 pdf.pdf"
-    },
-    "Quartz Slabs": {
-      "catalog": "UB - AFP - Quartz Catalog Jan 2026 - 2 pdf.pdf"
-    },
-    "Marble Slabs": {
-      "catalog": "UB - AFP - Quartz Catalog Jan 2026 - 2 pdf.pdf"
-    },
+    "Granite Slabs": {},
+    "Quartz Slabs": {},
+    "Marble Slabs": {},
     "Custom Fabrication": {
       "description": "Custom edge profiles, cutouts, sizing"
     }
