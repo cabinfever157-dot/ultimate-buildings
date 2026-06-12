@@ -88,7 +88,7 @@ export default function HomePage() {
                 className="max-w-5xl"
               >
                   <p className="mb-4 text-[1.125rem] md:text-[1.25rem] font-body font-medium text-white drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]">
-                    Contact Us: 513-800-1980
+                    Contact Us: 833-224-2940
                   </p>
 
                   <p className="mb-8 text-2xl md:text-3xl font-display font-light text-white/80 drop-shadow-[0_0_12px_rgba(0,0,0,0.9)] leading-tight">

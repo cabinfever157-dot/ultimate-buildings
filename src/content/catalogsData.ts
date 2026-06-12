@@ -18,19 +18,35 @@ export const catalogsData = [
     ]
   },
   {
-    id: 'stone-surfaces',
-    title: 'Stone Surfaces',
+    id: 'granite-marble',
+    title: 'Granite & Marble',
     category: 'Stone Flooring & Walls',
-    description: 'Marble and Granite — factory direct from our quarries. 20 acres of stock stone blocks.',
-    types: ['Marble', 'Granite'] as string[],
+    description: 'Granite and Marble — factory direct from our quarries. 20 acres of stock stone blocks.',
+    types: ['Granite', 'Marble'] as string[],
     image: '/catalogs/stone-surfaces.jpg',
     icon: 'StoneIcon',
-    flipbookId: 'stone-surfaces',
+    flipbookId: 'granite-marble',
     features: [
       'Own the Quarry — Factory Direct',
       'Custom Colors and Finishes',
       'Slabs or Custom Fabrication',
       '20 Acres of Stock Stone Blocks'
+    ]
+  },
+  {
+    id: 'quartz',
+    title: 'Quartz',
+    category: 'Stone Flooring & Walls',
+    description: 'Engineered Quartz surfaces — factory direct. Custom colors, finishes, and fabrication.',
+    types: ['Quartz'] as string[],
+    image: '/catalogs/stone-surfaces.jpg',
+    icon: 'StoneIcon',
+    flipbookId: 'quartz',
+    features: [
+      'Factory Direct Pricing',
+      'Custom Colors and Finishes',
+      'Slabs or Custom Fabrication',
+      'Durable Engineered Surface'
     ]
   },
   {

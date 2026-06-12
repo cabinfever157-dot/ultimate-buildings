@@ -25,9 +25,9 @@ export function Footer() {
             >
               <p className="text-brand-primary text-xs uppercase tracking-[0.2em] font-body font-medium">Contact Us</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:5138001980" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
+                <a href="tel:8332242940" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
                   <Phone className="w-4 h-4 text-brand-primary" />
-                  513-800-1980
+                  833-224-2940
                 </a>
                 <a href="mailto:info@Ultimate-Buildings.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
                   <Mail className="w-4 h-4 text-brand-primary" />

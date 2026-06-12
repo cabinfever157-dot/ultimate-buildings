@@ -212,13 +212,13 @@ export function CoreValues() {
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <a href="tel:5138001980">
+                <a href="tel:8332242940">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white/20 bg-black/20 text-white hover:bg-white/10 hover:text-white hover:border-white/40 text-lg px-10 py-7 rounded-full backdrop-blur-xl transition-all shadow-glass-lg font-medium flex gap-2"
                   >
-                    <Phone className="w-5 h-5" /> Call Lloyd: 513-800-1980
+                    <Phone className="w-5 h-5" /> Call Lloyd: 833-224-2940
                   </Button>
                 </a>
               </motion.div>

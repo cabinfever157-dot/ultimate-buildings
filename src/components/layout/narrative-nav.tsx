@@ -114,7 +114,7 @@ export function NarrativeNav() {
           </nav>
 
            <div className="flex items-center gap-4">
-             <a href="tel:5138001980">
+              <a href="tel:8332242940">
                <Button variant="outline" className="hidden md:flex border-white/10 hover:bg-white/5 hover:text-brand-primary">
                  Contact Us
                </Button>
