@@ -29,9 +29,9 @@ export function Footer() {
                   <Phone className="w-4 h-4 text-brand-primary" />
                   833-224-2940
                 </a>
-                <a href="mailto:Ultimatebuilders007@gmail.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
+                <a href="mailto:info@Ultimate-Buildings.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
                   <Mail className="w-4 h-4 text-brand-primary" />
-                  Ultimatebuilders007@gmail.com
+                  info@Ultimate-Buildings.com
                 </a>
               </div>
 
