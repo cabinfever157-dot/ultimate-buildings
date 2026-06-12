@@ -1,8 +1,8 @@
 import sgMail from "@sendgrid/mail";
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-const TO_EMAIL = "info@ultimate-buildings.com";
-const FROM_EMAIL = "noreply@ultimate-buildings.com";
+const TO_EMAIL = "Ultimatebuilders007@gmail.com";
+const FROM_EMAIL = "Ultimatebuilders007@gmail.com";
 
 if (SENDGRID_API_KEY) {
   sgMail.setApiKey(SENDGRID_API_KEY);
