@@ -93,16 +93,32 @@ export default function CatalogsPage() {
                  )}
                </div>
  
-                <div className="relative z-10 mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Jan 2026 Edition</span>
-                  <Link
-                    href={`/catalogs/${catalog.id}`}
-                    className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all text-white"
-                    title={`View ${catalog.title} Catalog`}
-                  >
-                    <BookOpen className="w-4 h-4" />
-                  </Link>
-                </div>
+                 <div className="relative z-10 mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
+                   <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Jan 2026 Edition</span>
+                   {(catalog as any).subCatalogs ? (
+                     <div className="flex items-center gap-3">
+                       {(catalog as any).subCatalogs.map((sub: { id: string; label: string }) => (
+                         <Link
+                           key={sub.id}
+                           href={`/catalogs/${sub.id}`}
+                           className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all text-white text-xs font-medium"
+                           title={`View ${sub.label} Catalog`}
+                         >
+                           <BookOpen className="w-3.5 h-3.5" />
+                           {sub.label}
+                         </Link>
+                       ))}
+                     </div>
+                   ) : (
+                     <Link
+                       href={`/catalogs/${catalog.id}`}
+                       className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary hover:text-brand-dark transition-all text-white"
+                       title={`View ${catalog.title} Catalog`}
+                     >
+                       <BookOpen className="w-4 h-4" />
+                     </Link>
+                   )}
+                 </div>
              </motion.div>
            ))}
          </div>
