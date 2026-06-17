@@ -95,7 +95,7 @@ export default function StoneFlooringPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Quality stone materials for beautiful and durable floors and wall surfaces.
+            Quality interior and exterior stone.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -160,10 +160,14 @@ export default function StoneFlooringPage() {
           className="text-center py-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-6">
-            Transform your space with quality stone flooring - factory direct pricing
+            Transform your space with quality stone flooring
+            <br className="hidden md:block" />
+            — factory direct pricing
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our flooring specialists can help you choose the perfect materials for your project
+            Our flooring specialists can help you choose
+            <br className="hidden md:block" />
+            the perfect materials for your project
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote-wizard">

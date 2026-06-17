@@ -23,7 +23,7 @@ const gallerySections = [
   {
     id: "stone-flooring",
     title: "Stone Flooring & Walls",
-    description: "Marble, granite, quartz, and limestone — interior and exterior applications",
+    description: "Marble, granite, and quartz — interior and exterior applications",
     images: [
       "/images/stock/stone-flooring-marble.png",
       "/images/stock/stone-flooring-2.jpg",
@@ -132,6 +132,7 @@ const gallerySections = [
       "/images/stock/prefab-offices.jpg",
     ],
   },
+  /* Global Projects - removed per client feedback
   {
     id: "projects",
     title: "Global Projects",
@@ -142,6 +143,7 @@ const gallerySections = [
       "/images/gallery/australia-resort.jpg",
     ],
   },
+  */
 ];
 
 export default function PromotionalGallery() {
@@ -158,7 +160,7 @@ export default function PromotionalGallery() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            Ultimate-Buildings <span className="text-brand-primary">Project</span> Gallery
+            Ultimate-Buildings <span className="text-brand-primary">Product</span> Gallery
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

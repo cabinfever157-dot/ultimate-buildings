@@ -198,7 +198,9 @@ export default function SPCFlooringPage() {
             Get SPC Flooring at factory direct pricing
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Volume buyers welcome. Custom specs, your brand, delivered to your job site.
+            Volume buyers welcome. Custom specs,
+            <br className="hidden md:block" />
+            your brand, delivered to your job site.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote-wizard">

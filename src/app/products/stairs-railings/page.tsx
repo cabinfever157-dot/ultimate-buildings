@@ -69,7 +69,7 @@ const stairsRailingsData = [
     id: "wood",
     title: "Custom Wood",
     description: "Warmth and natural beauty for traditional designs",
-    image: "https://i.pinimg.com/474x/be/96/89/be9689eb0da03966ad31f0ceb8b69cc8.jpg",
+    image: "https://www.arasbar.com/wp-content/uploads/2020/07/fascinating-custom-wood-stairs-picture-900.jpg",
     properties: [
       "Natural wood grain beauty",
       "Custom stain and finish options",

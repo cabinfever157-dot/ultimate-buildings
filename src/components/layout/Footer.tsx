@@ -68,7 +68,7 @@ export function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Catalogs", href: "/catalogs" },
                 { label: "Get a Bid Quote", href: "/quote-wizard" },
-                { label: "Promotional Gallery", href: "/promotional-gallery" },
+                { label: "Product Gallery", href: "/promotional-gallery" },
                 { label: "Materials", href: "/materials" },
               ].map((item) => (
                 <li key={item.href}>

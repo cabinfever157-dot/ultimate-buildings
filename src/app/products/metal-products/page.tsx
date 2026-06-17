@@ -122,7 +122,7 @@ const designFeatures = [
       "Anti-climb designs with smooth surfaces",
       "Reinforced posts and framework",
       "Tamper-proof fasteners and hardware",
-      "Integrated alarm systems",
+      /* "Integrated alarm systems" - removed per client feedback */
       "Surveillance camera mounting options",
     ],
   },
@@ -314,7 +314,8 @@ export default function MetalFencingGatesPage() {
           </div>
         </motion.div>
 
-        {/* Installation and Maintenance */}
+        {/* Installation and Maintenance - removed per client feedback */}
+        {false && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <Card className="glass-panel border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -378,8 +379,10 @@ export default function MetalFencingGatesPage() {
             </ul>
           </Card>
         </div>
+        )}
 
         {/* Call to Action */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

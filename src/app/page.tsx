@@ -94,9 +94,10 @@ export default function HomePage() {
                   <p className="mb-8 text-2xl md:text-3xl font-display font-light text-white/80 drop-shadow-[0_0_12px_rgba(0,0,0,0.9)] leading-tight">
                     Interior and Exterior<br/>Custom Architectural Finishing Products
                   </p>
-                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
-                    Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span><br/>to Your Job Site
+                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
+                    <br className="hidden md:block" />Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span> to Your Job Site
                   </h1>
+
                 <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-6 font-body font-light">
                   Quality - Reliability - Value<br/>We handle Production, Logistics, Customs, and Delivery.
                 </p>
@@ -328,7 +329,7 @@ const features = [
     href: "/products/windows-doors",
   },
   {
-    title: "Custom Vanities & Closets",
+    title: "Custom Vanities, Closets, & Cabinets",
     header: <Skeleton src="/images/bento/closets.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",

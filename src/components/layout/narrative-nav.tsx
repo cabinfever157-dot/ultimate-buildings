@@ -106,7 +106,7 @@ export function NarrativeNav() {
               Quote Wizard
             </Link>
             <Link href="/promotional-gallery" className="text-foreground/80 hover:text-brand-primary transition-colors">
-              Promotional Gallery
+              Product Gallery
             </Link>
              <Link href="/about" className="text-foreground/80 hover:text-brand-primary transition-colors">
                About

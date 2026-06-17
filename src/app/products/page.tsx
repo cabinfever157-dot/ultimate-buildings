@@ -11,7 +11,7 @@ const productCategories = [
   {
     id: "countertops",
     title: "Countertops & Slabs",
-    description: "Slabs and custom fabrication — granite, marble, quartz. Own the quarry. Sell slabs direct to fabricators or custom cut to your specs.",
+    description: "Custom countertops and slab solutions. Custom fabricated countertops for contractors and builders ready to install. Granite, Quartz, and Marble for interior/exterior walls and floors. Slabs sold direct to fabricators for their projects.",
     image: "/images/stock/countertops-1.jpg",
     materials: ["Granite", "Quartz", "Marble"],
     features: [
@@ -236,7 +236,8 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Materials Overview Section */}
+        {/* Materials Overview Section - removed per client feedback */}
+        {false && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -307,6 +308,7 @@ export default function ProductsPage() {
             </div>
           </div>
         </motion.div>
+        )}
 
         {/* Custom Design & Value Messaging */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -344,10 +346,10 @@ export default function ProductsPage() {
 
           <Card className="glass-panel border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Value, Not Premium
+              Value
             </h3>
             <p className="text-foreground/80 mb-4">
-              We are a volume-based business offering reliable, quality products at competitive prices — not premium pricing.
+              We are a volume-based business offering reliable, quality products at very attractive pricing.
             </p>
             <ul className="text-foreground/80 space-y-2 mb-6">
               <li className="flex items-start">
@@ -409,7 +411,7 @@ export default function ProductsPage() {
                 <span className="text-2xl font-display font-medium text-brand-primary">3</span>
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">QC & Delivery</h3>
-              <p className="text-sm text-foreground/80">Trial installation proof. Your rep can inspect. All logistics, customs, and delivery handled — direct to your job site.</p>
+              <p className="text-sm text-foreground/80">Pick your inspection method. All logistics, customs entry and delivery handled — direct to your job site.</p>
             </div>
           </div>
         </motion.div>

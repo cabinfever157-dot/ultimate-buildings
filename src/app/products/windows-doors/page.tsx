@@ -304,6 +304,8 @@ export default function WindowsDoorsPage() {
                 </li>
               </ul>
             </div>
+            {/* Automation Systems - removed per client feedback */}
+            {false && (
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 Automation Systems
@@ -330,6 +332,7 @@ export default function WindowsDoorsPage() {
                 </li>
               </ul>
             </div>
+            )}
           </div>
         </Card>
 

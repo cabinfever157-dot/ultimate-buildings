@@ -140,9 +140,18 @@ export default function CountertopsPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Custom countertop and slab solutions — slabs sold direct to fabricators.
-            <br />Custom fabricated to your specs.
+            Custom countertops and slab solutions for contractors and builders.
           </motion.p>
+          <motion.ul
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="text-lg text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7] space-y-2 list-disc list-inside"
+          >
+            <li>Custom fabricated countertops for contractors & builders ready to install</li>
+            <li>Granite, Quartz, and Marble for interior/exterior walls and floors</li>
+            <li>Slabs sold direct to fabricators for their projects</li>
+          </motion.ul>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -165,6 +174,45 @@ export default function CountertopsPage() {
             </Link>
           </div>
         </div>
+
+        {/* Slabs & Fabrication Section - moved to top per client feedback */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center">
+            Slabs & Fabrication
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="glass-panel border border-white/10 p-6">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Stone Slabs — Sold Direct</h3>
+              <p className="text-foreground/80 mb-4">
+                Our partner owns quarries and sells slabs direct to fabricators at lower costs than domestic sourcing. 20 acres of stock stone blocks — granite, marble, quartz available in volume.
+              </p>
+              <ul className="text-foreground/80 space-y-2">
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Buy slabs direct and cut your own</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Lower cost than domestic fabrication</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Volume slab pricing for fabricators</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Custom color matching available</span></li>
+              </ul>
+            </Card>
+            <Card className="glass-panel border border-white/10 p-6">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Custom Fabrication</h3>
+              <p className="text-foreground/80 mb-4">
+                We also custom fabricate to your exact specifications — from quarry to finished countertop. Custom edge profiles, cutouts, and sizing all included.
+              </p>
+              <ul className="text-foreground/80 space-y-2">
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>12+ custom edge profile styles</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Custom cutouts for sinks and faucets</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Your measurements, your details</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Trial installation with photo proof before shipping</span></li>
+              </ul>
+            </Card>
+          </div>
+        </motion.div>
 
         {/* Materials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -197,7 +245,8 @@ export default function CountertopsPage() {
           ))}
         </div>
 
-        {/* Material Comparison */}
+        {/* Material Comparison - removed per client feedback */}
+        {false && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -358,47 +407,10 @@ export default function CountertopsPage() {
             </div>
           </div>
         </motion.div>
+        )}
 
-        {/* Slabs & Fabrication Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center">
-            Slabs & Fabrication
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="glass-panel border border-white/10 p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Stone Slabs — Sold Direct</h3>
-              <p className="text-foreground/80 mb-4">
-                Our partner owns quarries and sells slabs direct to fabricators at lower costs than domestic sourcing. 20 acres of stock stone blocks — granite, marble, quartz available in volume.
-              </p>
-              <ul className="text-foreground/80 space-y-2">
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Buy slabs direct and cut your own</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Lower cost than domestic fabrication</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Volume slab pricing for fabricators</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Custom color matching available</span></li>
-              </ul>
-            </Card>
-            <Card className="glass-panel border border-white/10 p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Custom Fabrication</h3>
-              <p className="text-foreground/80 mb-4">
-                We also custom fabricate to your exact specifications — from quarry to finished countertop. Custom edge profiles, cutouts, and sizing all included.
-              </p>
-              <ul className="text-foreground/80 space-y-2">
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>12+ custom edge profile styles</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Custom cutouts for sinks and faucets</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Your measurements, your details</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Trial installation with photo proof before shipping</span></li>
-              </ul>
-            </Card>
-          </div>
-        </motion.div>
-
-        {/* Care and Maintenance */}
+        {/* Care and Maintenance - removed per client feedback */}
+        {false && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {careTips.map((tip, index) => (
             <Card key={index} className="glass-panel border border-white/10 p-6">
@@ -421,6 +433,7 @@ export default function CountertopsPage() {
             </Card>
           ))}
         </div>
+        )}
 
         {/* Call to Action */}
         <motion.div

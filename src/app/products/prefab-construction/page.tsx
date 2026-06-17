@@ -8,6 +8,19 @@ import { NarrativeNav } from "@/components/layout/narrative-nav";
 
 const prefabTypes = [
   {
+    id: "single-family",
+    title: "Single-Family Homes",
+    description: "Custom prefab single-family home construction — efficient, cost-effective, and delivered factory direct to your job site.",
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.Qt0e2j2U5R3hFp5EQyByYwHaEJ%3Fr%3D0%26cb%3Dthfvnextfalcon2%26pid%3DApi&f=1&ipt=e1dd353317152f618fb08e5a263ecb24971899db7aa29867ccbd35c31802f0e1&ipo=images",
+    properties: [
+      "Efficient prefab construction",
+      "Cost-effective single-family solutions",
+      "Custom designs and layouts",
+      "Factory direct delivery",
+    ],
+    features: ["Fast on-site assembly", "Custom finishes available", "Volume builder pricing"],
+  },
+  {
     id: "hotels",
     title: "Hotel Construction",
     description: "Complete prefab hotel packages — structural frame, panels, interior finishes. Volume builder pricing with factory direct delivery.",
@@ -114,7 +127,7 @@ export default function PrefabConstructionPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
           {prefabTypes.map((type, index) => (
             <motion.div
               key={type.id}
