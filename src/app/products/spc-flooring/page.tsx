@@ -5,11 +5,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 const spcTypes = [
   {
     id: "click-lock",
     title: "Click-Lock SPC Flooring",
+    catalog: "/catalogs/spc-flooring",
     description:
       "Quick-install click-lock system — no glue required. Custom ml wear thickness and mm plank thickness to your specs.",
     image: "/images/stock/spc-flooring-1.jpg",
@@ -25,6 +27,7 @@ const spcTypes = [
   {
     id: "glue-down",
     title: "Glue-Down SPC Flooring",
+    catalog: "/catalogs/spc-flooring",
     description:
       "Permanent adhesive installation for maximum stability. Best for high-traffic commercial environments.",
     image: "/images/stock/spc-flooring-2.jpg",
@@ -40,6 +43,7 @@ const spcTypes = [
   {
     id: "lay-flat",
     title: "Lay-Flat SPC Flooring",
+    catalog: "/catalogs/spc-flooring",
     description:
       "Loose-lay installation — no click, no glue. Fastest install for temporary or quick-turn projects.",
     image: "/images/stock/spc-flooring-3.jpg",
@@ -129,6 +133,20 @@ export default function SPCFlooringPage() {
                   <h3 className="text-xl font-semibold text-foreground mb-3">{type.title}</h3>
                   <p className="text-foreground/80 mb-4">{type.description}</p>
 
+                  {(type as any).catalog && (
+                    <Link href={(type as any).catalog} title={`View ${type.title} Catalog`}>
+                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>
+                    </Link>
+                  )}
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>

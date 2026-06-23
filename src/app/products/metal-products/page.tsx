@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
 
+
 // Fencing and gate types
 const fencingTypes = [
   {
@@ -54,7 +55,7 @@ const fencingTypes = [
     id: "steel",
     title: "Steel Security Fencing",
     description: "High-security fencing for maximum protection",
-    image: "/images/stock/gates-1.jpg",
+    image: "/images/stock/security-fence.jpg",
     properties: [
       "Exceptional strength and durability",
       "High impact resistance",
@@ -221,6 +222,7 @@ export default function MetalFencingGatesPage() {
                   <img
                     src={type.image}
                     alt={type.title}
+                    style={{ objectPosition: (type as any).imagePosition || "center" }}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
@@ -276,6 +278,12 @@ export default function MetalFencingGatesPage() {
                         </span>
                       ))}
                     </div>
+                  </div>
+
+                  <div className="mt-2 pt-3 border-t border-white/10 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
                   </div>
                 </div>
               </Card>

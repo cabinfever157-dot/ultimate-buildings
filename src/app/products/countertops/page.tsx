@@ -5,12 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 // Countertop materials data - Custom fabricated, Own the Mine
 const countertopMaterials = [
   {
     id: "granite",
     title: "Granite Countertops",
+    catalog: "/catalogs/granite-marble",
     description: "Custom fabricated granite. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
     image: "https://static.vecteezy.com/system/resources/thumbnails/056/121/709/small/beige-granite-kitchen-counter-photo.jpg",
     properties: [
@@ -32,6 +34,7 @@ const countertopMaterials = [
   {
     id: "quartz",
     title: "Quartz Countertops",
+    catalog: "/catalogs/quartz",
     description: "Custom fabricated quartz. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
     image: "/images/stock/countertops-2.jpg",
     properties: [
@@ -53,6 +56,7 @@ const countertopMaterials = [
   {
     id: "marble",
     title: "Marble Countertops",
+    catalog: "/catalogs/granite-marble",
     description: "Custom fabricated marble. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
     image: "https://t3.ftcdn.net/jpg/05/03/39/00/360_F_503390029_neeuMkAdFlk7NybORLlYveVV3naZ6YCc.jpg",
     properties: [
@@ -239,6 +243,20 @@ export default function CountertopsPage() {
                     {material.description}
                   </p>
 
+                  {(material as any).catalog && (
+                    <Link href={(material as any).catalog} title={`View ${material.title} Catalog`}>
+                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>
+                    </Link>
+                  )}
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>

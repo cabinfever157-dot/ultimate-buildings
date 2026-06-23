@@ -5,12 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 // Stairs and Railings data
 const stairsRailingsData = [
   {
     id: "wrought-iron",
     title: "Wrought Iron",
+    catalog: "/catalogs/wrought-iron-doors",
     description: "Classic elegance with custom design possibilities",
     image: "/images/stock/stairs-1.jpg",
     properties: [
@@ -30,6 +32,7 @@ const stairsRailingsData = [
   {
     id: "stainless-steel",
     title: "Stainless Steel",
+    catalog: "/catalogs/wrought-iron-doors",
     description: "Modern aesthetic with exceptional durability",
     image: "/images/stock/stairs-stainless-steel.jpg",
     properties: [
@@ -49,6 +52,7 @@ const stairsRailingsData = [
   {
     id: "glass",
     title: "Glass Railings",
+    catalog: "/catalogs/aluminum-doors-windows",
     description: "Sleek and modern with unobstructed views",
     image: "https://goldenglass.com/wp-content/uploads/2020/11/iStock-129179692.jpg",
     properties: [
@@ -68,6 +72,7 @@ const stairsRailingsData = [
   {
     id: "wood",
     title: "Custom Wood",
+    catalog: "/catalogs/wooden-doors",
     description: "Warmth and natural beauty for traditional designs",
     image: "https://www.arasbar.com/wp-content/uploads/2020/07/fascinating-custom-wood-stairs-picture-900.jpg",
     properties: [
@@ -184,6 +189,20 @@ export default function StairsRailingsPage() {
                     {material.description}
                   </p>
 
+                  {(material as any).catalog && (
+                    <Link href={(material as any).catalog} title={`View ${material.title} Catalog`}>
+                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>
+                    </Link>
+                  )}
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>

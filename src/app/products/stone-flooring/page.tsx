@@ -5,12 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 // Material data for Stone Flooring & Walls - Factory Direct - Own the Mine
 const flooringMaterials = [
   {
     id: "marble",
     title: "Marble",
+    catalog: "/catalogs/granite-marble",
     description: "Timeless elegance with natural veining. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs. 20 acres of stock stone block inventory.",
     image: "/images/stock/stone-flooring-marble.png",
     properties: [
@@ -31,6 +33,7 @@ const flooringMaterials = [
   {
     id: "granite",
     title: "Granite",
+    catalog: "/catalogs/granite-marble",
     description: "Exceptional durability with natural beauty. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
     image: "https://t4.ftcdn.net/jpg/05/19/71/33/360_F_519713382_18hplddKbojywZ1mHQHG5zNcbQJORPgy.jpg",
     properties: [
@@ -51,6 +54,7 @@ const flooringMaterials = [
   {
     id: "quartz",
     title: "Quartz",
+    catalog: "/catalogs/quartz",
     description: "Engineered stone with consistent patterns. Our partner manufactures the slabs — use our colors or yours. Custom fabrication to your specifications.",
     image: "/images/stock/stone-flooring-2.jpg",
     properties: [
@@ -145,6 +149,20 @@ export default function StoneFlooringPage() {
                     {material.description}
                   </p>
 
+                  {(material as any).catalog && (
+                    <Link href={(material as any).catalog} title={`View ${material.title} Catalog`}>
+                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>
+                    </Link>
+                  )}
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>

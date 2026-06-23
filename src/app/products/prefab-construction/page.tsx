@@ -5,11 +5,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 const prefabTypes = [
   {
     id: "single-family",
     title: "Single-Family Homes",
+    catalog: "/catalogs/prefab-construction",
     description: "Custom prefab single-family home construction — efficient, cost-effective, and delivered factory direct to your job site.",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.Qt0e2j2U5R3hFp5EQyByYwHaEJ%3Fr%3D0%26cb%3Dthfvnextfalcon2%26pid%3DApi&f=1&ipt=e1dd353317152f618fb08e5a263ecb24971899db7aa29867ccbd35c31802f0e1&ipo=images",
     properties: [
@@ -23,6 +25,7 @@ const prefabTypes = [
   {
     id: "hotels",
     title: "Hotel Construction",
+    catalog: "/catalogs/prefab-construction",
     description: "Complete prefab hotel packages — structural frame, panels, interior finishes. Volume builder pricing with factory direct delivery.",
     image: "/images/stock/prefab-hotels.jpg",
     properties: [
@@ -36,6 +39,7 @@ const prefabTypes = [
   {
     id: "apartments",
     title: "Apartment Buildings",
+    catalog: "/catalogs/prefab-construction",
     description: "Multi-unit prefab apartment construction. Custom layouts, code compliant, factory direct to job site.",
     image: "/images/stock/prefab-apartments.jpg",
     properties: [
@@ -49,6 +53,7 @@ const prefabTypes = [
   {
     id: "offices",
     title: "Office Buildings",
+    catalog: "/catalogs/prefab-construction",
     description: "Prefab office construction with flexible layouts. From shell to fully finished — factory direct.",
     image: "/images/stock/prefab-offices.jpg",
     properties: [
@@ -147,6 +152,20 @@ export default function PrefabConstructionPage() {
                   <h3 className="text-xl font-semibold text-foreground mb-3">{type.title}</h3>
                   <p className="text-foreground/80 mb-4">{type.description}</p>
 
+                  {(type as any).catalog && (
+                    <Link href={(type as any).catalog} title={`View ${type.title} Catalog`}>
+                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>
+                    </Link>
+                  )}
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>

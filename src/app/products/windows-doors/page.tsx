@@ -5,12 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 // Window and door types - Custom fabricated, all types available
 const windowDoorTypes = [
   {
     id: "french-slim",
     title: "French Slim Steel",
+    catalog: "/catalogs/french-steel",
     description: "Custom fabricated French slim steel windows and doors. Up to local code - residential & commercial.",
     image: "https://fsmedia.rt7.media/2018/02/08020130/steel-doors.jpg",
     properties: [
@@ -34,6 +36,7 @@ const windowDoorTypes = [
   {
     id: "aluminum",
     title: "Aluminum Systems",
+    catalog: "/catalogs/aluminum-doors-windows",
     description: "Custom fabricated aluminum windows and doors with thermal break technology.",
     image: "/images/stock/windows-2.jpg",
     properties: [
@@ -56,9 +59,10 @@ const windowDoorTypes = [
   },
   {
     id: "wrought-iron",
-    title: "Wrought Iron",
+    title: "Wrought Iron Doors",
+    catalog: "/catalogs/wrought-iron-doors",
     description: "Custom fabricated wrought iron doors and windows. Custom design to fit your needs.",
-    image: "/images/stock/windows-3.jpg",
+    image: "/images/stock/wrought-iron-door.jpg",
     properties: [
       "Custom fabricated to your measurements",
       "Custom design to fit your needs",
@@ -80,6 +84,7 @@ const windowDoorTypes = [
   {
     id: "mixed-materials",
     title: "Mixed Materials",
+    catalog: "/catalogs/wooden-doors",
     description: "Custom fabricated windows and doors using mixed materials for unique designs.",
     image: "/images/stock/windows-mixed-materials.png",
     properties: [
@@ -217,6 +222,20 @@ export default function WindowsDoorsPage() {
                     {type.description}
                   </p>
 
+                  {(type as any).catalog && (
+                    <Link href={(type as any).catalog} title={`View ${type.title} Catalog`}>
+                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        View Catalog
+                      </Button>
+                    </Link>
+                  )}
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>
