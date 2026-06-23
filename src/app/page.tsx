@@ -294,33 +294,33 @@ export default function HomePage() {
   );
 }
 
-const Skeleton = ({ src }: { src?: string }) => (
+const Skeleton = ({ src, objectPosition = "center" }: { src?: string; objectPosition?: string }) => (
   <div className="flex flex-1 w-full min-h-[16rem] rounded-xl bg-[#0a0f18] border border-white/5 overflow-hidden relative group-hover/bento:shadow-[inset_0_0_50px_rgba(212,175,55,0.2)] transition-shadow duration-500">
       {src && (
           /* eslint-disable-next-line @next/next/no-img-element */
-          <img src={src} className="absolute inset-0 object-cover w-full h-full group-hover/bento:scale-110 transition-transform duration-1000 ease-out" alt="Preview"/>
+          <img src={src} style={{ objectPosition }} className="absolute inset-0 object-cover w-full h-full group-hover/bento:scale-110 transition-transform duration-1000 ease-out" alt="Preview"/>
       )}
   </div>
 );
 
 const features = [
   {
-    title: "Windows & Doors",
-    header: <Skeleton src="/images/bento/wrought-iron-wooden-door.jpg" />,
-    icon: <Box className="h-6 w-6 text-brand-primary" />,
-    href: "/products/windows-doors",
+    title: "Flooring Solutions",
+    header: <Skeleton src="/images/projects/page12_img01.jpg" objectPosition="bottom" />,
+    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
+    href: "/materials",
   },
   {
-    title: "Premium Cabinets",
+    title: "Stone Countertops",
+    header: <Skeleton src="/images/bento/countertops.jpg" />,
+    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
+    href: "/products/countertops",
+  },
+  {
+    title: "Cabinets",
     header: <Skeleton src="/images/bento/cabinets.jpg" />,
     icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",
-  },
-  {
-    title: "Staircases & Railings",
-    header: <Skeleton src="/images/bento/staircases_railings..jpg" />,
-    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
-    href: "/products/stairs-railings",
   },
   {
     title: "Wrought Iron & Metal Gates",
@@ -329,33 +329,51 @@ const features = [
     href: "/products/windows-doors",
   },
   {
-    title: "Custom Vanities, Closets, & Cabinets",
+    title: "Staircases & Railings",
+    header: <Skeleton src="/images/bento/staircases_railings..jpg" />,
+    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
+    href: "/products/stairs-railings",
+  },
+  {
+    title: "Windows",
+    header: <Skeleton src="/images/bento/windows.jpg" />,
+    icon: <Box className="h-6 w-6 text-brand-primary" />,
+    href: "/products/windows-doors",
+  },
+  {
+    title: "Doors",
+    header: <Skeleton src="/images/bento/hero_door.jpg" />,
+    icon: <Box className="h-6 w-6 text-brand-primary" />,
+    href: "/products/windows-doors",
+  },
+  {
+    title: (
+      <>
+        Custom Vanities,
+        <br className="hidden md:block" />
+        Closets & Cabinets
+      </>
+    ),
     header: <Skeleton src="/images/bento/closets.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",
-  },
-  {
-    title: "Flooring Solutions",
-    header: <Skeleton src="/images/projects/page12_img01.jpg" />,
-    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
-    href: "/materials",
-  },
-  {
-    title: "Stone Countertops",
-    header: <Skeleton src="https://stonemasters.ca/wp-content/uploads/2014/10/home-granite-countertops.jpg" />,
-    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
-    href: "/products/countertops",
-  },
-  {
-    title: "Factory Direct Pricing",
-    header: <Skeleton src="/images/bento/factorydirect.jpg" />,
-    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
-    href: "/quote-wizard",
   },
   {
     title: "Metal Fencing & Gates",
     header: <Skeleton src="/images/stock/gates-upload.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/metal-products",
+  },
+  {
+    title: "Prefab Construction",
+    header: <Skeleton src="/images/bento/prefab.jpg" />,
+    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
+    href: "/products/prefab-construction",
+  },
+  {
+    title: "Factory Direct Pricing",
+    header: <Skeleton src="/images/bento/factorydirect.jpg" />,
+    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
+    href: "/quote-wizard",
   },
 ];

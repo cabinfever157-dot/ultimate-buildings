@@ -37,7 +37,6 @@ export const materialsData = [
     title: 'SPC Flooring',
     category: 'Flooring',
     description: 'Stone Plastic Composite flooring — waterproof, durable, and factory direct. Perfect for high-traffic residential and commercial spaces.',
-    image: '/images/projects/page08_img03.jpg',
     icon: 'FlooringIcon',
     properties: [
       '100% Waterproof',
@@ -59,7 +58,6 @@ export const materialsData = [
     title: 'Granite & Marble',
     category: 'Premium Materials',
     description: 'We own the quarry. Fully integrated from mine to fabrication. Premium stone surfaces with direct quality control.',
-    image: '/images/projects/page05_img04.jpg',
     icon: 'StoneIcon',
     properties: [
       'Own the Mine',
@@ -209,17 +207,6 @@ export default function MaterialsPage() {
               whileHover={{ y: -5 }}
               className="group relative flex flex-col rounded-2xl glass-panel border border-white/10 hover:border-brand-primary/30 transition-all overflow-hidden"
             >
-              {/* Material image */}
-              {material.image && (
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={material.image}
-                    alt={material.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              )}
-              
               <div className="p-6 flex flex-col flex-1">
               {/* Material icon with glow */}
               <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-4 border border-white/10 group-hover:border-brand-primary/30 transition-all">

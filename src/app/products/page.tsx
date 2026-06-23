@@ -5,12 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { BookOpen } from "lucide-react";
 
 // Product categories data - All products are custom fabricated to your measurements, colors, and details
 const productCategories = [
   {
     id: "countertops",
     title: "Countertops & Slabs",
+    catalog: "/catalogs/granite-marble",
     description: "Custom countertops and slab solutions. Custom fabricated countertops for contractors and builders ready to install. Granite, Quartz, and Marble for interior/exterior walls and floors. Slabs sold direct to fabricators for their projects.",
     image: "/images/stock/countertops-1.jpg",
     materials: ["Granite", "Quartz", "Marble"],
@@ -25,6 +27,7 @@ const productCategories = [
   {
     id: "spc-flooring",
     title: "SPC Flooring",
+    catalog: "/catalogs/spc-flooring",
     description: "Custom SPC flooring - click-lock, glue-down, lay-flat options. 5-week production. Your brand packaging available.",
     image: "/images/stock/spc-flooring-1.jpg",
     materials: ["SPC Core", "UV Coating", "Click-Lock", "Glue-Down", "Lay-Flat"],
@@ -39,6 +42,7 @@ const productCategories = [
   {
     id: "prefab-construction",
     title: "Prefab Construction",
+    catalog: "/catalogs/prefab-construction",
     description: "Custom prefab construction components - hotels, apartments, offices. Volume builder pricing.",
     image: "/images/stock/prefab-hotels.jpg",
     materials: ["Light Steel Frame", "Prefab Panels", "Structural Components"],
@@ -52,6 +56,7 @@ const productCategories = [
   {
     id: "stairs-railings",
     title: "Stairs & Railings",
+    catalog: "/catalogs/wrought-iron-doors",
     description: "Custom fabricated staircases and railings. Safety & code compliant to your location.",
     image: "/images/stock/stairs-1.jpg",
     materials: ["Wrought Iron", "Stainless Steel", "Glass", "Wood"],
@@ -65,6 +70,7 @@ const productCategories = [
   {
     id: "cabinets",
     title: "Cabinets & Organizational Storage",
+    catalog: "/catalogs/wooden-doors",
     description: "Custom fabricated cabinets and organizational storage for kitchens, bathrooms, wardrobes, and walk-in closets. Volume buyers welcome.",
     image: "/images/stock/cabinets-1.jpg",
     materials: ["Wood", "Laminates", "Metal", "Glass"],
@@ -78,6 +84,7 @@ const productCategories = [
   {
     id: "stone-flooring",
     title: "Stone Flooring & Walls",
+    catalog: "/catalogs/granite-marble",
     description: "Custom fabricated stone flooring and walls to your measurements. Value-priced factory direct for interior and exterior residential and commercial spaces.",
     image: "/images/stock/stone-flooring-1.jpg",
     materials: ["Marble", "Granite", "Quartz", "Limestone"],
@@ -91,6 +98,7 @@ const productCategories = [
   {
     id: "windows-doors",
     title: "Windows & Doors",
+    catalog: "/catalogs/aluminum-doors-windows",
     description: "Custom windows and doors - Wrought Iron, French Slim, Aluminum, Mixed Materials. Up to local code.",
     image: "/images/stock/windows-1.jpg",
     materials: ["Wrought Iron", "French Slim", "Aluminum", "Mixed Materials"],
@@ -104,6 +112,7 @@ const productCategories = [
   {
     id: "metal-products",
     title: "Metal Products",
+    catalog: "/catalogs/wrought-iron-doors",
     description: "Custom fencing, gates, partitions, and garage doors. Custom designed & sized to fit your needs — not standard sizes.",
     image: "/images/stock/gates-2.jpg",
     materials: ["Wrought Iron", "Steel", "Aluminum", "Garage Doors"],
@@ -222,14 +231,20 @@ export default function ProductsPage() {
                     {category.description}
                   </p>
 
-                  <Link
-                    href={`/products/${category.id}`}
-                    className="mt-auto pt-4"
-                  >
-                    <Button className="w-full bg-brand-primary text-brand-dark hover:bg-brand-primary/90 shadow-glass-glow">
-                      Explore {category.title}
-                    </Button>
-                  </Link>
+                  <div className="mt-auto pt-4 flex items-center gap-3">
+                    <Link href={`/products/${category.id}`} className="flex-1">
+                      <Button className="w-full bg-brand-primary text-brand-dark hover:bg-brand-primary/90 shadow-glass-glow">
+                        Explore {category.title}
+                      </Button>
+                    </Link>
+                    {category.catalog && (
+                      <Link href={category.catalog} title={`View ${category.title} Catalog`}>
+                        <Button variant="outline" size="icon" className="border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary shrink-0">
+                          <BookOpen className="w-5 h-5" />
+                        </Button>
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </Card>
             </motion.div>

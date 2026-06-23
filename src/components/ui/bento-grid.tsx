@@ -51,9 +51,9 @@ export const BentoGridItem = ({
          <div className="p-2 bg-brand-primary/10 rounded-lg group-hover/bento:bg-brand-primary/20 transition-colors">
            {icon}
          </div>
-         <div className="font-display font-bold text-white tracking-wide text-lg shrink-0">
-           {title}
-         </div>
+          <div className="font-display font-bold text-white tracking-wide text-base md:text-lg leading-tight">
+            {title}
+          </div>
        </div>
      </motion.div>
    );

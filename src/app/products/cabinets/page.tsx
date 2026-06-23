@@ -4,7 +4,8 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { NarrativeNav } from "@/components/layout/narrative-nav";import { CheckCircle } from "lucide-react";
+import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { CheckCircle, BookOpen } from "lucide-react";
 
 // New simplified list of custom cabinet applications
 const customCabinetApplications = [
@@ -67,13 +68,18 @@ export default function CabinetsPage() {
                 ← Back to All Products
               </Button>
             </Link>
-            <Link href="/quote-wizard">
-              <Button className="bg-brand-primary text-brand-dark hover:bg-brand-primary/90">
-                Get a Quote
-              </Button>
-            </Link>
-          </div>
+          <Link href="/quote-wizard">
+            <Button className="bg-brand-primary text-brand-dark hover:bg-brand-primary/90">
+              Get a Quote
+            </Button>
+          </Link>
+          <Link href="/catalogs/wooden-doors" title="View Cabinets Catalog">
+            <Button variant="outline" size="icon" className="border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+              <BookOpen className="w-5 h-5" />
+            </Button>
+          </Link>
         </div>
+      </div>
 
         {/* Image Gallery Section */}
         <motion.div
@@ -93,7 +99,6 @@ export default function CabinetsPage() {
                     transition={{ duration: 0.5 }}
                 >
                     <img src={image.src} alt={image.alt} className="w-full h-full object-cover"/>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </motion.div>
             ))}
         </motion.div>
@@ -110,7 +115,9 @@ export default function CabinetsPage() {
             Ready to Build Your Vision?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our experts will guide you through the entire process, from design to delivery.
+            Our experts will guide you through the entire process,
+            <br className="hidden md:block" />
+            from design to delivery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote-wizard">
