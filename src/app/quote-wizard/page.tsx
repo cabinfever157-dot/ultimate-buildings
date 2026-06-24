@@ -95,10 +95,18 @@ export default function QuoteWizard() {
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="text-brand-primary/80 font-display text-2xl tracking-widest uppercase mb-4"
+            >
+              <a href="tel:8332242940" className="hover:text-brand-primary transition-colors">833-224-2940</a>
+            </motion.p>
             <h1 className="text-5xl md:text-7xl font-display font-light text-white mb-6 tracking-tight relative inline-block">
-              Bid{" "}
+              Request{" "}
               <span className="text-brand-primary font-medium bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-amber-300">
-                Quote Portal
+                a Quote
               </span>
               <motion.div
                 className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-brand-primary/50 to-transparent"
