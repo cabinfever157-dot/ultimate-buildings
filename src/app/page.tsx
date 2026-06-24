@@ -253,8 +253,8 @@ export default function HomePage() {
                     Contact us today to learn how we can bring your vision to life for:
                   </p>
                   <p className="text-brand-primary leading-relaxed">
-                    Stone Floor & Walls — SPC Flooring — Countertops — Cabinets & Storage — Stairs & Railings<br/>
-                    Windows — Interior & Exterior Doors — Metal Gates & Fencing — Prefab Buildings
+                    Stone Floor & Walls — SPC Flooring — Countertops — Cabinets & Storage — Windows & Doors<br/>
+                    Stairs & Railings — Interior & Exterior Doors — Metal Gates & Fencing — Prefab Buildings
                   </p>
                 </div>
               </motion.div>
@@ -305,34 +305,28 @@ const Skeleton = ({ src, objectPosition = "center" }: { src?: string; objectPosi
 
 const features = [
   {
-    title: "Flooring Solutions",
-    header: <Skeleton src="/images/projects/page12_img01.jpg" objectPosition="bottom" />,
-    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
-    href: "/materials",
-  },
-  {
     title: "Stone Countertops",
     header: <Skeleton src="/images/bento/countertops.jpg" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
     href: "/products/countertops",
   },
   {
+    title: "SPC Flooring",
+    header: <Skeleton src="/images/stock/spc-flooring-1.jpg" />,
+    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
+    href: "/products/spc-flooring",
+  },
+  {
+    title: "Stone Flooring & Walls",
+    header: <Skeleton src="/images/projects/page12_img01.jpg" objectPosition="bottom" />,
+    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
+    href: "/products/stone-flooring",
+  },
+  {
     title: "Cabinets",
     header: <Skeleton src="/images/bento/cabinets.jpg" />,
     icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
     href: "/products/cabinets",
-  },
-  {
-    title: "Wrought Iron & Metal Gates",
-    header: <Skeleton src="/images/bento/Metal-Fencing-Gates.jpg" />,
-    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
-    href: "/products/windows-doors",
-  },
-  {
-    title: "Staircases & Railings",
-    header: <Skeleton src="/images/bento/staircases_railings..jpg" />,
-    icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
-    href: "/products/stairs-railings",
   },
   {
     title: "Windows",
@@ -345,6 +339,12 @@ const features = [
     header: <Skeleton src="/images/bento/hero_door.jpg" />,
     icon: <Box className="h-6 w-6 text-brand-primary" />,
     href: "/products/windows-doors",
+  },
+  {
+    title: "Staircases & Railings",
+    header: <Skeleton src="/images/bento/staircases_railings..jpg" />,
+    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
+    href: "/products/stairs-railings",
   },
   {
     title: (
@@ -360,8 +360,8 @@ const features = [
   },
   {
     title: "Metal Fencing & Gates",
-    header: <Skeleton src="/images/stock/gates-upload.jpg" />,
-    icon: <Box className="h-6 w-6 text-brand-primary" />,
+    header: <Skeleton src="/images/bento/Metal-Fencing-Gates.jpg" />,
+    icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/products/metal-products",
   },
   {

@@ -82,9 +82,33 @@ const windowDoorTypes = [
     ],
   },
   {
+    id: "wood-doors",
+    title: "Wood Doors",
+    catalog: "/catalogs/wooden-doors",
+    description: "Custom wood doors — solid construction, custom sizing, and finishes. View our catalog for available styles.",
+    image: "/images/bento/hero_door.jpg",
+    properties: [
+      "Custom fabricated to your measurements",
+      "Solid wood and engineered options",
+      "Custom finishes and stains",
+      "Interior and exterior applications",
+    ],
+    applications: [
+      "Residential entry doors",
+      "Interior passage doors",
+      "Custom projects",
+      "Traditional and modern homes",
+    ],
+    features: [
+      "Natural wood grain",
+      "Custom panel and glass designs",
+      "Factory direct pricing",
+    ],
+  },
+  {
     id: "mixed-materials",
     title: "Mixed Materials",
-    catalog: "/catalogs/wooden-doors",
+    catalog: "/catalogs/aluminum-doors-windows",
     description: "Custom fabricated windows and doors using mixed materials for unique designs.",
     image: "/images/stock/windows-mixed-materials.png",
     properties: [
@@ -377,7 +401,7 @@ export default function WindowsDoorsPage() {
             </Link>
             <Link href="/promotional-gallery">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
-                View Installation Projects
+                View Product Gallery
               </Button>
             </Link>
           </div>

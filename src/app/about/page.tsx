@@ -251,9 +251,9 @@ export default function AboutPage() {
 
              <div className="mt-12 pt-8 border-t border-white/10 text-center">
                <p className="text-muted-foreground leading-[1.6]">
-                 Stone Floor & Walls – SPC Flooring – Countertops – Cabinets & Storage – Stairs & Railings
-                 <br />
-                 Windows – Interior & Exterior Doors – Metal Gates & Fencing – Prefab Buildings
+                  Stone Floor & Walls – SPC Flooring – Countertops – Cabinets & Storage – Windows & Doors
+                  <br />
+                  Stairs & Railings – Interior & Exterior Doors – Metal Gates & Fencing – Prefab Buildings
                </p>
              </div>
            </div>

@@ -211,7 +211,7 @@ export default function PrefabConstructionPage() {
               <ul className="text-foreground/80 space-y-2">
                 <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Structural engineering and shop drawings</span></li>
                 <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>3D visualizations prior to production</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>QC photos and trial installation proof</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>QC photos and preproduction samples available</span></li>
               </ul>
             </div>
             <div>

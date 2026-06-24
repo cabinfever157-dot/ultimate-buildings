@@ -12,7 +12,6 @@ const gallerySections = [
     description: "Custom curved, spiral, and straight staircases — wrought iron, stainless steel, glass, and wood",
     images: [
       "/images/stock/stairs-1.jpg",
-      "/images/stock/stairs-2.jpg",
       "/images/stock/stairs-stainless-steel.jpg",
       "/images/gallery/uk-villa-staircase.png",
       "/images/gallery/fitness-center.jpg",
@@ -26,7 +25,9 @@ const gallerySections = [
     description: "Marble, granite, and quartz — interior and exterior applications",
     images: [
       "/images/stock/stone-flooring-marble.png",
+      "/images/stock/stone-flooring-1.jpg",
       "/images/stock/stone-flooring-2.jpg",
+      "/images/stock/stone-flooring-3.jpg",
       "https://t4.ftcdn.net/jpg/05/19/71/33/360_F_519713382_18hplddKbojywZ1mHQHG5zNcbQJORPgy.jpg",
     ],
   },
@@ -38,6 +39,8 @@ const gallerySections = [
       "/images/stock/spc-flooring-1.jpg",
       "/images/stock/spc-flooring-2.jpg",
       "/images/stock/spc-flooring-3.jpg",
+      "/images/stock/spc-flooring-1.jpg",
+      "/images/stock/spc-flooring-2.jpg",
     ],
   },
   {
@@ -45,9 +48,9 @@ const gallerySections = [
     title: "Countertops & Slabs",
     description: "Granite, quartz, and marble countertops — custom fabricated to your specifications",
     images: [
-      "https://static.vecteezy.com/system/resources/thumbnails/056/121/709/small/beige-granite-kitchen-counter-photo.jpg",
+      "/images/stock/countertops-1.jpg",
       "/images/stock/countertops-2.jpg",
-      "https://t3.ftcdn.net/jpg/05/03/39/00/360_F_503390029_neeuMkAdFlk7NybORLlYveVV3naZ6YCc.jpg",
+      "/images/stock/countertops-3.jpg",
       "/images/stock/countertops-4.jpg",
       "/images/stock/countertops-5.jpg",
       "/images/stock/countertops-6.jpg",
@@ -75,6 +78,8 @@ const gallerySections = [
     images: [
       "/images/stock/vanity-1.jpg",
       "/images/stock/vanity-2.jpg",
+      "/images/stock/hotel-bathroom-1.jpg",
+      "/images/stock/hotel-bathroom-2.jpg",
     ],
   },
   {
@@ -95,8 +100,10 @@ const gallerySections = [
     title: "Windows & Doors",
     description: "French slim steel, aluminum, wrought iron, and mixed material systems",
     images: [
-      "https://fsmedia.rt7.media/2018/02/08020130/steel-doors.jpg",
-      "https://goldenglass.com/wp-content/uploads/2020/11/iStock-129179692.jpg",
+      "/images/stock/windows-1.jpg",
+      "/images/stock/windows-2.jpg",
+      "/images/stock/windows-3.jpg",
+      "/images/stock/wrought-iron-door.jpg",
       "/images/stock/windows-mixed-materials.png",
       "/images/gallery/ohio-apartments.jpg",
     ],
@@ -109,6 +116,7 @@ const gallerySections = [
       "/images/stock/gates-1.jpg",
       "/images/stock/gates-2.jpg",
       "/images/stock/gates-upload.jpg",
+      "/images/stock/security-fence.jpg",
       "/images/gallery/arizona-estate.jpg",
     ],
   },
@@ -237,7 +245,7 @@ export default function PromotionalGallery() {
             </Link>
             <Link href="/products">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
-                Explore All Materials
+                Explore All Products
               </Button>
             </Link>
           </div>

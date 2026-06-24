@@ -320,7 +320,7 @@ export default function StairsRailingsPage() {
             </Link>
             <Link href="/promotional-gallery">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
-                View Staircase Projects
+                View Product Gallery
               </Button>
             </Link>
           </div>

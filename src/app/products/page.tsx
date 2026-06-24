@@ -245,6 +245,12 @@ export default function ProductsPage() {
                       </Link>
                     )}
                   </div>
+
+                  <div className="mt-3 text-center">
+                    <span className="text-lg font-medium text-brand-primary tracking-wide">
+                      Customized to Your Design
+                    </span>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -349,7 +355,7 @@ export default function ProductsPage() {
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">•</span>
-                <span>Trial installation with photo proof before shipping</span>
+                <span>Trial installation with preproduction samples available</span>
               </li>
             </ul>
             <Link href="/quote-wizard">

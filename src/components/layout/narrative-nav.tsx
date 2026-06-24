@@ -58,10 +58,10 @@ export function NarrativeNav() {
                             </Link>
                         </li>
                         <li>
-                             <Link href="/products/stairs-railings" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                               <div className="text-sm font-medium leading-none">Stairs & Railings</div>
+                             <Link href="/products/windows-doors" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Windows & Doors</div>
                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                 Custom-designed staircases and railings
+                                 Custom fabricated — residential & commercial
                                </p>
                              </Link>
                         </li>
@@ -74,10 +74,10 @@ export function NarrativeNav() {
                              </Link>
                         </li>
                         <li>
-                             <Link href="/products/windows-doors" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                               <div className="text-sm font-medium leading-none">Windows & Doors</div>
+                             <Link href="/products/stairs-railings" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                               <div className="text-sm font-medium leading-none">Stairs & Railings</div>
                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                 Custom fabricated — residential & commercial
+                                 Custom-designed staircases and railings
                                </p>
                              </Link>
                         </li>

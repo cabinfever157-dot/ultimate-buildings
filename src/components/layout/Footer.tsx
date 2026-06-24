@@ -45,9 +45,10 @@ export function Footer() {
               {[
                 { label: "Stone Flooring & Walls", href: "/products/stone-flooring" },
                 { label: "SPC Flooring", href: "/products/spc-flooring" },
-                { label: "Cabinets & Storage", href: "/products/cabinets" },
                 { label: "Countertops & Slabs", href: "/products/countertops" },
                 { label: "Windows & Doors", href: "/products/windows-doors" },
+                { label: "Cabinets & Storage", href: "/products/cabinets" },
+                { label: "Stairs & Railings", href: "/products/stairs-railings" },
                 { label: "Metal Products", href: "/products/metal-products" },
                 { label: "Prefab Construction", href: "/products/prefab-construction" },
               ].map((item) => (
@@ -69,7 +70,6 @@ export function Footer() {
                 { label: "Catalogs", href: "/catalogs" },
                 { label: "Get a Bid Quote", href: "/quote-wizard" },
                 { label: "Product Gallery", href: "/promotional-gallery" },
-                { label: "Materials", href: "/materials" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-white/50 hover:text-brand-primary transition-colors text-sm font-body">
