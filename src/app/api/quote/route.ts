@@ -23,6 +23,7 @@ export async function POST(request: Request) {
 
     await sgMail.send({
       to: TO_EMAIL,
+      bcc: "greg@sygnifi.com",
       from: FROM_EMAIL,
       replyTo: email,
       subject: `Quote Request from ${companyName} — ${contactName}`,
