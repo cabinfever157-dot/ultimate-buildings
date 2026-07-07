@@ -106,7 +106,7 @@ export default function PrefabConstructionPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto font-body leading-[1.7]"
           >
-            Custom prefab construction components for hotels, apartments, and offices.
+            Custom prefab construction components for homes, hotels, apartments, and offices.
             <br />Volume builder pricing.
           </motion.p>
           <motion.p

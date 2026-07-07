@@ -59,9 +59,9 @@ const spcTypes = [
 ];
 
 const productionInfo = [
-  { step: "1", title: "Order Confirmed", desc: "Custom specs locked — wear thickness, plank size, color, packaging." },
+  { step: "1", title: "Order Confirmed", desc: "Custom specs — wear thickness, plank size, color, packaging." },
   { step: "2", title: "Production", desc: "5-week manufacturing cycle. Progress reports with QC photos." },
-  { step: "3", title: "Quality Control", desc: "Trial installation with photos/video. Your rep can inspect." },
+  { step: "3", title: "Quality Control", desc: "Our team is at the factory." },
   { step: "4", title: "Shipped to Job Site", desc: "All logistics, duty/tariffs, and delivery included. Your brand on the box." },
 ];
 
@@ -212,11 +212,11 @@ export default function SPCFlooringPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center py-16"
         >
-          <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-medium text-brand-primary mb-6">
             Get SPC Flooring at factory direct pricing
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Volume buyers welcome. Custom specs,
+            Custom specs,
             <br className="hidden md:block" />
             your brand, delivered to your job site.
           </p>

@@ -179,9 +179,10 @@ export default function StoneFlooringPage() {
         >
           <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-6">
             Transform your space with quality stone flooring
-            <br className="hidden md:block" />
-            — factory direct pricing
           </h2>
+          <p className="text-2xl md:text-3xl font-display font-medium text-brand-primary max-w-3xl mx-auto mb-4">
+            FACTORY DIRECT PRICING
+          </p>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Our flooring specialists can help you choose
             <br className="hidden md:block" />
@@ -193,7 +194,7 @@ export default function StoneFlooringPage() {
                 Request Free Consultation
               </Button>
             </Link>
-            <Link href="/promotional-gallery">
+            <Link href="/promotional-gallery#stone-flooring">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
                 View Completed Projects
               </Button>

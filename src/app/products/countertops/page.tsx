@@ -473,7 +473,7 @@ export default function CountertopsPage() {
                 Get Countertop Consultation
               </Button>
             </Link>
-            <Link href="/promotional-gallery">
+            <Link href="/promotional-gallery#countertops">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
                 View Product Gallery
               </Button>

@@ -85,7 +85,7 @@ const windowDoorTypes = [
     id: "wood-doors",
     title: "Wood Doors",
     catalog: "/catalogs/wooden-doors",
-    description: "Custom wood doors — solid construction, custom sizing, and finishes. View our catalog for available styles.",
+    description: "Custom wood doors — interior and exterior. Solid construction, custom sizing, and finishes. View our catalog for available styles.",
     image: "/images/bento/hero_door.jpg",
     properties: [
       "Custom fabricated to your measurements",
@@ -399,7 +399,7 @@ export default function WindowsDoorsPage() {
                 Get Window & Door Consultation
               </Button>
             </Link>
-            <Link href="/promotional-gallery">
+            <Link href="/promotional-gallery#windows-doors">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
                 View Product Gallery
               </Button>

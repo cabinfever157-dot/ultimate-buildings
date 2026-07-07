@@ -5,13 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
-import { BookOpen } from "lucide-react";
 
 // Stairs and Railings data
 const stairsRailingsData = [
   {
     id: "wrought-iron",
-    title: "Wrought Iron",
+    title: "Metal",
     catalog: "/catalogs/wrought-iron-doors",
     description: "Classic elegance with custom design possibilities",
     image: "/images/stock/stairs-1.jpg",
@@ -189,15 +188,6 @@ export default function StairsRailingsPage() {
                     {material.description}
                   </p>
 
-                  {(material as any).catalog && (
-                    <Link href={(material as any).catalog} title={`View ${material.title} Catalog`}>
-                      <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
-                        <BookOpen className="w-4 h-4 mr-2" />
-                        View Catalog
-                      </Button>
-                    </Link>
-                  )}
-
                   <div className="mt-3 text-center">
                     <span className="text-lg font-medium text-brand-primary tracking-wide">
                       Customized to Your Design
@@ -318,7 +308,7 @@ export default function StairsRailingsPage() {
                 Schedule Design Consultation
               </Button>
             </Link>
-            <Link href="/promotional-gallery">
+            <Link href="/promotional-gallery#stairs">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
                 View Product Gallery
               </Button>

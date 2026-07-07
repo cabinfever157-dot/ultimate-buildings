@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
@@ -39,8 +40,6 @@ const gallerySections = [
       "/images/stock/spc-flooring-1.jpg",
       "/images/stock/spc-flooring-2.jpg",
       "/images/stock/spc-flooring-3.jpg",
-      "/images/stock/spc-flooring-1.jpg",
-      "/images/stock/spc-flooring-2.jpg",
     ],
   },
   {
@@ -60,26 +59,17 @@ const gallerySections = [
   },
   {
     id: "cabinets",
-    title: "Cabinets & Storage",
+    title: "Cabinets, Vanities & Storage",
     description: "Kitchens, vanities, closets, wardrobes, and organizational storage — fully custom",
     images: [
       "/images/stock/cabinets-1.jpg",
-      "/images/stock/cabinets-2.jpg",
+      "/images/stock/cabinets-6.jpg",
       "/images/stock/cabinets-3.jpg",
       "/images/stock/cabinets-4.jpg",
       "/images/stock/cabinets-5.jpg",
-      "/images/stock/cabinets-6.jpg",
-    ],
-  },
-  {
-    id: "vanities",
-    title: "Vanities",
-    description: "Custom bathroom vanities — sized to your space, finished to your style",
-    images: [
+      "/images/stock/closets.jpg",
       "/images/stock/vanity-1.jpg",
       "/images/stock/vanity-2.jpg",
-      "/images/stock/hotel-bathroom-1.jpg",
-      "/images/stock/hotel-bathroom-2.jpg",
     ],
   },
   {
@@ -106,25 +96,20 @@ const gallerySections = [
       "/images/stock/wrought-iron-door.jpg",
       "/images/stock/windows-mixed-materials.png",
       "/images/gallery/ohio-apartments.jpg",
+      "/images/stock/wood-entry-door-1.jpg",
+      "/images/stock/wood-entry-door-2.png",
     ],
   },
   {
     id: "gates",
-    title: "Wrought Iron & Gates",
-    description: "Custom designed gates, fencing, and architectural metalwork",
+    title: "Metalwork, Gates & Garage Doors",
+    description: "Custom gates, fencing, architectural metalwork, and commercial garage doors",
     images: [
       "/images/stock/gates-1.jpg",
       "/images/stock/gates-2.jpg",
       "/images/stock/gates-upload.jpg",
       "/images/stock/security-fence.jpg",
       "/images/gallery/arizona-estate.jpg",
-    ],
-  },
-  {
-    id: "garage-doors",
-    title: "Commercial Garage Doors",
-    description: "Custom fabricated garage doors — sized to fit, not standard sizes",
-    images: [
       "/images/stock/garage-doors-1.jpg",
       "/images/stock/garage-doors-2.jpg",
       "/images/stock/garage-doors-3.jpg",
@@ -155,6 +140,29 @@ const gallerySections = [
 ];
 
 export default function PromotionalGallery() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const scrollToHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (!hash) return;
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto", block: "start" });
+      }
+    };
+
+    const t1 = setTimeout(scrollToHash, 400);
+    const t2 = setTimeout(scrollToHash, 1000);
+    window.addEventListener("hashchange", scrollToHash);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-transparent pt-32 pb-24">
       <NarrativeNav />
@@ -183,11 +191,12 @@ export default function PromotionalGallery() {
         {gallerySections.map((section, sectionIndex) => (
           <motion.div
             key={section.id}
+            id={section.id}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: sectionIndex * 0.05 }}
-            className="mb-20"
+            className="mb-20 scroll-mt-32"
           >
             <div className="mb-8">
               <div className="flex items-center gap-4 mb-2">

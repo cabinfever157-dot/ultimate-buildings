@@ -141,10 +141,8 @@ const designFeatures = [
     title: "Functional Features",
     items: [
       "Automated gate operators",
-      "Solar-powered options",
       "Emergency release mechanisms",
       "Pedestrian access gates",
-      "Vehicle detection systems",
     ],
   },
   {
@@ -410,7 +408,7 @@ export default function MetalFencingGatesPage() {
                 Get Fencing Consultation
               </Button>
             </Link>
-            <Link href="/promotional-gallery">
+            <Link href="/promotional-gallery#gates">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
                 View Product Gallery
               </Button>

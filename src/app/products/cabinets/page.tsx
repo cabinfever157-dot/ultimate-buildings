@@ -26,6 +26,8 @@ const customCabinetApplications = [
 const imageGallery = [
     { src: "/images/stock/cabinets-1.jpg", alt: "Custom kitchen cabinetry" },
     { src: "/images/stock/cabinets-2.jpg", alt: "Custom organizational storage" },
+    { src: "/images/stock/closets.jpg", alt: "Custom closet" },
+    { src: "/images/stock/vanity-1.jpg", alt: "Custom vanity" },
 ]
 
 export default function CabinetsPage() {
@@ -125,7 +127,7 @@ export default function CabinetsPage() {
                 Start Your Custom Project
               </Button>
             </Link>
-            <Link href="/promotional-gallery">
+            <Link href="/promotional-gallery#cabinets">
               <Button variant="outline" className="border-white/10 hover:bg-white/5 hover:text-brand-primary px-8 py-6 text-lg">
                 View Project Gallery
               </Button>
