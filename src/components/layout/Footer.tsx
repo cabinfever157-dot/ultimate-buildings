@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -33,6 +33,10 @@ export function Footer() {
                   <Mail className="w-4 h-4 text-brand-primary" />
                   info@Ultimate-Buildings.com
                 </a>
+              </div>
+              <div className="flex items-start gap-2 text-white/80 font-body text-sm">
+                <MapPin className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
+                <span>PO Box 509, Hudsonville, MI 49426</span>
               </div>
 
             </motion.div>
@@ -84,7 +88,11 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs font-body">
-            &copy; {new Date().getFullYear()} Ultimate-Buildings — Global Building Trading Solutions. All rights reserved.
+            &copy; {new Date().getFullYear()} Ultimate-Buildings — Powered by{" "}
+            <a href="https://sygnifi.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-brand-primary transition-colors">Sygnifi Networks</a>{" "}
+            and{" "}
+            <a href="https://advancedai-solutions.com/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-brand-primary transition-colors">Advanced AI Solutions, Inc.</a>
+            . All rights reserved.
           </p>
           <p className="text-white/30 text-xs font-body">
             Quality &bull; Reliability &bull; Value

@@ -66,22 +66,11 @@ const prefabTypes = [
   },
 ];
 
-const processSteps = [
-  {
-    step: "1",
-    title: "Consultation & Design",
-    desc: "Share your project requirements. We provide recommendations, measurements, and project drawings.",
-  },
-  {
-    step: "2",
-    title: "Order & Production",
-    desc: "Deposit confirms order. Shop drawings and 3D visualizations approved. Production begins with QC progress reports.",
-  },
-  {
-    step: "3",
-    title: "Logistics & Delivery",
-    desc: "Freight rate proposals, forwarder coordination, customs handling. Factory direct to your job site.",
-  },
+const productionSteps = [
+  { step: "1", title: "Order Confirmed", desc: "Custom specs — your measurements, colors, materials, and floor plans." },
+  { step: "2", title: "Production", desc: "Manufacturing cycle with progress reports and QC photos." },
+  { step: "3", title: "Quality Control", desc: "Our team is at the factory." },
+  { step: "4", title: "Shipped to Job Site", desc: "All logistics, duty/tariffs, and delivery included." },
 ];
 
 export default function PrefabConstructionPage() {
@@ -180,10 +169,10 @@ export default function PrefabConstructionPage() {
           className="mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center">
-            Factory Direct to <span className="text-brand-primary">Job Site</span>
+            Factory Direct — <span className="text-brand-primary">Custom Production</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {processSteps.map((step, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {productionSteps.map((step, index) => (
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}

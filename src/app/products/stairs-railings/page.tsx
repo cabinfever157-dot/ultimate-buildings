@@ -114,6 +114,13 @@ const designStyles = [
   },
 ];
 
+const productionSteps = [
+  { step: "1", title: "Order Confirmed", desc: "Custom specs — your measurements, colors, materials, and design." },
+  { step: "2", title: "Production", desc: "Manufacturing cycle with progress reports and QC photos." },
+  { step: "3", title: "Quality Control", desc: "Our team is at the factory." },
+  { step: "4", title: "Shipped to Job Site", desc: "All logistics, duty/tariffs, and delivery included." },
+];
+
 export default function StairsRailingsPage() {
   return (
     <div className="relative min-h-screen bg-transparent pt-32 pb-24">
@@ -287,6 +294,37 @@ export default function StairsRailingsPage() {
             </div>
           </div>
         </Card>
+
+        {/* Factory Direct Process */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-8 text-center">
+            Factory Direct — <span className="text-brand-primary">Custom Production</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {productionSteps.map((step, index) => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 mx-auto rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-display font-medium text-brand-primary">{step.step}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-foreground/80">{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Call to Action */}
         <motion.div
