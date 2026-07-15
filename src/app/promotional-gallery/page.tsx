@@ -49,6 +49,12 @@ const gallerySections = [
     images: [
       "/images/stock/spc-flooring-1.jpg",
       "/images/stock/spc-flooring-2.jpg",
+      "/images/stock/spc-flooring-4.png",
+      "/images/stock/spc-flooring-5.png",
+      "/images/stock/spc-flooring-6.png",
+      "/images/stock/spc-flooring-7.png",
+      "/images/stock/spc-flooring-8.png",
+      "/images/stock/spc-flooring-9.png",
     ],
   },
   {
@@ -98,6 +104,8 @@ const gallerySections = [
       "/images/stock/hotel-bathroom-4.jpg",
       "/images/stock/hotel-bathroom-5.jpg",
       "/images/stock/hotel-bathroom-6.jpg",
+      "/images/stock/hotel-bathroom-7.png",
+      "/images/stock/hotel-bathroom-8.png",
     ],
   },
   {
@@ -131,10 +139,12 @@ const gallerySections = [
     images: [
       "/images/stock/gates-1.jpg",
       "/images/stock/gates-2.jpg",
+      "/images/stock/gates-3.png",
       "/images/stock/security-fence.jpg",
       "/images/stock/garage-doors-1.jpg",
       "/images/stock/garage-doors-2.jpg",
       "/images/stock/garage-doors-3.jpg",
+      "/images/stock/garage-doors-4.png",
     ],
   },
   {
