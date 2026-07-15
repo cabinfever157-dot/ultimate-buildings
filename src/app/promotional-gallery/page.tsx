@@ -267,6 +267,7 @@ export default function PromotionalGallery() {
                   key={image}
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 3, zIndex: 50 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: imageIndex * 0.05 }}
                   className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm hover:border-brand-primary/30 transition-all duration-500"
