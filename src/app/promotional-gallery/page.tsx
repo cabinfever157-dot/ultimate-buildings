@@ -77,7 +77,6 @@ const gallerySections = [
       "/images/stock/countertops-5.jpg",
       "/images/stock/countertops-6.jpg",
       "/images/stock/countertops-7.jpg",
-      "/images/stock/countertops-8.jpg",
       "https://t4.ftcdn.net/jpg/05/67/44/15/240_F_567441573_mdINncJhdTQDsrVybM8yYOXjzemEGGNC.jpg",
       "https://t3.ftcdn.net/jpg/06/63/22/88/240_F_663228827_PL2tD3KL5UAj6afVi9PGwdqiV2qKzUmO.jpg",
       "https://t3.ftcdn.net/jpg/16/27/01/24/240_F_1627012411_kMlhvMIC5JUuEjp03tSMGwQXGCToexZ4.jpg",
@@ -108,7 +107,6 @@ const gallerySections = [
       "https://t3.ftcdn.net/jpg/10/98/07/90/240_F_1098079067_IuFDeYDJneZF8331C8Tpx6skE7NCeRyA.jpg",
       "https://t3.ftcdn.net/jpg/02/72/98/66/240_F_272986603_4pJSgslRHDbsFABtQ6KBznAJxjErGmHB.jpg",
       "https://t3.ftcdn.net/jpg/08/30/22/28/240_F_830222803_tLxTTbIRinlJKbdlXaSYlErg950fvbIx.jpg",
-      "https://t3.ftcdn.net/jpg/18/26/81/74/240_F_1826817424_p5TLgYmN8hgbO3DC3RWsNDnXbVFZAJsz.jpg",
     ],
   },
   {
@@ -152,7 +150,6 @@ const gallerySections = [
       "/images/stock/wood-entry-door-2.png",
       "https://t3.ftcdn.net/jpg/02/56/45/58/240_F_256455890_qye58OWMmdeDKIHEBDhjYoTD6eB14HQl.jpg",
       "https://t3.ftcdn.net/jpg/08/77/69/74/240_F_877697412_wpDcsxrqiNpbSEHLNC388giZoBxPKS2b.jpg",
-      "https://t3.ftcdn.net/jpg/10/55/16/00/240_F_1055160047_ZgmdYP24AJ60E755QOPZO5tyV0wpi2g9.jpg",
     ],
   },
   {
@@ -291,7 +288,7 @@ export default function PromotionalGallery() {
               )}
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
               {section.images.map((image, imageIndex) => (
                 <motion.div
                   key={image}
