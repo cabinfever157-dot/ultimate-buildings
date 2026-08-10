@@ -318,7 +318,7 @@ const features = [
   },
   {
     title: "Stone Flooring & Walls",
-    header: <Skeleton src="/images/projects/page12_img01.jpg" objectPosition="bottom" />,
+    header: <Skeleton src="/images/stock/stone-flooring-1.jpg" objectPosition="bottom" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
     href: "/products/stone-flooring",
   },

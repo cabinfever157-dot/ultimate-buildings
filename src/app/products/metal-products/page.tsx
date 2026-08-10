@@ -13,7 +13,6 @@ const fencingTypes = [
   {
     id: "wrought-iron",
     title: "Wrought Iron Fencing",
-    catalog: "/catalogs/wrought-iron-doors",
     description: "Classic elegance with custom design possibilities",
     image: "/images/stock/gates-1.jpg",
     properties: [
@@ -36,7 +35,7 @@ const fencingTypes = [
     id: "aluminum",
     title: "Aluminum Fencing",
     description: "Low-maintenance fencing with modern aesthetics",
-    image: "https://www.hurricanefenceinc.com/wp-content/uploads/2024/08/Aluminum-Fencing-Strength-ActiveYards-Marble-Hearth-6x8-1.jpg",
+    image: "/images/stock/gates-3.png",
     properties: [
       "Lightweight yet strong",
       "Corrosion-resistant",
