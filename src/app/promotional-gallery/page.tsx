@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { CenteredZoomImage } from "@/components/layout/centered-zoom-image";
 import { BookOpen } from "lucide-react";
 
 const gallerySections = [
@@ -267,17 +268,11 @@ export default function PromotionalGallery() {
                   key={image}
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  whileHover={{ scale: 3, zIndex: 50 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: imageIndex * 0.05 }}
-                  className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm hover:border-brand-primary/30 transition-all duration-500"
+                  className="relative"
                 >
-                  <img
-                    src={image}
-                    alt={`${section.title} example`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <CenteredZoomImage src={image} alt={`${section.title} example`} />
                 </motion.div>
               ))}
             </div>
