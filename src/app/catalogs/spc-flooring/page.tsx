@@ -1,12 +1,14 @@
 "use client";
 
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { CatalogLoader } from "@/components/layout/catalog-loader";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function SpcFlooringPage() {
   const [mounted, setMounted] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => { setMounted(true); }, []);
@@ -25,15 +27,10 @@ export default function SpcFlooringPage() {
         </Link>
         <span className="text-sm font-medium text-white truncate max-w-[60%] text-right">SPC Flooring</span>
       </div>
-      {!mounted && (
-        <div className="fixed inset-0 z-30 flex items-center justify-center bg-background" style={{ marginTop: "100px" }}>
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-8 h-8 border-2 border-brand-primary border-t-transparent rounded-full animate-spin" />
-            <p className="text-sm text-muted-foreground">Loading catalog...</p>
-          </div>
-        </div>
+      {!loaded && (
+        <CatalogLoader title="SPC Flooring" onComplete={() => setLoaded(true)} />
       )}
-      <iframe ref={iframeRef} className="w-full border-none" style={{ height: "calc(100vh - 100px)", marginTop: "100px", display: mounted ? "block" : "none" }} title="SPC Flooring" allow="fullscreen" />
+      <iframe ref={iframeRef} className="w-full border-none" style={{ height: "calc(100vh - 100px)", marginTop: "100px", display: loaded ? "block" : "none" }} title="SPC Flooring" allow="fullscreen" />
     </div>
   );
 }
