@@ -29,6 +29,7 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
   const tileRef = useRef<HTMLDivElement>(null);
   const delayTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const zoomedRef = useRef(false); // sync truth for event handlers
+  const landedRef = useRef(false); // true only once the zoom-in animation completes
   const [zoomed, setZoomed] = useState(false);
   const [rect, setRect] = useState<DOMRect | null>(null);
 
@@ -44,6 +45,7 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
     delayTimer.current = setTimeout(() => {
       if (tileRef.current && !zoomedRef.current) {
         zoomedRef.current = true;
+        landedRef.current = false; // not yet fully zoomed — ignore mouse-outs during flight
         setRect(tileRef.current.getBoundingClientRect());
         setZoomed(true);
       }
@@ -51,7 +53,12 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
   }, [clearDelay]);
 
   const close = useCallback(() => {
+    // GATE: mousing out does nothing until the zoom has fully landed.
+    // During the flight the image moves away from the pointer, which fires
+    // mouseleave — that must NOT reverse the animation.
+    if (!landedRef.current) return;
     zoomedRef.current = false;
+    landedRef.current = false;
     setZoomed(false);
   }, []);
 
@@ -108,11 +115,12 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
               transition: { duration: 0.25, ease: "easeIn" },
             }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            onAnimationComplete={() => { landedRef.current = true; }}
             style={{ pointerEvents: "none" }}
           >
             {/* Backdrop: blocks tile hover beneath, never closes the zoom */}
             <div className="absolute inset-[-100vh] bg-black/60" />
-            {/* The zoomed image — leaving THIS (and only this) reverses */}
+            {/* The zoomed image — leaving THIS (and only this) reverses, but only after landing */}
             <div
               className="absolute inset-0 flex items-center justify-center"
               style={{ pointerEvents: "auto" }}
