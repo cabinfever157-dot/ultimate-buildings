@@ -17,7 +17,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const HOVER_DELAY_MS = 1000;
+const HOVER_DELAY_MS = 500;
 const ZOOM_SCALE = 3;
 
 interface CenteredZoomImageProps {

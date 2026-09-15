@@ -10,28 +10,6 @@ import { BookOpen } from "lucide-react";
 // Countertop materials data - Custom fabricated, Own the Mine
 const countertopMaterials = [
   {
-    id: "granite",
-    title: "Granite Countertops",
-    catalog: "/catalogs/granite-marble",
-    description: "Custom fabricated granite. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/056/121/709/small/beige-granite-kitchen-counter-photo.jpg",
-    properties: [
-      "Own quarries — cut and finish blocks in-house",
-      "Purchase stone blocks worldwide",
-      "Custom fabricate slabs to your specs",
-      "Heat resistant up to 1200°F",
-    ],
-    applications: [
-      "Kitchen countertops",
-      "Bathroom vanities",
-      "Outdoor kitchens",
-      "Bar tops",
-    ],
-    colors: ["Absolute Black", "Ubatuba", "Santa Cecilia", "Bianco Antico", "Blue Pearl"],
-    finishes: ["Polished", "Honed", "Leathered", "Flamed"],
-    edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Waterfall", "Custom"],
-  },
-  {
     id: "quartz",
     title: "Quartz Countertops",
     catalog: "/catalogs/quartz",
@@ -54,6 +32,28 @@ const countertopMaterials = [
     edgeProfiles: ["Straight", "Bevel", "Bullnose", "Ogee", "Mitered", "Custom"],
   },
   {
+    id: "granite",
+    title: "Granite Countertops",
+    catalog: "/catalogs/granite-marble",
+    description: "Custom fabricated granite. Our partner owns quarries, purchases blocks worldwide, and custom fabricates slabs to your specs.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/056/121/709/small/beige-granite-kitchen-counter-photo.jpg",
+    properties: [
+      "Own quarries — cut and finish blocks in-house",
+      "Purchase stone blocks worldwide",
+      "Custom fabricate slabs to your specs",
+      "Heat resistant up to 1200°F",
+    ],
+    applications: [
+      "Kitchen countertops",
+      "Bathroom vanities",
+      "Outdoor kitchens",
+      "Bar tops",
+    ],
+    colors: ["Absolute Black", "Ubatuba", "Santa Cecilia", "Bianco Antico", "Blue Pearl"],
+    finishes: ["Polished", "Honed", "Leathered", "Flamed"],
+    edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Waterfall", "Custom"],
+  },
+  {
     id: "marble",
     title: "Marble Countertops",
     catalog: "/catalogs/granite-marble",
@@ -74,7 +74,7 @@ const countertopMaterials = [
     colors: ["Carrara", "Calacatta", "Statuario", "Emperador", "Crema Marfil"],
     finishes: ["Polished", "Honed", "Brushed"],
     edgeProfiles: ["Eased", "Bevel", "Bullnose", "Ogee", "Chiseled", "Custom"],
-  },
+  }
 ];
 
 // Care and maintenance tips
