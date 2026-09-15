@@ -16,6 +16,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { RadialGlowButton } from "@/components/ui/radial-glow-button";
 
 const HOVER_DELAY_MS = 500; // hover-hold before the preview zoom + button appear
 const ZOOM_SCALE = 3; // full zoom footprint (tile x3, same as old scale-3 zoom)
@@ -99,58 +100,23 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-        {/* ZOOM button — appears when primed. Mind-blow treatment:
-            1. Animated conic "aura" ring rotating behind the button (gold → white → gold).
-            2. Pulsing outer glow halo.
-            3. Sheen sweep across the text every 3s.
-            4. Magnetic lift on button hover + gold ignition. */}
+        {/* ZOOM button — appears when primed. Vengence UI radial-glow-button,
+            recolored to Cinematic Gold on deep black (dark theme retained).
+            Rotating conic shine + light sweep + gradient border, pure CSS. */}
         <AnimatePresence>
           {primed && !zoomed && (
-            <motion.button
+            <motion.div
               key="zoom-btn"
-              type="button"
-              aria-label={`Zoom ${alt}`}
-              onClick={openFullZoom}
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              whileHover={{ scale: 1.08, y: -2 }}
-              whileTap={{ scale: 0.94 }}
-              className="absolute inset-0 m-auto w-fit h-fit group/btn cursor-pointer"
+              className="absolute inset-0 m-auto w-fit h-fit"
             >
-              {/* Rotating conic aura (behind the pill) */}
-              <span
-                aria-hidden
-                className="absolute -inset-2 rounded-xl opacity-70 blur-[6px]
-                           bg-[conic-gradient(from_0deg,transparent_0deg,rgba(212,175,55,0.9)_60deg,transparent_120deg,rgba(255,255,255,0.8)_200deg,transparent_180deg,rgba(212,175,55,0.9)_300deg,transparent_360deg)]
-                           animate-[spin_3s_linear_infinite]"
-              />
-              {/* Breathing outer glow */}
-              <motion.span
-                aria-hidden
-                className="absolute -inset-1 rounded-xl bg-white/30 blur-xl"
-                animate={{ opacity: [0.25, 0.6, 0.25], scale: [1, 1.06, 1] }}
-                transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-              />
-              {/* Pill body */}
-              <span className="relative block px-7 py-3 rounded-lg overflow-hidden
-                              bg-black/75 backdrop-blur-md border border-white/30
-                              font-display font-semibold tracking-[0.3em] uppercase text-sm text-white
-                              shadow-[0_0_28px_rgba(255,255,255,0.35),inset_0_0_18px_rgba(255,255,255,0.12)]
-                              transition-colors duration-200
-                              group-hover/btn:bg-black/90 group-hover/btn:border-brand-primary
-                              group-hover/btn:shadow-[0_0_40px_rgba(212,175,55,0.6)]">
-                {/* Sheen sweep */}
-                <motion.span
-                  aria-hidden
-                  className="absolute inset-y-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg]"
-                  animate={{ left: ["-50%", "150%"] }}
-                  transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 1.8, ease: "easeInOut" }}
-                />
-                <span className="relative drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]">Zoom</span>
-              </span>
-            </motion.button>
+              <RadialGlowButton onClick={openFullZoom} aria-label={`Zoom ${alt}`}>
+                Zoom
+              </RadialGlowButton>
+            </motion.div>
           )}
         </AnimatePresence>
       </div>
