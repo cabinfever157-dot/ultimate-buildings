@@ -70,7 +70,7 @@ const productCategories = [
   {
     id: "cabinets",
     title: "Cabinets & Organizational Storage",
-    catalog: "/catalogs/wooden-doors",
+    catalog: "/catalogs/cabinets",
     description: "Custom fabricated cabinets and organizational storage for kitchens, bathrooms, wardrobes, and walk-in closets. Volume buyers welcome.",
     image: "/images/stock/cabinets-1.jpg",
     materials: ["Wood", "Laminates", "Metal", "Glass"],

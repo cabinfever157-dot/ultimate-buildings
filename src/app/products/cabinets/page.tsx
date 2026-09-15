@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { BookOpen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+
+const CABINETS_CATALOG = "/catalogs/cabinets";
 
 const cabinetTypes = [
   {
@@ -171,6 +174,13 @@ export default function CabinetsPage() {
                       ))}
                     </div>
                   </div>
+
+                  <Link href={CABINETS_CATALOG} title={`View ${type.title} Catalog`}>
+                    <Button variant="outline" className="w-full border-white/10 hover:bg-brand-dark hover:text-brand-primary hover:border-brand-primary">
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      View Catalog
+                    </Button>
+                  </Link>
 
                   <div className="mt-auto pt-3 border-t border-white/10 text-center">
                     <span className="text-lg font-medium text-brand-primary tracking-wide">

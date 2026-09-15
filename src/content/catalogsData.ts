@@ -98,6 +98,22 @@ export const catalogsData = [
     ]
   },
   {
+    id: 'cabinets',
+    title: 'Cabinets, Vanities & Storage',
+    category: 'Cabinets & Storage',
+    description: 'Custom fabricated cabinets, vanities, closets, wardrobes, and organizational storage — kitchens, baths, and beyond',
+    types: ['Kitchens & Islands', 'Vanities', 'Closets & Wardrobes', 'Organizational Storage'] as string[],
+    image: '/catalogs/cabinets.jpg',
+    icon: 'WoodIcon',
+    flipbookId: 'cabinets',
+    features: [
+      'Custom Fabricated to Your Measurements',
+      'Custom Wood Species and Finishes',
+      'Soft-Close Mechanisms Standard',
+      'Volume Buyers Welcome'
+    ]
+  },
+  {
     id: 'prefab-construction',
     title: 'Prefab Construction',
     category: 'Prefab Construction',
