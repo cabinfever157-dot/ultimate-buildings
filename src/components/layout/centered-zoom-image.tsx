@@ -1,21 +1,24 @@
 /**
  * CenteredZoomImage — gallery tile image with viewport-centered hover zoom.
  *
- * Behavior (per Damon's spec):
- * - Requires ~1s of continuous hover before the zoom engages (no flyby triggers).
- * - Zoomed size ≈ the old scale-3 footprint (tile width × 3), centered on screen.
- * - The zoomed overlay CAPTURES the pointer (pointer-events: auto): moving off
- *   the zoomed image itself is the ONLY event that reverses it. Hovering tiles
- *   beneath cannot trigger anything while zoomed.
- * - Mouse-out reverses back into the tile (re-measured in case of scroll).
+ * Behavior (Damon spec, v3):
+ * - ~1s of continuous hover on a tile arms the zoom; releasing early cancels.
+ * - Zoomed size = tile x3 (old in-place footprint), centered on screen.
+ * - The zoomed overlay captures the pointer (backdrop + image, pointer-events
+ *   auto) so tiles beneath receive NOTHING while zoomed.
+ * - REVERSAL: ONLY leaving the zoomed image's own bounds closes it. The
+ *   pointer may sit anywhere else (tiles, backdrop margin) without effect.
+ *   Tiles far from screen center work identically to center tiles — the
+ *   zoom does not react to the pointer's location relative to the clone
+ *   during/after flight.
  */
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const HOVER_DELAY_MS = 1000; // hold the mouse for 1s before zoom fires
-const ZOOM_SCALE = 3; // matches the old in-place zoom footprint
+const HOVER_DELAY_MS = 1000;
+const ZOOM_SCALE = 3;
 
 interface CenteredZoomImageProps {
   src: string;
@@ -25,51 +28,47 @@ interface CenteredZoomImageProps {
 export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
   const tileRef = useRef<HTMLDivElement>(null);
   const delayTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const zoomedRef = useRef(false); // sync truth for event handlers
   const [zoomed, setZoomed] = useState(false);
   const [rect, setRect] = useState<DOMRect | null>(null);
 
-  const clearDelay = () => {
+  const clearDelay = useCallback(() => {
     if (delayTimer.current) {
       clearTimeout(delayTimer.current);
       delayTimer.current = null;
     }
-  };
+  }, []);
 
-  const open = useCallback(() => {
-    if (zoomed) return;
+  const armZoom = useCallback(() => {
     clearDelay();
     delayTimer.current = setTimeout(() => {
-      if (tileRef.current) {
+      if (tileRef.current && !zoomedRef.current) {
+        zoomedRef.current = true;
         setRect(tileRef.current.getBoundingClientRect());
         setZoomed(true);
       }
     }, HOVER_DELAY_MS);
-  }, [zoomed]);
+  }, [clearDelay]);
 
   const close = useCallback(() => {
-    clearDelay();
+    zoomedRef.current = false;
     setZoomed(false);
   }, []);
 
-  // unmount cleanup
-  useEffect(() => clearDelay, []);
+  // re-measure the tile right before the exit animation starts
+  const measureTile = useCallback(() => {
+    return tileRef.current ? tileRef.current.getBoundingClientRect() : rect;
+  }, [rect]);
 
-  // when the zoom closes, re-measure the tile for the fly-back
-  const rectForExit = (() => {
-    if (!zoomed && tileRef.current) return tileRef.current.getBoundingClientRect();
-    return rect;
-  })();
+  useEffect(() => clearDelay, []);
 
   return (
     <>
-      {/* The tile — its own hover only ARMS the zoom; nothing visual fires until the delay elapses */}
+      {/* Tile — only arms the zoom; while zoomed its events are dead (backdrop blocks) */}
       <div
         ref={tileRef}
-        onMouseEnter={open}
-        onMouseLeave={() => {
-          // leaving the tile before the delay cancels the armed zoom
-          if (!zoomed) clearDelay();
-        }}
+        onMouseEnter={armZoom}
+        onMouseLeave={clearDelay}
         className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm hover:border-brand-primary/30 transition-all duration-500 cursor-zoom-in"
       >
         <img
@@ -80,7 +79,6 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 
-      {/* The zoomed clone — fixed, centered, pointer-capturing */}
       <AnimatePresence>
         {zoomed && rect && (
           <motion.div
@@ -110,13 +108,16 @@ export function CenteredZoomImage({ src, alt }: CenteredZoomImageProps) {
               transition: { duration: 0.25, ease: "easeIn" },
             }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            onMouseLeave={close}
-            style={{ pointerEvents: "auto" }}
+            style={{ pointerEvents: "none" }}
           >
-            {/* Backdrop captures pointer so tiles beneath never receive hover */}
-            <div className="absolute inset-[-100vh] bg-black/60" style={{ pointerEvents: "auto" }} />
-            {/* The zoomed image itself, object-contain within the clone box */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* Backdrop: blocks tile hover beneath, never closes the zoom */}
+            <div className="absolute inset-[-100vh] bg-black/60" />
+            {/* The zoomed image — leaving THIS (and only this) reverses */}
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              style={{ pointerEvents: "auto" }}
+              onMouseLeave={close}
+            >
               <img
                 src={src}
                 alt={alt}
