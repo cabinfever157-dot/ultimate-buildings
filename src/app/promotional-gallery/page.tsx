@@ -244,7 +244,7 @@ export default function PromotionalGallery() {
               <p className="text-muted-foreground text-center text-sm max-w-2xl mx-auto">
                 {section.description}
               </p>
-              {section.catalogLinks?.length > 0 && (
+              {(section.catalogLinks?.length ?? 0) > 0 && (
                 <div className="flex flex-wrap justify-center gap-2 mt-4">
                   {section.catalogLinks?.map((cat) => (
                     <Link
