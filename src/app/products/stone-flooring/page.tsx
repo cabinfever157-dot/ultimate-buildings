@@ -98,7 +98,7 @@ export default function StoneFlooringPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            <span className="text-brand-primary">Stone Flooring</span> & Walls
+            <span className="text-brand-primary">Stone Floors</span> & Walls
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

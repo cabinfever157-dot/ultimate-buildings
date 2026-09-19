@@ -29,6 +29,21 @@ const gallerySections = [
     ],
   },
   {
+    id: "stone-flooring",
+    title: "Stone Floors & Walls",
+    description: "Marble, granite, and quartz — interior and exterior applications",
+    catalogLinks: [
+      { href: "/catalogs/granite-marble", label: "Granite & Marble Catalog" },
+      { href: "/catalogs/quartz", label: "Quartz Catalog" },
+    ],
+    images: [
+      "/images/stock/stone-flooring-marble.png",
+      "/images/stock/stone-flooring-1.jpg",
+      "/images/stock/stone-flooring-2.jpg",
+      "/images/stock/stone-flooring-3.jpg",
+    ],
+  },
+  {
     id: "spc-flooring",
     title: "SPC Flooring",
     description: "Click-lock, glue-down, and lay-flat SPC flooring — custom thickness and wear layer",
@@ -44,21 +59,6 @@ const gallerySections = [
       "/images/stock/spc-flooring-7.png",
       "/images/stock/spc-flooring-8.png",
       "/images/stock/spc-flooring-9.png",
-    ],
-  },
-  {
-    id: "stone-flooring",
-    title: "Stone Flooring & Walls",
-    description: "Marble, granite, and quartz — interior and exterior applications",
-    catalogLinks: [
-      { href: "/catalogs/granite-marble", label: "Granite & Marble Catalog" },
-      { href: "/catalogs/quartz", label: "Quartz Catalog" },
-    ],
-    images: [
-      "/images/stock/stone-flooring-marble.png",
-      "/images/stock/stone-flooring-1.jpg",
-      "/images/stock/stone-flooring-2.jpg",
-      "/images/stock/stone-flooring-3.jpg",
     ],
   },
   {
@@ -84,7 +84,7 @@ const gallerySections = [
   },
   {
     id: "cabinets",
-    title: "Cabinets, Vanities & Storage",
+    title: "Cabinets & Storage",
     description: "Kitchens, vanities, closets, wardrobes, and organizational storage — fully custom",
     catalogLinks: [] as { href: string; label: string }[],
     images: [
@@ -99,24 +99,8 @@ const gallerySections = [
     ],
   },
   {
-    id: "bathrooms",
-    title: "Hotel & Luxury Bathrooms",
-    description: "Complete bathroom packages for hotels, resorts, and luxury residential",
-    catalogLinks: [] as { href: string; label: string }[],
-    images: [
-      "/images/stock/hotel-bathroom-1.jpg",
-      "/images/stock/hotel-bathroom-2.jpg",
-      "/images/stock/hotel-bathroom-3.jpg",
-      "/images/stock/hotel-bathroom-4.jpg",
-      "/images/stock/hotel-bathroom-5.jpg",
-      "/images/stock/hotel-bathroom-6.jpg",
-      "/images/stock/hotel-bathroom-7.png",
-      "/images/stock/hotel-bathroom-8.png",
-    ],
-  },
-  {
     id: "stairs",
-    title: "Staircases & Railings",
+    title: "Stairs & Railings",
     description: "Custom curved, spiral, and straight staircases — wrought iron, stainless steel, glass, and wood",
     catalogLinks: [] as { href: string; label: string }[],
     images: [
@@ -132,7 +116,7 @@ const gallerySections = [
   },
   {
     id: "gates",
-    title: "Metalwork, Gates & Garage Doors",
+    title: "Metal Products & Fencing",
     description: "Custom gates, fencing, architectural metalwork, and commercial garage doors",
     catalogLinks: [
       { href: "/catalogs/wrought-iron-doors", label: "Wrought Iron Doors Catalog" },
@@ -162,7 +146,22 @@ const gallerySections = [
       "/images/bento/factorydirect.jpg",
     ],
   },
-  /* Global Projects - removed per client feedback
+  {
+    id: "bathrooms",
+    title: "Hotel & Luxury Bathrooms",
+    description: "Complete bathroom packages for hotels, resorts, and luxury residential",
+    catalogLinks: [] as { href: string; label: string }[],
+    images: [
+      "/images/stock/hotel-bathroom-1.jpg",
+      "/images/stock/hotel-bathroom-2.jpg",
+      "/images/stock/hotel-bathroom-3.jpg",
+      "/images/stock/hotel-bathroom-4.jpg",
+      "/images/stock/hotel-bathroom-5.jpg",
+      "/images/stock/hotel-bathroom-6.jpg",
+      "/images/stock/hotel-bathroom-7.png",
+      "/images/stock/hotel-bathroom-8.png",
+    ],
+  },
   {
     id: "projects",
     title: "Global Projects",
@@ -173,7 +172,6 @@ const gallerySections = [
       "/images/gallery/australia-resort.jpg",
     ],
   },
-  */
 ];
 
 export default function PromotionalGallery() {
@@ -246,9 +244,9 @@ export default function PromotionalGallery() {
               <p className="text-muted-foreground text-center text-sm max-w-2xl mx-auto">
                 {section.description}
               </p>
-              {section.catalogLinks.length > 0 && (
+              {section.catalogLinks?.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2 mt-4">
-                  {section.catalogLinks.map((cat) => (
+                  {section.catalogLinks?.map((cat) => (
                     <Link
                       key={cat.href}
                       href={cat.href}

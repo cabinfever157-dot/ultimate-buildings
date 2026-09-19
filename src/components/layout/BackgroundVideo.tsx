@@ -26,7 +26,7 @@ export function BackgroundVideo({
   const getVideoUrl = () => {
     if (platform === 'vimeo') {
       // Vimeo URL format with parameters for background video
-      return `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&autopause=0&background=1&transparent=0&responsive=1`;
+      return `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&autopause=0&background=1&transparent=0`;
     } else {
       // YouTube URL format (existing implementation)
       return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&start=${startTime || 0}&end=270&playinline=1&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0`;
@@ -81,9 +81,13 @@ export function BackgroundVideo({
       <iframe
         ref={iframeRef}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-        style={{ 
-          width: '100vw', 
-          height: '100vh', 
+        style={{
+          /* Aspect-LOCK the iframe to the video's native 16:9 (1.775) so the vimeo
+             player never letterboxes (side bars) inside the iframe, and size it to
+             COVER the viewport on any monitor: width = max(100vw, 100vh*1.775) with
+             a small bleed so contain-mode bars land outside the visible screen. */
+          width: 'calc(max(100vw, 177.78vh) + 2px)',
+          height: 'calc(max(100vw, 177.78vh) / 1.775)',
           objectFit: 'cover',
           opacity: opacity,
           zIndex: 10

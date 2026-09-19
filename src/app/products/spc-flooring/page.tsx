@@ -191,7 +191,7 @@ export default function SPCFlooringPage() {
               <ul className="text-foreground/80 space-y-2">
                 <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Custom ml wear thickness</span></li>
                 <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>UV coating for scratch resistance</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Commercial warranty options available</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Commercial wear layer thickness and size planks available</span></li>
               </ul>
             </div>
             <div>

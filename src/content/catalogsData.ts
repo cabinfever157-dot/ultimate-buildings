@@ -20,7 +20,7 @@ export const catalogsData = [
   {
     id: 'granite-marble-quartz',
     title: 'Granite, Marble & Quartz',
-    category: 'Stone Flooring & Walls',
+    category: 'Stone Floors & Walls',
     description: 'Granite, Marble, and Engineered Quartz — factory direct from our quarries. 20 acres of stock stone blocks.',
     types: ['Granite', 'Marble', 'Quartz'] as string[],
     image: '/catalogs/stone-surfaces.jpg',
@@ -40,7 +40,7 @@ export const catalogsData = [
   {
     id: 'wooden-doors',
     title: 'Wooden Doors',
-    category: 'Doors & Windows',
+    category: 'Windows & Doors',
     description: 'Custom fabricated wooden doors — your size, your colors, your details',
     image: '/catalogs/wooden-doors.jpg',
     icon: 'WoodIcon',
@@ -55,7 +55,7 @@ export const catalogsData = [
   {
     id: 'aluminum-doors-windows',
     title: 'Aluminum Doors & Windows',
-    category: 'Doors & Windows',
+    category: 'Windows & Doors',
     description: 'Custom fabricated aluminum door and window systems — residential and commercial',
     image: '/catalogs/aluminum-doors-windows.jpg',
     icon: 'WindowIcon',
@@ -70,7 +70,7 @@ export const catalogsData = [
   {
     id: 'french-steel',
     title: 'French Slim Steel Windows & Doors',
-    category: 'Doors & Windows',
+    category: 'Windows & Doors',
     description: 'Custom fabricated French slim steel windows and doors — residential and commercial',
     image: '/catalogs/french-steel.jpg',
     icon: 'WindowIcon',
@@ -85,7 +85,7 @@ export const catalogsData = [
   {
     id: 'wrought-iron-doors',
     title: 'Wrought Iron Doors',
-    category: 'Doors & Windows',
+    category: 'Windows & Doors',
     description: 'Custom fabricated wrought iron doors — your design, your size',
     image: '/catalogs/wrought-iron-doors.jpg',
     icon: 'DoorIcon',

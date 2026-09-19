@@ -246,13 +246,13 @@ export default function CountertopsPage() {
             <Card className="glass-panel border border-white/10 p-6">
               <h3 className="text-xl font-semibold text-foreground mb-4">Stone Slabs — Sold Direct</h3>
               <p className="text-foreground/80 mb-4">
-                Our partner owns quarries and sells slabs direct to fabricators at lower costs than domestic sourcing. 20 acres of stock stone blocks — granite, marble, quartz available in volume.
+                Our partner owns quarries so we can sell slabs direct to fabricators at advantageous pricing. 20 Acres of Granite & Marble blocks in stocks – Plus, our Partners own the Quartz Factory allowing us to offer factory direct prices for volume opportunities.
               </p>
               <ul className="text-foreground/80 space-y-2">
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Buy slabs direct and cut your own</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Lower cost than domestic fabrication</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Volume slab pricing for fabricators</span></li>
-                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Custom color matching available</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Buy slabs factory direct</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Fabricators lower your stone costs</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Huge inventory and color selection</span></li>
+                <li className="flex items-start"><span className="text-green-500 mr-2">&bull;</span><span>Quartz custom color matching available</span></li>
               </ul>
             </Card>
             <Card className="glass-panel border border-white/10 p-6">
@@ -500,10 +500,10 @@ export default function CountertopsPage() {
           className="text-center py-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-6">
-            Upgrade your kitchen or bathroom today
+            Plan your kitchens and bathrooms today
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our countertop specialists can help you choose the perfect material and design for your space
+            Our countertop specialists can help make your project a success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quote-wizard">

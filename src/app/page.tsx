@@ -94,7 +94,15 @@ export default function HomePage() {
                   <p className="mb-8 text-2xl md:text-3xl font-display font-light text-white/80 drop-shadow-[0_0_12px_rgba(0,0,0,0.9)] leading-tight">
                     Interior and Exterior<br/>Custom Architectural Finishing Products
                   </p>
-                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-light text-white mb-6 tracking-tighter leading-[0.9]">
+                  <h1
+                    className="font-display font-light text-white mb-6 tracking-tighter leading-[0.9]"
+                    style={{
+                      /* Never clip: size off the viewport so both lines always fit.
+                         'Factory Direct to' (~17 glyphs) fits when font-size <= ~5.2vw;
+                         clamp keeps it readable between 44px and 128px. */
+                      fontSize: "clamp(2.75rem, 5.2vw, 8rem)"
+                    }}
+                  >
                     <br className="hidden md:block" />Factory <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-amber-200 to-brand-primary glow-yellow font-medium">Direct</span> to Your Job Site
                   </h1>
 
@@ -142,7 +150,7 @@ export default function HomePage() {
                       type: "spring",
                       bounce: 0.3
                     }}
-                    className={i === 0 || i === 3 ? "md:col-span-2" : ""}
+                    className={i === 0 || i === 5 ? "md:col-span-2" : ""}
                   >
                    <BentoGridItem
                       title={feature.title}
@@ -253,8 +261,8 @@ export default function HomePage() {
                     Contact us today to learn how we can bring your vision to life for:
                   </p>
                   <p className="text-brand-primary leading-relaxed">
-                    Stone Floor & Walls — SPC Flooring — Countertops — Cabinets & Storage — Windows & Doors<br/>
-                    Stairs & Railings — Interior & Exterior Doors — Metal Gates & Fencing — Prefab Buildings
+                    Countertops &amp; Slabs — Stone Floors &amp; Walls — SPC Flooring — Windows &amp; Doors<br/>
+                    Cabinets &amp; Storage — Stairs &amp; Railings — Metal Products &amp; Fencing — Prefab Construction
                   </p>
                 </div>
               </motion.div>
@@ -311,22 +319,16 @@ const features = [
     href: "/products/countertops",
   },
   {
-    title: "SPC Flooring",
-    header: <Skeleton src="/images/stock/spc-flooring-1.jpg" />,
-    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
-    href: "/products/spc-flooring",
-  },
-  {
-    title: "Stone Flooring & Walls",
+    title: "Stone Floors & Walls",
     header: <Skeleton src="/images/stock/stone-flooring-1.jpg" objectPosition="bottom" />,
     icon: <ShieldCheck className="h-6 w-6 text-brand-primary" />,
     href: "/products/stone-flooring",
   },
   {
-    title: "Cabinets",
-    header: <Skeleton src="/images/bento/cabinets.jpg" />,
+    title: "SPC Flooring",
+    header: <Skeleton src="/images/stock/spc-flooring-1.jpg" />,
     icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
-    href: "/products/cabinets",
+    href: "/products/spc-flooring",
   },
   {
     title: "Windows",
@@ -341,22 +343,16 @@ const features = [
     href: "/products/windows-doors",
   },
   {
+    title: "Cabinets",
+    header: <Skeleton src="/images/bento/cabinets.jpg" />,
+    icon: <CircleDashed className="h-6 w-6 text-brand-primary" />,
+    href: "/products/cabinets",
+  },
+  {
     title: "Staircases & Railings",
     header: <Skeleton src="/images/bento/staircases_railings..jpg" />,
     icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/products/stairs-railings",
-  },
-  {
-    title: (
-      <>
-        Custom Vanities,
-        <br className="hidden md:block" />
-        Closets & Cabinets
-      </>
-    ),
-    header: <Skeleton src="/images/bento/closets.jpg" />,
-    icon: <Box className="h-6 w-6 text-brand-primary" />,
-    href: "/products/cabinets",
   },
   {
     title: "Metal Fencing & Gates",
@@ -369,6 +365,18 @@ const features = [
     header: <Skeleton src="/images/bento/prefab.jpg" />,
     icon: <Sparkles className="h-6 w-6 text-brand-primary" />,
     href: "/products/prefab-construction",
+  },
+  {
+    title: (
+      <>
+        Custom Vanities,
+        <br className="hidden md:block" />
+        Closets & Cabinets
+      </>
+    ),
+    header: <Skeleton src="/images/bento/closets.jpg" />,
+    icon: <Box className="h-6 w-6 text-brand-primary" />,
+    href: "/products/cabinets",
   },
   {
     title: "Factory Direct Pricing",

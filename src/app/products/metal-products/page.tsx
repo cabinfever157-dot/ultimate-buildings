@@ -180,7 +180,7 @@ export default function MetalFencingGatesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-display font-medium text-white mb-6"
           >
-            <span className="text-brand-primary">Metal Products</span>
+            <span className="text-brand-primary">Metal Products &amp; Fencing</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

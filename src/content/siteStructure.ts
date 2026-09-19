@@ -1,7 +1,7 @@
 // Ultimate-Buildings Product Content Structure
 
 export const siteStructure = {
-  "Stone Flooring & Walls": {
+  "Stone Floors & Walls": {
     "Marble": {
       "applications": ["Flooring", "Wall cladding", "Feature walls", "Fireplace surrounds"]
     },
@@ -26,19 +26,19 @@ export const siteStructure = {
       "productionWeeks": 5
     }
   },
-  "Cabinets & Organizational Storage": {
+  "Cabinets & Storage": {
     "Kitchen Cabinets": {},
     "Wardrobe Cabinets": {},
     "Vanity Cabinets": {},
     "Walk-In Closets": {}
   },
-  "Doors & Windows": {
+  "Windows & Doors": {
     "Wooden Doors": {},
     "Aluminum Doors & Windows": {},
     "French Slim Steel Windows & Doors": {},
     "Wrought Iron Doors": {}
   },
-  "Metal Products": {
+  "Metal Products & Fencing": {
     "Fencing": {
       "types": ["Wrought Iron", "Aluminum", "Steel"]
     },

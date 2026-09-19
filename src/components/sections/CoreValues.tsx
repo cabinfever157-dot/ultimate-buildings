@@ -66,13 +66,13 @@ const industries = [
 ];
 
 const products = [
-  { label: "Stone Flooring & Walls", href: "/products/stone-flooring" },
-  { label: "SPC Flooring", href: "/products/spc-flooring" },
   { label: "Countertops & Slabs", href: "/products/countertops" },
+  { label: "Stone Floors & Walls", href: "/products/stone-flooring" },
+  { label: "SPC Flooring", href: "/products/spc-flooring" },
+  { label: "Windows & Doors", href: "/products/windows-doors" },
   { label: "Cabinets & Storage", href: "/products/cabinets" },
   { label: "Stairs & Railings", href: "/products/stairs-railings" },
-  { label: "Windows & Doors", href: "/products/windows-doors" },
-  { label: "Metal Products", href: "/products/metal-products" },
+  { label: "Metal Products & Fencing", href: "/products/metal-products" },
   { label: "Prefab Construction", href: "/products/prefab-construction" },
 ];
 

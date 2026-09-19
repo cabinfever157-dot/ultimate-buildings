@@ -42,18 +42,18 @@ export function NarrativeNav() {
                              </Link>
                         </li>
                         <li>
-                            <Link href="/products/spc-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">SPC Flooring</div>
+                            <Link href="/products/stone-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">Stone Floors & Walls</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Click-Lock, Glue-Down, Lay-Flat — 5-week production
+                                Marble, Granite, Quartz - Interior & Exterior solutions
                               </p>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/products/stone-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                              <div className="text-sm font-medium leading-none">Stone Flooring & Walls</div>
+                            <Link href="/products/spc-flooring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <div className="text-sm font-medium leading-none">SPC Flooring</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                Marble, Granite, Quartz - Interior & Exterior solutions
+                                Click-Lock, Glue-Down, Lay-Flat — 5-week production
                               </p>
                             </Link>
                         </li>
@@ -83,7 +83,7 @@ export function NarrativeNav() {
                         </li>
                         <li>
                              <Link href="/products/metal-products" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                               <div className="text-sm font-medium leading-none">Metal Products</div>
+                               <div className="text-sm font-medium leading-none">Metal Products &amp; Fencing</div>
                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                  Fencing, gates, partitions & garage doors
                                </p>

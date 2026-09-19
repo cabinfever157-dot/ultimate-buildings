@@ -47,13 +47,13 @@ export function Footer() {
             <h4 className="font-display font-medium text-white mb-4 tracking-tight">Products</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Stone Flooring & Walls", href: "/products/stone-flooring" },
-                { label: "SPC Flooring", href: "/products/spc-flooring" },
                 { label: "Countertops & Slabs", href: "/products/countertops" },
+                { label: "Stone Floors & Walls", href: "/products/stone-flooring" },
+                { label: "SPC Flooring", href: "/products/spc-flooring" },
                 { label: "Windows & Doors", href: "/products/windows-doors" },
                 { label: "Cabinets & Storage", href: "/products/cabinets" },
                 { label: "Stairs & Railings", href: "/products/stairs-railings" },
-                { label: "Metal Products", href: "/products/metal-products" },
+                { label: "Metal Products & Fencing", href: "/products/metal-products" },
                 { label: "Prefab Construction", href: "/products/prefab-construction" },
               ].map((item) => (
                 <li key={item.href}>
