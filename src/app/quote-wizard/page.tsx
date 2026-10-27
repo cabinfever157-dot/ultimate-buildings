@@ -101,7 +101,7 @@ export default function QuoteWizard() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="text-brand-primary/80 font-display text-2xl tracking-widest uppercase mb-4"
             >
-              <a href="tel:8332242940" className="hover:text-brand-primary transition-colors">833-224-2940</a>
+              <a href="tel:2832278730" className="hover:text-brand-primary transition-colors">283-227-8730</a>
             </motion.p>
             <h1 className="text-5xl md:text-7xl font-display font-light text-white mb-6 tracking-tight relative inline-block">
               Request{" "}
