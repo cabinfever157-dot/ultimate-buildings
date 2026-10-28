@@ -1,10 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Footer() {
+  const pathname = usePathname();
+  const showEmail = pathname?.replace(/\/$/, "") !== "/quote-wizard";
+
   return (
     <footer className="relative z-20 border-t border-white/[0.06] bg-black/40 backdrop-blur-3xl">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-16">
@@ -29,10 +33,12 @@ export function Footer() {
                   <Phone className="w-4 h-4 text-brand-primary" />
                   283-227-8730
                 </a>
-                <a href="mailto:info@Ultimate-Buildings.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
-                  <Mail className="w-4 h-4 text-brand-primary" />
-                  info@Ultimate-Buildings.com
-                </a>
+                {showEmail && (
+                  <a href="mailto:info@Ultimate-Buildings.com" className="flex items-center gap-2 text-white hover:text-brand-primary transition-colors font-body text-sm">
+                    <Mail className="w-4 h-4 text-brand-primary" />
+                    info@Ultimate-Buildings.com
+                  </a>
+                )}
               </div>
               <div className="flex items-start gap-2 text-white/80 font-body text-sm">
                 <MapPin className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
