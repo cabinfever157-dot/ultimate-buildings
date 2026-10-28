@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { NarrativeNav } from "@/components/layout/narrative-nav";
+import { CallbackBooking } from "@/components/sections/CallbackBooking";
 import { Info, Send } from "lucide-react";
 
 interface ContactFormData {
@@ -126,6 +127,8 @@ export default function QuoteWizard() {
             Direct factory pricing including all logistics, customs, and duties. Tell us what you need and we&apos;ll get back to you.
           </motion.p>
         </div>
+
+        <CallbackBooking />
 
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-3 hidden lg:block sticky top-32">
